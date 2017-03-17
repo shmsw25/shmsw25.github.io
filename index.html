@@ -1,3 +1,8 @@
+<!--
+	Profile Page (https://shmsw25.github.io)
+	last updated: 2017.03.16
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,10 +13,10 @@
     <title>Sewon Min</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link href="index.css" rel="stylesheet">
+    <link href="style/index.css" rel="stylesheet">
     <link type='image/x-icon' href='assets/apple-touch-icon.png' rel='shortcut icon' >
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,165 +31,151 @@
   </head>
   <body>
 
-  	<div class="blank">
-  	</div>
-	
-	<div class="container theme-showcase" id="container" role="main">
+  	<div id="background-container">
 
-		<div id="info">
-			<h2> Sewon Min </h2>
+	  	<div class="blank">
+	  	</div>
+		
+		<div class="container theme-showcase" id="container" role="main">
 
-			<br />
+			<div id="info">
+				<h2> Sewon Min </h2>
 
-			<div class="row">
-				<div class="col-md-4">
-					<p>
-						<a class="icons-sm email-ic" href="mailto:shmsw25@snu.ac.kr" target="_blank"><i class="fa fa-envelope-o"></i>   shmsw25@snu.ac.kr</a>
-					</p>
-					<p>
-						<a class="icons-sm git-ic" href="https://www.github.com/shmsw25" target="_blank"><i class="fa fa-github"></i>   /shmsw25</a>
-					</p>
-					<p>
-						<a class="icons-sm fb-ic" href="https://www.facebook.com/sewon.min.1" target="_blank"><i class="fa fa-facebook"></i>   /sewon.min.1</a>
-					</p>
-				</div>
-				<div class="col-md-4">
-					<p><span class="glyphicon glyphicon-phone-alt"></span>   +82-10-6771-0920</p> 
-					<p><span class="glyphicon glyphicon-home"></span>   Bongcheon-dong, Gwanak-gu</p> 
-					<p>Seoul, Korea</p> 
-				</div>
-				<div class="col-md-4">
-					<p>Undergraduate Student</p>
-					<p><a href="https://snu.ac.kr" target="_blank">Seoul National University</a></p>
-					<p><a href="https://cse.snu.ac.kr" target="_blank">Computer Science and Engineering</a></p>
+				<br />
+
+				<!-- contact information -->
+
+				<div class="row">
+					<div class="col-md-4">
+						<p>
+							<a class="icons-sm email-ic" href="mailto:shmsw25@snu.ac.kr" target="_blank"><i class="fa fa-envelope-o"></i>   shmsw25@snu.ac.kr</a>
+						</p>
+						<p>
+							<a class="icons-sm git-ic" href="https://www.github.com/shmsw25" target="_blank"><i class="fa fa-github"></i>   /shmsw25</a>
+						</p>
+						<p>
+							<a class="icons-sm fb-ic" href="https://www.facebook.com/sewon.min.1" target="_blank"><i class="fa fa-facebook"></i>   /sewon.min.1</a>
+						</p>
+					</div>
+					<div class="col-md-4">
+						<p><span class="glyphicon glyphicon-phone-alt"></span>   +82-10-6771-0920</p> 
+						<p><span class="glyphicon glyphicon-home"></span>   Bongcheon-dong, Gwanak-gu</p> 
+						<p>Seoul, Korea</p> 
+					</div>
+					<div class="col-md-4">
+						<p>Undergraduate Student</p>
+						<p><a href="https://snu.ac.kr" target="_blank">Seoul National University</a></p>
+						<p><a href="https://cse.snu.ac.kr" target="_blank">Computer Science and Engineering</a></p>
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<hr />
-		<div id="intro" class="field">
-			<p>
-				Hello! <br />
-				I am an undergraduate student majoring in computer science and engineering. I am interested in deep learning, especially application in Natural Language Processing and Computer Vision. <br />
-				I am highly motivated to learn and study more!
-			</p>
-
-		</div>
-
-		<div class="blank">
-  		</div>
-
-		<div id="education" class="field">
-			<h3>Education</h3>
-			<h4>Seoul National University (2014 - )</h4>
-			<p>
-				I am currently a 4th year undergraduate student.
-			</p>
-			<h4>University of Washington (2016) </h4>
-			<p>
-				I was an exchange student in the fall quarter of 2016.
-			</p>
-			<h4>Gyeonggi Science High School (2011 - 2013) </h4>
-			<p>
-				It is a special-purposed high school for students interested in math and science.
-			</p>
-		</div>
-
-		<div class="blank">
-  		</div>
-
-		<div id="experience" class="field">
-			<h3>Experience</h3>
-
-			<h4>University of Washington (2016 - 2017)</h4>
-			<p>
-				I was an undergraduate research intern during my exchange program, advised by <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>.
-				Thanks to <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a> who gave me a lot of help.
-				<ul>
-					<li>I worked on QRN, a newly proposed RNN-like model, and run experiments in tasks of a Textual Question Answering (with bAbI QA dataset) and dialog interaction (with bAbI dialog dataset). [<a href="https://arxiv.org/abs/1606.04582", target="_blank">Paper</a>]</li>
-					<li>I made an interactive demo for Context-based Question Answering with Bi-directional Attention Flow model. [<a href="http://35.165.153.16:1995/" target="_blank">Demo</a>]</li>
-					<li>I worked on transfer learning to Context-based Question Answering (Machine Comprehension) and RTE (Recognizing Textual Entailment) from a large, span-supervised data SQuAD.</li>
-					<li>I worked on OpenQA, a open-domain question answering with/without a context.</li>
-				</ul>
-			</p>
-			<h4>Seoul National University (2016)</h4>
-			<p>
-				I was an undergraduate research intern during summer, in <a href="http://vision.snu.ac.kr/" target="_blank">Vision&Learning Lab</a>, advised by <a href="http://www.cs.cmu.edu/~gunhee/" target="_blank">Gunhee Kim</a>.
-				<ul>
-					<li>I worked on image captioning (generating sentence given an image) as an Industrial-University Cooperation.</li>
-				</ul>
-			</p>
-			<h4>Seoul National University (2016)</h4>
-			<p>
-				I participated in Undergraduate Research Opportunity Program, advised by <a href="http://ids.snu.ac.kr/wiki/Sang-goo_Lee" target="_blank">Sang-gu Lee</a>.
-				<ul>
-					<li> I worked on entity linking from Tweets to Wikipedia article. </li>
-				</ul>
-			</p>
-
-		</div>
-
-		<div class="blank">
-		</div>
-		<!--
-		<div id="publication" class="field">
-			<h3>Publication</h3>
-			<ul>
-				<li>
-					Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh  Hajishirzi. ``Open-domain Question Answering with Unstructured Data". 2017. (Under Review in ACL demo paper)
-				</li>
-				<li>
-					<strong>Sewon Min</strong>, Minjoon Seo, Hannaneh Hajishirzi. ``Question Answering through Transfer Learning from Large Fine-grained Supervision Data". 2017. (Under Review in ACL short paper)
-				</li>
-				<li>
-					Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi. ``Query-Reduction Networks". In: <em>Proceedings of ICLR</em>. 2017.
-				</li>
-			</ul>
-  		</div>
-
-
-		<div class="blank">
-  		</div>
-		-->
-
-		<div id="courses" class="field">
-			<h3>Interesting Courses</h3>
 			
-			<p>
-				<span>Stanford CS231n, CS224d</span> were available online, and I was highly motivated by these lectures.
-			</p>
-			<p>
-				Thanks to <span>Logic Design</span> and <span>Data Structure</span>, I was able to get a good grasp of the basics in computer science. <span>Programming Language</span> and <span>Automata Theory</span> were super super good lectures.
-			</p>
-			<p>
-				<span>Intro. to Mathematical Analysis (I)</span> was so challenging but excited. I also enjoyed <span>Understanding of Korean Contemporary History</span> and <span>Psychology of Interpersonal Relations</span>.
-			</p>
-			<p>
-				I took <span>CSE544 (Priciple of DBMS), CSE517(Natural Language Processing)</span> in University of Washington, and it was a great opportunity to study and work on a project with graduate students.
-			</p>		
+			<hr />
+
+			<!-- introduction -->
+			<div id="intro" class="field">
+				<p>
+					Hello! <br />
+					I am an undergraduate student majoring in computer science and engineering. I am interested in artificial intelligence and application of deep learning, especially in Natural Language Processing and Computer Vision. <br />
+					I am highly motivated to learn and study more!
+				</p>
+			</div>
+
+			<div class="blank">
+	  		</div>
+
+	  		<!-- education -->
+			<div id="education" class="field">
+				<h3>Education</h3>
+				<h4>Seoul National University (2014 - Current)</h4>
+				<p>
+					I am currently a 4th year undergraduate student.
+				</p>
+				<h4>University of Washington (2016) </h4>
+				<p>
+					I was an exchange student in the fall quarter of 2016.
+				</p>
+				<h4>Gyeonggi Science High School (2011 - 2013) </h4>
+				<p>
+					It is a special-purposed high school for students interested in math and science.
+				</p>
+			</div>
+
+			<div class="blank">
+	  		</div>
+
+	  		<!-- experience -->
+			<div id="experience" class="field">
+				<h3>Experience</h3>
+
+				<h4>University of Washington (2016 - 2017)</h4>
+				<p>
+					I was an undergraduate research intern during my exchange program, advised by <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>.
+					Thanks to <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a> who gave me a lot of help.
+					<ul>
+						<li>
+							I worked on QRN, a newly proposed RNN-like model, and run experiments in tasks of a Textual Question Answering (with bAbI QA dataset) and dialog interaction (with bAbI dialog dataset). [<a href="https://arxiv.org/abs/1606.04582", target="_blank">Paper</a>]
+						</li>
+						<li>
+							I made an interactive demo for Context-based Question Answering with Bi-directional Attention Flow model. [<a href="http://35.165.153.16:1995/" target="_blank">Demo</a>]
+						</li>
+						<li>
+							I worked on transfer learning to Context-based Question Answering (Machine Comprehension) and RTE (Recognizing Textual Entailment) from a large, span-supervised data SQuAD.
+						</li>
+						<li>
+							I worked on OpenQA, a open-domain question answering with/without a context.
+						</li>
+					</ul>
+				</p>
+				<h4>Seoul National University (2016)</h4>
+				<p>
+					I was an undergraduate research intern during summer, in <a href="http://vision.snu.ac.kr/" target="_blank">Vision&Learning Lab</a>, advised by <a href="http://www.cs.cmu.edu/~gunhee/" target="_blank">Gunhee Kim</a>.
+					<ul>
+						<li>
+							I worked on image captioning (generating sentence given an image) as an Industrial-University Cooperation.
+						</li>
+					</ul>
+				</p>
+				<h4>Seoul National University (2016)</h4>
+				<p>
+					I participated in Undergraduate Research Opportunity Program, advised by <a href="http://ids.snu.ac.kr/wiki/Sang-goo_Lee" target="_blank">Sang-gu Lee</a>.
+					<ul>
+						<li>
+							I worked on entity linking from Tweets to Wikipedia article.
+						</li>
+					</ul>
+				</p>
+
+			</div>
+
+			<div class="blank">
+			</div>
+
+			<!-- courses -->
+			<div id="courses" class="field">
+				<h3>Interesting Courses</h3>
+				
+				<p>
+					<span>Stanford CS231n, CS224d</span> were available online, and I was highly motivated by these lectures.
+				</p>
+				<p>
+					Thanks to <span>Logic Design</span> and <span>Data Structure</span>, I was able to get a good grasp of the basics in computer science. <span>Programming Language</span> and <span>Automata Theory</span> were super super good lectures.
+				</p>
+				<p>
+					<span>Intro. to Mathematical Analysis (I)</span> was so challenging but excited. I also enjoyed <span>Understanding of Korean Contemporary History</span> and <span>Psychology of Interpersonal Relations</span>.
+				</p>
+				<p>
+					I took <span>CSE544 (Priciple of DBMS), CSE517(Natural Language Processing)</span> in University of Washington, and it was a great opportunity to study and work on a project with graduate students.
+				</p>		
+			</div>
+
+			<div class="blank">
+	  		</div>
+
 		</div>
-
-		<div class="blank">
-  		</div>
-
-
-		<!--
-		<div id="personal" class="field">
-			<h3>Personal</h3>
-			<p>
-				My favorite is shopping, watching youtube, riding bicycle, chatting with friends with eating sweets (or other fattening foods XD) , and so on.
-			</p>
-			<p>
-				I like traveling occasionally. Recently I lived in Seattle for six months and went on a trip to San Francisco (including Menlo Park, Palo Alto, and Berkeley). My favorite place for trip is a resort or a city. My desired place for next trip is New York.
-			</p>
-		</div>
-		-->	
 		<div class="blank">
 	  	</div>
-
-	</div>
-	<div class="blank">
-  	</div>
+	  </div>
 
   </body>
 </html>
