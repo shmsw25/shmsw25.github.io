@@ -26,8 +26,27 @@
 }
 
 h3{
+	font-size: 16pt;
+}
+
+h3, #research-container h4 {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+#research-container .field {
+	margin-bottom: 50px;
+	clear: both;
+}
+
+#research-container img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	height: 200px;
+	width: 450px;
+	border: solid gray 1px;
+	padding: 10px;
 }
 
 #container{
@@ -38,11 +57,15 @@ h3{
 	border-radius: 20px;
 }
 
+.label {
+	font-weight: normal;
+}
+
 .blank{
 	height: 30px;
 }
 
-.field{
+.field, #menu{
 	max-width: 750px;
 	margin-right: auto;
 	margin-left: auto;
@@ -52,7 +75,11 @@ h3{
 	text-align: center;
 }
 
-#education p, #experience p, #publication p{
+#intro ul {
+	margin-top: 10px;
+}
+
+#education p, #experience p, #publication p #honorship p{
 	margin-left: 20px;
 }
 
@@ -73,4 +100,43 @@ h3{
 
 #courses span{
 	text-decoration: underline;
+}
+
+
+/* navigator section */
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bababa;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu li:last-child {
+    border-right: none;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#menu li:not(.active) a:hover {
+    background-color: #777777;
+}
+
+#menu .active {
+    background-color: #FFC0CB;
+}
+
+#research-container, #courses-container {
+	display: none;
 }
