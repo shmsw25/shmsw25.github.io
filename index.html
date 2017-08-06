@@ -1,6 +1,6 @@
 <!--
 	Profile Page (https://shmsw25.github.io)
-	last updated: 2017.03.16
+	last updated: 2017.08
 -->
 
 <!DOCTYPE html>
@@ -80,12 +80,12 @@
 					<div id="intro" class="field">
 						<p>
 							Hello! <br />
-							I study artificial intelligence. In specific, I aim to understand human intelligence by creating a system of human-level understanding of natural language. Currently I am interested in question answering, machine comprehension, generation and interaction with visual data.<br />
+							I study artificial intelligence. In particular, I aim to understand human intelligence by creating a system of human-level understanding of natural language. My interests include question answering, machine comprehension, generation and interaction with visual data.<br />
 							I am highly motivated to learn and study more!
 						</p>
 						<ul>
 							<li>I recently attended <a href="http://acl2017.org/" target="_blank">ACL 2017</a> at Vancouver.</li>
-							<li>I will be interning at Salesforce Research (Palo Alto) this winter. I will join in <a href="https://einstein.ai/" target="_blank">Einstein Team</a>.</li>
+							<li>I will be interning at Salesforce Research (Palo Alto) starting November. I will join in <a href="https://einstein.ai/" target="_blank">Einstein Team</a>.</li>
 							<li>I am looking for a Ph.D. position starting 2018.</li>
 						</ul>
 					</div>
@@ -190,7 +190,7 @@
 				            <a href="https://www.google.cn/intl/en/university/research/travelgrants.html" target="_blank">Google Travel Grants</a> for attending <a href="http://acl2017.org/"  target="_blank">ACL 2017</a>. <span class="label label-default">2017.07</span>
 				          </li>
 				          <li>
-				           	<a href="http://cse.snu.ac.kr/scsc/node/19" href="_blank">Samsung Convergence Software Course</a> Mentor Scholarship <span class="label label-default">2017.03-06</span>
+				           	<a href="http://cse.snu.ac.kr/scsc/node/19" target="_blank">Samsung Convergence Software Course</a> Mentor Scholarship <span class="label label-default">2017.03-06</span>
 				          </li>
 				          <li>
 				          	Full Scholarship for all semesters attended (merit-based) <span class="label label-default">2014-2017</span>
@@ -208,10 +208,10 @@
 				<div id="research-container">
 					<div id="interest" class="field">
 		       			<h4>Interest</h4>
-						I have been working on understanding context of natural language, and answering the question and/or classifying the context. I am interested in well-defining tasks for human-level understanding of natural language and designing systems to tackle challenges for these extended tasks. Some topics of interest are as follows.
+						I have worked on understanding context of natural language, and answering the question and/or classifying the context. I am interested in well-defining tasks for natural language understanding and designing systems to tackle challenges for these extended tasks. Some topics of interest are as follows.
 						<ul>
-							<li>Question Answering in long, multi-document setting or open-domain setting.</li>
-							<li>Generation such as Question Answering with free-form answer and Dialog.</li>
+							<li>Question answering in long, multi-document setting or open-domain setting.</li>
+							<li>Generation such as free-form question answering and dialog.</li>
 							<li>Extensive use of large amount of data such as web data. (Unsupervised learning, transfer learning ...)</li>
 							<li>Interaction with visual data.</li>
 						</ul>
@@ -219,17 +219,18 @@
 
 
 					<div id="skim-rnn" class="field">
-						<h4>Skim-RNN <span class="label label-default">2017</span></h4>
+						<h4>Neural Speed Reading <span class="label label-default">2017</span></h4>
 						<ul>
 							<li>
 								I participated in Neural Speed Reading project by  <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>. (currently under review in NIPS)
 							</li>
-							<li>
-								Skim-RNN is a varient of RNN that sequentially reads text and skims fast through unimportant parts of the text. It dynamically decides (using a stochastic multinomial random variable) to either fully read and update the entire hidden state, or skim and only update a small portion of the hidden state.  Skim-RNN requires significantly less number of float computations compared to standard RNNs without sacrificing the accuracy.
+							<li>Coming soon!</li>
+							<!--<li>
+								Skim-RNN is a varient of RNN that sequentially reads text and skims fast through unimportant parts of the text. It dynamically decides to either fully read and update the entire hidden state, or skim and only update a small portion of the hidden state.  Skim-RNN requires significantly less number of float computations compared to standard RNNs without sacrificing the accuracy.
 							</li>
 							<li>
-								<strong>My work</strong>: I evaluated Skim-RNN; I applied it to sentiment analysis tasks (SST, Rotten Tomato, IMDB and AGNews) and question answering (CBT), with a slight modification of output module for CBT. We got better results than vanilla RNN as well as largely reduced inference time.
-							</li>
+								<strong>My work</strong>: I evaluated Skim-RNN; I applied it to sentiment analysis tasks (SST, Rotten Tomato, IMDB and AGNews) and question answering (CBT), with a slight modification of an output module for CBT. We got better results than vanilla RNN as well as largely reduced inference time.
+							</li>-->
 						</ul>
 					</div>
 					<div id="open-qa" class="field">
@@ -239,10 +240,10 @@
 								I participated in OpenQA project by  <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>.
 							</li>
 							<li>
-								We had a hierarchical structure for retrieving relevant documents from Wikipedia (Elastic Search), selecting relevant paragraphs (TF-IDF) and run QA model (BiDAF).
+								We had a hierarchical structure for retrieving relevant documents from Wikipedia, selecting relevant paragraphs and run QA model.
 							</li>
 							<li>
-								It indicates that there are still challenges to solve for open-domain question answering. Further study is needed for scalable question answering.
+								It indicates that there are still challenges to deal with open-domain question answering. Further study is needed for scalable question answering.
 							</li>
 						</ul>
 					</div>
@@ -261,7 +262,7 @@
 								We achieve the state of the art in two well-studied QA datasets, WikiQA and SemEval-2016 (Task 3A) as well as an entailment task (SICK), through a transfer learning from SQuAD. For WikiQA, our model outperforms the previous best model by more than 8%.
 							</li>
 							<li>
-								Though our work was done on specific model (BiDAF) and specific datasets, further study should be done to extend this technique to general tasks, allowing extensive use of transfer learning in natural language processing.
+								Since our work was done on specific model (BiDAF) and specific datasets, further study is needed to extend this technique to general tasks, allowing extensive use of the transfer learning in natural language processing.
 							</li>
 						</ul>
 					</div>
@@ -270,10 +271,10 @@
 						<img src="assets/bidaf-demo.png" alt="bidaf-demo">
 						<ul>
 							<li>
-								I made an interactive demo Question Answering with Bi-directional Attention Flow model. It supports both open-domain setting and context-aware setting. [<a href="http://35.165.153.16:1995/" target="_blank">demo page</a>] [<a href="https://github.com/allenai/bi-att-flow/tree/demo" target="_blank">demo code</a>]
+								I made an interactive demo of context-aware question answering. [<a href="http://35.165.153.16:1995/" target="_blank">demo page</a>] [<a href="https://github.com/allenai/bi-att-flow/tree/demo" target="_blank">demo code</a>]
 							</li>
 							<li>
-								BiDAF is a model for context-aware question answering. [<a href="https://allenai.github.io/bi-att-flow/" target="_blank">BiDAF webpage</a>]
+								Use BiDAF (Bi-directional Attention Flow) model. [<a href="https://allenai.github.io/bi-att-flow/" target="_blank">BiDAF webpage</a>]
 							</li>
 						</ul>
 					</div>
@@ -287,10 +288,10 @@
 		       					Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi. "Query-Reduction Networks". In: Proceedings of ICLR. 2017. [<a href="https://arxiv.org/abs/1606.04582" target="_blank">paper</a>] [<a href="https://github.com/seominjoon/qrn"  target="_blank">code</a>]
 		       				</li>
 		       				<li>
-		       					Query-Reduction Network (QRN) is a variant of RNN that effectively handles both short-term (local) and long-term (global) sequential dependencies to reason over multiple facts. QRN considers the context sentences as a sequence of state-changing triggers, and reduces the original query to a more informed query as it observes each trigger (context sentence) through time.
+		       					Query-Reduction Network (QRN) is a variant of RNN that effectively handles both short-term and long-term sequential dependencies to reason over multiple facts. QRN considers the context sentences as a sequence of state-changing triggers, and reduces the original query to a more informed query as it observes each trigger (context sentence) through time.
 		       				</li>
 							<li>
-								<strong>My work</strong>: I evaluated QRN; I applied it to question answering (with bAbI QA 10K dataset) and dialog generation (with bAbI dialog & DSTC2 dataset), with a slight modification of output module for dialog. We got state-of-the-art results in all datasets.
+								<strong>My work</strong>: I evaluated QRN; I applied it to question answering (with bAbI QA 10K dataset) and dialog generation (with bAbI dialog & DSTC2 dataset), with a slight modification of an output module for dialog. We achieve the state of the art results in all datasets.
 							</li>
 						</ul>
 					</div>
