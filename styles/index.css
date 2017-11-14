@@ -1,7 +1,4 @@
-/*
-	style sheet for index.html
-
-*/
+/* overall */
 
 #background-container{
 	background-image: url('../assets/floor.jpg');
@@ -11,97 +8,52 @@
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: Arial, Tahoma, Geneva, sans-serif;
 	font-size: 11pt;
 	margin-right: auto;
 	margin-left: auto;
+	text-align: justify;
 }
 
-#container p{
-	margin-bottom: 1px;
-}
-
-#container a:hover{
-	background-color: #FFC0CB;
-}
-
-h3{
+.field h3{
+	text-align: center;
 	font-size: 16pt;
-}
-
-h3, #research-container h4 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-#research-container .field {
-	margin-bottom: 50px;
-	clear: both;
+h4 {
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
-#research-container img {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-	height: 200px;
-	width: 450px;
-	border: solid gray 1px;
-	padding: 10px;
-}
-
-#container{
-	max-width: 1000px;
+.container{
+	max-width: 900px;
 	background-color: white;
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 20px;
 }
 
-.label {
-	font-weight: normal;
+.container p{
+	margin-bottom: 1px;
+}
+
+.container a:hover{
+	background-color: #FFC0CB;
 }
 
 .blank{
 	height: 30px;
 }
 
-.field, #menu{
+/* menu, info, fields */
+
+#info, .field, #menu{
 	max-width: 750px;
 	margin-right: auto;
 	margin-left: auto;
 }
-
-.field h3{
-	text-align: center;
-}
-
-#intro ul {
-	margin-top: 10px;
-}
-
-#education p, #experience p, #publication p #honorship p{
-	margin-left: 20px;
-}
-
-#info{
-	text-align: center;
-	font-size: 10pt;
-}
-
-#education .col-md-4{
-	text-align: center;
-	text-decoration: bold;
-	font-family: Verdana, Geneva, sans-serif;
-}
-
-#education .col-md-8{
-	
-}
-
-#courses span{
-	text-decoration: underline;
-}
-
 
 /* navigator section */
 
@@ -137,6 +89,61 @@ h3, #research-container h4 {
     background-color: #FFC0CB;
 }
 
-#research-container, #courses-container {
+#project-container {
 	display: none;
+}
+
+
+/* info */
+
+#info img{
+	padding: 20px;
+	border-radius: 50%;
+	max-width: 350px;
+	height: auto;
+}
+
+/* project container */
+
+#project-container .field {
+	margin-bottom: 50px;
+	clear: both;
+}
+
+#project-container img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 250px;
+	width: 600px;
+	border: solid gray 1px;
+	padding: 5px;
+	display: inline;
+}
+
+/* fields */
+
+
+#education p, #experience p, #publication p, #honorship p, .p-field p{
+	margin-left: 20px;
+}
+
+#publication ul, #honorship ul {
+	padding-left: 5px;
+}
+
+#education span, #experience span, #honorship span, .p-field span {
+	font-style: normal;
+	border: solid 1px #777777;
+	border-radius: 5px;
+	font-size: 80%;
+	color: #777777;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#education span.loc, #experience span.loc {
+	border: solid 1px #7777aa;
+	color: #7777aa;
 }
