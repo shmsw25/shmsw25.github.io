@@ -4,7 +4,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">/
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
     <link href="styles/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="styles/index.css" rel="stylesheet">
-    <link type='image/x-icon' href='assets/apple-touch-icon.png' rel='shortcut icon' >
+    <link type='image/x-icon' href='assets/uw.png' rel='shortcut icon' >
   </head>
 
   <body>
@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-6">
               <div class="blank"></div>
-              <h2> Sewon Min </h2>
+              <h2>Sewon Min</h2>
               <p>Undergraduate Student</p>
               <p>Computer Science and Engineering</p>
               <p>Seoul National University</p>
@@ -49,125 +49,158 @@
         </div>
         <hr />
 
-        <div id="menu">
+        <!-- introduction -->
+        <div id="intro" class="field">
+          <p>
+            Hello! <br />
+            I am an undergraduate at Seoul National University, majoring in Computer Science and Engineering. <br /><br />
+            My primary research interests lie in the area of natural language processing and machine learning. <br />
+            Previously, I was a research intern at the University of Washington (advised by <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>) and Salesforce Research (advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>). <br /><br />
+            <!--I am interested in various problems including: Question Answering, Reading Comprehension, Machine Reasoning, Representation Learning, Semantics, Learning Algorithms for Language, Unsupervised/Semi-supervised Learning over Text, and Intersection between Vision and Language.-->
+            <!--In particular, I aim to create a system that is capable of human-level understanding of natural language. <br />
+            I am highly motivated to learn and study more! <br/> <br/>-->
+            
+            <span class="glyphicon glyphicon-ok"></span>
+            I will present my papers at upcoming ICLR (@ Vancouver) and ACL (@ Melbourne).
+            <br />
+            <span class="glyphicon glyphicon-ok"></span>
+            This fall, I will start my PhD in Computer Science and Engineering at the University of Washington.
+          </p>
+        </div>
+        <div class="blank"></div>
+
+      </div>
+      <div class="blank"></div>
+      <div class="container">
+        
+        <!-- education -->
+        <div id="education" class="field">
+          <h3>Education</h3>
+
+          <!--<h4>University of Washington <span class="loc">Seattle, WA</span> <span>2018.09 - Current</span></h4>
+          <p>PhD Student in Computer Science and Engineering </p>-->
+          
+          <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2014.03 - 2018.08 (Expected)</span></h4>
+          <p>BS in Computer Science and Engineering </p>
+          <p>GPA: 4.11/4.30 (total) 4.18/4.30 (major)</p>
+          
+          <h4>University of Washington <span class="loc">Seattle, WA</span> <span>2016.09 - 12</span> </h4>
+          <p>Exchange student</p>
+          
+          <h4>Gyeonggi Science High School <span class="loc">Suwon, Korea</span> <span>2011.03 - 2013.02</span> </h4>
+          <p>Specialized high school for students talented in math and science</p>
+        </div>
+        <div class="blank"></div>
+
+      </div>
+
+      <div class="blank"></div>
+      
+      <div class="container">
+
+        <!-- publication -->
+        <div id="publication" class="field">
+          <h3> Publication </h3>
+
+          <h4>Efficient and Robust Question Answering from Minimal Context over Documents</h4>
+          <p><strong>Sewon Min</strong>, Victor Zhong, Caiming Xiong, Richard Socher.</p>
+          <p>In: <em>Proceedings of ACL (long)</em>. Melbourne, Australia. 2018.
+          [paper coming soon]
+
+          <h4>Neural Speed Reading via Skim-RNN</h4>
+          <p>Minjoon Seo*, <strong>Sewon Min*</strong>, Ali Farhadi, Hannaneh Hajishirzi. </p>
+          <p>In: <em>Proceedings of ICLR</em>. Vancouver, Canada. 2018.
+          [<a href="https://arxiv.org/abs/1711.02085" target="_blank">paper</a>] <!--[<a class="to-project-m" href="#skim-rnn">details</a>]--></p>
+
+          <h4>Question Answering through Transfer Learning from Large Fine-grained Supervision Data</h4>
+          <p><strong>Sewon Min</strong>, Minjoon Seo, Hannaneh Hajishirzi.</p>
+          <p>In: <em>Proceedings of ACL (short)</em>. Vancouver, Canada. 2017.
+          [<a href="https://arxiv.org/abs/1702.02171" target="_blank">paper</a>] [<a href="https://github.com/shmsw25/qa-transfer" target="_blank">code</a>] [<a href="assets/acl2017_poster.pdf" target="_blank">poster</a>] <!--[<a class="to-project-m" href="#transfer">details</a>]--></p>
+
+          <h4>Query-Reduction Networks for Question Answering</h4>
+          <p>Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi.</p>
+          <p>In: <em>Proceedings of ICLR</em>. Toulon, France. 2017.
+          [<a href="https://arxiv.org/abs/1606.04582" target="_blank">paper</a>] [<a href="https://github.com/seominjoon/qrn" target="_blank">code</a>] <!--[<a class="to-project-m" href="#qrn">details</a>]--></p>
+
+          <br />*: equal contribution
+        </div>
+
+        <!-- experience -->
+        <div class="blank"></div>
+
+      </div>
+      <div class="blank"></div>
+      <div class="container">
+        <div id="experience" class="field">
+          <h3>Experience</h3>
+
+          <h4>Salesforce Research (Metamind) <span class="loc">Palo Alto, CA</span> <span>2017.11 - 2018.02 (Expected)</span></h4>
+          <p>Research intern, advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>.</p>
           <ul>
-            <li id="home-m" class="active"><a href="#">Home</a></li>
-            <li id="project-m"><a href="#project">Project</a></li>
+            <li>Worked on question answering with minimal context from given document to achieve efficiency, scalability and robustness. (ACL 2018) </li>
+          </ul>
+
+          <h4>University of Washington <span class="loc">Seattle, WA</span> <span>2016.10 - 2017.02</span></h4>
+          <p>Undergraduate research intern, advised by <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>, <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>.</p>
+          <ul>
+            <li>Worked on Skim-RNN, which skims unimportant tokens and fully reads important tokens when reading text. (ICLR 2018)</li>
+            <li>Worked on transfer learning in question answering. Showed benefit of transfer learning from different large fine-grained dataset by achieving SOTA on WikiQA, SemEval2016-task3 & SICK using pre-trained model on SQuAD. (ACL 2017)</li>
+            <li>Worked on QRN, which effectively handles questions requiring reasoning over multiple facts. Achieved SOTA on bAbI QA, bAbI dialog & DSTC2. (ICLR 2017) </li>
+            <li>Made an interactive demo of context-aware question answering. [<a href="https://allenai.github.io/bi-att-flow/demo/" target="_blank">demo page</a>] [<a href="https://github.com/allenai/bi-att-flow/tree/demo" target="_blank">code</a>]</li>.
+          </ul>
+
+          <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2016.07 - 08</span></h4>
+          <p>Undergraduate intern at <a href="http://vision.snu.ac.kr/" target="_blank">Vision&Learning Lab</a>, advised by <a href="http://www.cs.cmu.edu/~gunhee/" target="_blank">Gunhee Kim</a>.</p>
+          <ul>
+            <li>Worked on image captioning (generating sentence given an image) as an Industrial-University Cooperation. Used model from <a href="https://arxiv.org/abs/1502.03044" target="_blank">Show, Attend and Tell</a>.</li>
+          </ul>
+
+          <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2016.02 - 06</span></h4>
+		      <p>Participant of Undergraduate Research Opportunity Program, advised by <a href="http://ids.snu.ac.kr/wiki/Sang-goo_Lee" target="_blank">Sang-goo Lee</a>.</p>
+          <ul>
+            <li>Worked on entity linking from Tweets to Wikipedia article.</li>
+          </ul>
+        </div>
+
+        
+
+        <div class="blank"></div>
+      </div>
+
+      <div class="blank"></div>
+
+      <div class="container">
+        <!-- honorship -->
+        <div id="honorship" class="field">
+          <h3> Honorship </h3>
+          <ul>
+            <li>
+              <strong>Doctoral Study Abroad Program Fellowship</strong> from <a href="https://www.kfas.or.kr/?pCulture=en" target="_blank">Korea Foundation for Advanced Studies (KFAS)</a> (2018-2023)
+            </li>
+            <li>
+              ICLR Travel Award (2018)
+            </li>
+            <li>
+              <a href="https://www.google.cn/intl/en/university/research/travelgrants.html" target="_blank">Google Travel Grants</a> (2017, 2018)</a>
+            </li>
+            <li>
+              <a href="http://cse.snu.ac.kr/scsc/node/19" target="_blank">Samsung Convergence Software Course</a> Mentor Scholarship (2017).
+            </li>
+            <li>
+              Full Scholarship for all semesters attended at Seoul National University (merit-based, 2014-2018)
+            </li>
           </ul>
         </div>
 
         <div class="blank"></div>
 
-        <!-- introduction -->
-        <div id="home-container">
-          <div id="intro" class="field">
-            <p>
-              Hello! <br />
-              I am an undergraduate at Seoul National University, majoring in Computer Science and Engineering. I worked as an intern at University of Washington under the supervision of <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>. <br /><br />
-              My primary research interests lie in the area of natural language processing and machine learning. In particular, I aim to create a system that is capable of human-level understanding of natural language. <br />
-              I am highly motivated to learn and study more! <br/> <br/>
-              <span class="glyphicon glyphicon-ok"></span>
-              I am looking for a Ph.D. position starting 2018. My doctoral study is expected to be fully supported by <a href="http://www.kfas.or.kr/?pCulture=en" target="_blank">Korea Foundation for Advanced Studies (KFAS)</a>. <br />
-              <!--<span class="glyphicon glyphicon-ok"></span>
-              I am attending upcoming <a href="https://nips.cc/" target="_blank">NIPS</a>.-->
-            </p>
-          </div>
-
-          <div class="blank"></div>
-
-          <!-- education -->
-          <div id="education" class="field">
-            <h3>Education</h3>
-            <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2014.03 - 2018.08 (Expected) </span></h4>
-            <p>B.S. in Computer Science and Engineering </p>
-            <p>GPA: 4.11/4.30 (total) 4.18/4.30 (major) 4.22/4.30 (upper)</p>
-            
-            <h4>University of Washington <span class="loc">Seattle, WA</span> <span>2016.09 - 12</span> </h4>
-            <p>Exchange student</p>
-            
-	          <h4>Gyeonggi Science High School <span class="loc">Suwon, Korea</span> <span>2011.03 - 2013.02</span> </h4>
-            <p>Special-purpose high school for students talented in math and science.</p>
-          </div>
-
-          <!-- publication -->
-          <div class="blank"></div>
-
-          <div id="publication" class="field">
-            <h3> Publication </h3>
-            <h4>Neural Speed Reading via Skim-RNN</h4>
-            <p>Minjoon Seo*, <strong>Sewon Min*</strong>, Ali Farhadi, Hannaneh Hajishirzi. </p>
-            <p>In: <em>Proceedings of ICLR</em>. 2018.
-            [<a href="https://arxiv.org/abs/1711.02085" target="_blank">paper</a>] [<a class="to-project-m" href="#skim-rnn">details</a>]</p>
-
-            <h4>Question Answering through Transfer Learning from Large Fine-grained Supervision Data</h4>
-            <p><strong>Sewon Min</strong>, Minjoon Seo, Hannaneh Hajishirzi.</p>
-            <p>In: <em>Proceedings of ACL (short)</em>. 2017.
-            [<a href="https://arxiv.org/abs/1702.02171" target="_blank">paper</a>] [<a href="https://github.com/shmsw25/qa-transfer" target="_blank">code</a>] [<a href="assets/acl2017_poster.pdf" target="_blank">poster</a>] [<a class="to-project-m" href="#transfer">details</a>]</p>
-
-            <h4>Query-Reduction Networks for Question Answering</h4>
-            <p>Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi.</p>
-            <p>In: <em>Proceedings of ICLR</em>. 2017.
-            [<a href="https://arxiv.org/abs/1606.04582" target="_blank">paper</a>] [<a href="https://github.com/seominjoon/qrn" target="_blank">code</a>] [<a class="to-project-m" href="#qrn">details</a>]</p>
-            
-          </div>
-
-          <!-- experience -->
-          <div class="blank"></div>
-          <div id="experience" class="field">
-            <h3>Experience</h3>
-
-            <h4>Salesforce Inc. <span class="loc">Palo Alto, CA</span> <span>2017.11 - 2018.02 (Expected)</span></h4>
-            <p>Research intern at Einstein Team (previously Metamind), advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>.</p>
-
-            <h4>University of Washington <span class="loc">Seattle, WA</span> <span>2016.10 - 2017.02</span></h4>
-            <p>Undergraduate research intern, advised by <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>. A special thanks to my mentor <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>.</p>
-            <ul>
-              <li>Published 3 papers in ICLR 2017, ACL 2017 and ICLR 2018.</li>
-              <li>Some technical works including making a demo page.</li>
-              <li>Details in <a class="to-project-m" href="#project">Project Section</a>.</li>
-            </ul>
-
-            <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2016.07 - 08</span></h4>
-            <p>Undergraduate intern at <a href="http://vision.snu.ac.kr/" target="_blank">Vision&Learning Lab</a>, advised by <a href="http://www.cs.cmu.edu/~gunhee/" target="_blank">Gunhee Kim</a>.</p>
-            <ul>
-              <li>Worked on image captioning (generating sentence given an image) as an Industrial-University Cooperation. Used a model from <a href="https://arxiv.org/abs/1502.03044" target="_blank">Show, Attend and Tell</a>.</li>
-            </ul>
-
-            <h4>Seoul National University <span class="loc">Seoul, Korea</span> <span>2016.02 - 06</span></h4>
-			      <p>Participated in Undergraduate Research Opportunity Program, advised by <a href="http://ids.snu.ac.kr/wiki/Sang-goo_Lee" target="_blank">Sang-goo Lee</a>.</p>
-            <ul>
-              <li>Worked on entity linking from Tweets to Wikipedia article.</li>
-            </ul>
-          </div>
-
           
+      </div>
 
-          <div class="blank"></div>
+      <div class="blank"></div>
+      
 
-          <!-- honorship -->
-          <div id="honorship" class="field">
-            <h3> Honorship </h3>
-            <ul>
-              <li>
-                <strong>Doctoral Study Abroad Program Scholarship</strong> granted by <a href="https://www.kfas.or.kr/?pCulture=en" target="_blank">Korea Foundation for Advanced Studies (KFAS)</a>, awarded to qualified students to complete their doctorates. <span>2018 - 2023 (Expected)</span>
-              </li>
-              <li>
-                <a href="https://www.google.cn/intl/en/university/research/travelgrants.html" target="_blank">Google Travel Grants</a> for attending <a href="http://acl2017.org/"  target="_blank">ACL 2017</a>.
-              </li>
-              <li>
-                <a href="http://cse.snu.ac.kr/scsc/node/19" target="_blank">Samsung Convergence Software Course</a> Mentor Scholarship. <span>2017.03 - 06</span>
-              </li>
-              <li>
-                Full Scholarship for all semesters attended at Seoul National University (merit-based).
-              </li>
-            </ul>
-          </div>
-
-          <div class="blank"></div>
-
-          
-        </div>
-
+        <!--
         <div id="project-container">
 
           <div id="skim-rnn" class="field p-field">
@@ -238,27 +271,15 @@
           <div class="blank"></div>
         </div>
 
-      </div>
+      </div>-->
 
       <div class="blank"></div>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      $('#menu li').click(function(){
-        toggleMenu($(this));
-      });
-      $('.to-project-m').click(function(){
-        toggleMenu($('#project-m'));
-      })
-      function toggleMenu(curr){
-        var $old = $('#menu .active').removeClass('active').css('background-color', '#bababa');
-            $('#' + $old.text().toLowerCase()+'-container').hide();
-            curr.addClass('active').css('background-color', '#FFC0CB');
-            $('#' + curr.text().toLowerCase()+'-container').show();
-      }
-    </script>
+    <!--<script src="content.js"></script>
+    <script src="index.js"></script>-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
