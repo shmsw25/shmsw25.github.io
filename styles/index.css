@@ -8,9 +8,7 @@
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	font-family: /*Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", */ "Arial Black", "sans serif"; 
-	/*"Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-	*/
+	font-family: Trebuchet MS, sans-serif;
 	font-size: 11pt;
 	margin-right: auto;
 	margin-left: auto;
