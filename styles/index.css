@@ -8,16 +8,22 @@
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	font-family: Open Sans,Tahoma,Arial,Verdana,sans-serif;
-	font-size: 10pt;
+	/*font-family: Open Sans,Tahoma,Arial,Verdana,sans-serif;*/
+  font-family: Georgia, serif;
+  font-size: 10pt;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: justify;
 }
 
+#info span { /* Korean name */
+	font-family: Open Sans,Tahoma,Arial,Verdana,sans-serif;*	
+}
+
 .field h3{
 	text-align: center;
 	font-size: 16pt;
+  	font-weight: bold;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -143,16 +149,16 @@ sup{
 /* fields */
 
 
-#education p, #experience p, #publication p, #honorship p, .p-field p {
+#education p, #experience p, #publication p, #honorship p, #service p, p-field p {
 	margin-left: 20px;
 }
 
 
-#publication ul, #honorship ul {
+#publication ul, #honorship ul, #service ul {
 	padding-left: 5px;
 }
 
-#education span, #experience span, #honorship span, .p-field span {
+#education span, #experience span, #honorship span, #service span, .p-field span {
 	font-style: normal;
 	border: solid 1px #777777;
 	border-radius: 5px;
