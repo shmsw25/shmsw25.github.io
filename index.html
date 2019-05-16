@@ -16,6 +16,7 @@
     <link href="styles/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="styles/index.css" rel="stylesheet">
     <link type='image/x-icon' href='assets/uw.png' rel='shortcut icon' >
   </head>
@@ -40,8 +41,9 @@
               <p>Paul G. Allen School of Computer Science & Engineering</p>
               <p>University of Washington</p>
               <div class="blank"></div>
-              <p><a href="assets/CV.pdf" target="_blank"><span class="glyphicon glyphicon-download-alt"></span> Curriculum Vitae</a></p>
+              <p><a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> Curriculum Vitae</a></p>
               <p><a class="icons-sm email-ic" href="mailto:sewon@cs.washington.edu" target="_blank"><i class="fa fa-envelope-o"></i> sewon@cs.washington.edu</a></p>
+              <p><a href="https://scholar.google.com/citations?user=jU4IZs4AAAAJ&hl=en" target="_blank"><i class="fa fa-google"></i> google scholar</a></p>
               <p><a class="icons-sm git-ic" href="https://www.github.com/shmsw25" target="_blank"><i class="fa fa-github"></i> /shmsw25</a></p>
               <p><a class="icons-sm twitter-ic" href="https://twitter.com/sewon__min" target="_blank"><i class="fa fa-twitter-square"></i> @sewon__min</a></p>
               <p><a class="icons-sm fb-ic" href="https://www.facebook.com/sewon.min.1" target="_blank"><i class="fa fa-facebook"></i> /sewon.min.1</a></p>
@@ -55,14 +57,12 @@
         <div id="intro" class="field">
           <p>
             Hello! <br />
-            I am a 1st-year Ph.D. student in the Natural Language Processing group at the University of Washington. I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a> and <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>.<br /><br />
+            I am a 1st-year Ph.D. student in the Natural Language Processing group at the University of Washington. I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a> and <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>.
+            <br /><br />
             My primary research interests lie in the area of natural language processing and machine learning.
-            <!--Previously, I was a research intern at the University of Washington (advised by <a href="http://ssli.ee.washington.edu/~hannaneh/index.html" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>) and Salesforce Research (advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>). <br /><br />-->
-            In particular, I am interested in designing models and learning algorithms to understand natural language and generalize across data. <br /><br />
-            <!--I am interested in various problems including: Question Answering, Reading Comprehension, Machine Reasoning, Representation Learning, Semantics, Learning Algorithms for Language, Unsupervised/Semi-supervised Learning over Text, and Intersection between Vision and Language.-->
-            <!--In particular, I aim to create a system that is capable of human-level understanding of natural language. <br />
-            I am highly motivated to learn and study more! <br/> <br/>-->
-
+            In particular, I am interested in developing methods for various natural language understanding and question anwering tasks which maximize the signal from limited supervision. <br /><br />
+            <span class="glyphicon glyphicon-ok"></span>
+            In 2019, I have 2 ACL papers. <br />
             <span class="glyphicon glyphicon-ok"></span>
             In 2018, I have 1 ICLR paper and 1 ACL paper. <br />
             <span class="glyphicon glyphicon-ok"></span>
@@ -79,6 +79,18 @@
         <!-- publication -->
         <div id="publication" class="field">
           <h3> Publications </h3>
+
+
+          <h4>Multi-hop Reading Comprehension through Question Decomposition and Rescoring</h4>
+          <p><strong class="thicker">Sewon Min</strong>, Victor Zhong, Luke Zettlemoyer, Hannaneh Hajishirzi.</p>
+          <p>In: <em>Proceedings of ACL (long)</em>. Florence, Italy. 2019.
+          [paper coming soon]
+          
+          <h4>Compositional Questions Do Not Necessitate Multi-hop Reasoning</h4>
+          <p><strong class="thicker">Sewon Min*</strong>, Eric Wallace*, Sameer Singh, Matt Gardner, Hannaneh Hajishirzi, Luke Zettlemoyer.</p>
+          <p>In: <em>Proceedings of ACL (short)</em>. Florence, Italy. 2019.
+          [paper coming soon]
+
 
           <h4>Efficient and Robust Question Answering from Minimal Context over Documents</h4>
           <p><strong class="thicker">Sewon Min</strong>, Victor Zhong, Richard Socher, Caiming Xiong.</p>
@@ -137,6 +149,9 @@
       <div class="container">
         <div id="experience" class="field">
           <h3>Research Experience</h3>
+
+          <h4>Facebook AI Research (FAIR) <sup>2019.06 - 09</sup></h4>
+          <p>Research intern, advised by <a href="https://cs.stanford.edu/~danqi/" target="_blank">Danqi Chen</a> and <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>.</p>
 
           <h4>Salesforce Research (Metamind) <sup>2017.11 - 2018.02</sup></h4>
           <p>Research intern, advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>.</p>
@@ -210,10 +225,10 @@
           <h3> Services </h3>
           <ul>
             <li>
-              Reviewer/Program Committee: NIPS 2018, ICLR 2019, AKBC 2019, NAACL 2019 (secondary), ACL 2019
+              Reviewer/Program Committee: NeurIPS 2018, ICLR 2019, AKBC 2019, NAACL 2019 (secondary), ACL 2019, EMNLP 2019
             </li>
             <li>
-              Reviewer/Program Committee: Workshop on Machine Reading for Question Answering (EMNLP 2019)
+              Reviewer/Program Committee: Student Research Workshop (ACL 2019), Workshop on Machine Reading for Question Answering (EMNLP 2019)
             </li>
             <li>
               UW CSE Prospective Student Committee Chair (2019)
@@ -234,82 +249,6 @@
         </div>
         <div class="blank"></div>
       </div>
-
-      <div class="blank"></div>
-
-
-        <!--
-        <div id="project-container">
-
-          <div id="skim-rnn" class="field p-field">
-            <h4>Neural Speed Reading via Skim-RNN <span>ICLR 2018</span></h4>
-            <p>Minjoon Seo*, <strong>Sewon Min*</strong>, Ali Farhadi, Hannaneh Hajishirzi.</p>
-            <p>In: Proceedings of ICLR. 2018.
-            [<a href="https://arxiv.org/abs/1711.02085" target="_blank">paper</a>]</p>
-            <p><img src="assets/skim-rnn2.png" alt="skim-rnn"></p>
-            <ul>
-              <li>
-                Skim-RNN is a variant of RNN that dynamically decides to update only a small fraction of the hidden state. It gives computational advantage over an RNN that always updates the entire hidden state.
-              </li>
-              <li>
-                We show that Skim-RNN can achieve significantly reduced computational cost without losing accuracy compared to standard RNNs on Text Classification and Question Answering.
-              </li>
-            </ul>
-          </div>
-
-          <div id="open-qa" class="field p-field">
-            <h4>Open-domain Question Answering <span>2017</span></h4>
-            <ul>
-              <li>
-                I participated in OpenQA project led by <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>.
-              </li>
-              <li>
-                We have a hierarchical structure for retrieving relevant documents from Wikipedia, selecting relevant paragraphs and run QA model.
-              </li>
-              <li>
-                It indicates that there are still challenges to deal with open-domain question answering, and further study is needed for scalable question answering.
-              </li>
-            </ul>
-          </div>
-
-          <div id="transfer" class="field p-field">
-            <h4>Question Answering through Transfer Learning <span>ACL 2017</span></h4>
-            <p><strong>Sewon Min</strong>, Minjoon Seo, Hannaneh Hajishirzi.</p>
-            <p> In: <em>Proceedings of ACL (short)</em>. 2017. [<a href="https://arxiv.org/abs/1702.02171" target="_blank">paper</a>] [<a href="https://github.com/shmsw25/qa-transfer" target="_blank">code</a>] [<a href="assets/acl2017_poster.pdf" target="_blank">poster</a>]</p>
-            <p><img src="assets/transfer.png" alt="transfer"></p>
-            <ul>
-              <li>
-                We show that the task of question answering can significantly benefit from the transfer learning of models trained on a different large, fine-grained QA dataset (SQuAD). We demonstrate that not only large scale but also finer supervision enables the model (BiDAF) to better learn lexical and syntactic information.
-              </li>
-              <li>
-                We achieve the state of the art in two well-studied QA datasets, WikiQA and SemEval-2016 (Task 3A) as well as an entailment task (SICK), through a transfer learning from SQuAD. For WikiQA, our model outperforms the previous best model by more than 8%.
-              </li>
-            </ul>
-          </div>
-
-          <div id="bidaf-demo" class="field p-field">
-            <h4>BiDAF Demo <span>2016</span></h4>
-            <p><img src="assets/bidaf-demo.png" alt="bidaf-demo"></p>
-            <ul>
-              <li>An interactive demo of context-aware question answering. [<a href="https://allenai.github.io/bi-att-flow/demo/" target="_blank">demo page</a>] [<a href="https://github.com/allenai/bi-att-flow/tree/demo" target="_blank">demo code</a>]</li>
-              <li>Use BiDAF (Bi-directional Attention Flow) model. [<a href="https://allenai.github.io/bi-att-flow/" target="_blank">BiDAF webpage</a>]</li>
-            </ul>
-          </div>
-
-          <div id="qrn" class="field p-field">
-            <h4>Query-Reduction Network for Question Answering <span>ICLR 2017</span></h4>
-            <p>Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi. </p>
-            <p>In: Proceedings of ICLR. 2017. [<a href="https://arxiv.org/abs/1606.04582" target="_blank">paper</a>] [<a href="https://github.com/seominjoon/qrn"  target="_blank">code</a>]</p>
-            <p><img src="assets/qrn.png" alt="qrn"></p>
-            <ul>
-              <li>Query-Reduction Network (QRN) is a variant of RNN that effectively handles both short-term and long-term sequential dependencies to reason over multiple facts. QRN considers the context sentences as a sequence of state-changing triggers, and reduces the original query to a more informed query as it observes each trigger (context sentence) through time.</li>
-              <li>I applied it to question answering (with bAbI QA) and dialog (with bAbI dialog & DSTC2), with a slight modification of an output module for dialog. We achieve the state of the art results in all datasets.</li>
-            </ul>
-          </div>
-          <div class="blank"></div>
-        </div>
-
-      </div>-->
 
       <div class="blank"></div>
 

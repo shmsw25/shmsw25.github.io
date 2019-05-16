@@ -9,11 +9,12 @@
   	-o-background-size: cover;
   	background-size: cover;
 	/*font-family: Open Sans,Tahoma,Arial,Verdana,sans-serif;*/
-  font-family: Georgia, serif;
-  font-size: 10pt;
+  	font-family: Georgia, serif;
+  	font-size: 10pt;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: justify;
+	padding: 5px;
 }
 
 #info span { /* Korean name */
