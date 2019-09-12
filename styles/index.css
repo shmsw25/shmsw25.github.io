@@ -35,6 +35,10 @@ h4 {
 	font-size: 12pt;
 }
 
+h4 em {
+	color: #4B0082;
+}
+
 .container{
 	max-width: 900px;
 	background-color: white;
