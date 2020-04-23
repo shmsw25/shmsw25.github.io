@@ -1,6 +1,6 @@
 <!--
   Profile Page (https://shmsw25.github.io)
-  last updated: 2018.01
+  last updated: 2019.12
 -->
 
 <!DOCTYPE html>
@@ -12,11 +12,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Sewon Min</title>
     <!-- Bootstrap -->
+    
     <link href="styles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link href="styles/index.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://www.cs.washington.edu/sites/default/files/favicon_3.ico" type="image/vnd.microsoft.icon" />
   </head>
@@ -27,7 +29,7 @@
 
       <div class="blank"></div>
 
-      <div class="container theme-showcase" role="main">
+      <div class="my-container theme-showcase" role="main">
 
         <div id="info">
           <div class="row">
@@ -36,269 +38,91 @@
             </div>
             <div class="col-md-6">
               <div class="blank"></div>
-              <h3>Sewon Min <span style='font-size: 16pt'>(민세원)</span></h3>
+              <h3>Sewon Min <span style='font-size: 90%'>(민세원)</span></h3>
               <p>Ph.D. Student</p>
               <p>Paul G. Allen School of Computer Science & Engineering</p>
               <p>University of Washington</p>
               <div class="blank"></div>
-              <p><a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> Curriculum Vitae</a></p>
-              <p><a class="icons-sm email-ic" href="mailto:sewon@cs.washington.edu" target="_blank"><i class="fa fa-envelope-o"></i> sewon@cs.washington.edu</a></p>
-              <p><a href="https://scholar.google.com/citations?user=jU4IZs4AAAAJ&hl=en" target="_blank"><i class="fa fa-google"></i> google scholar</a></p>
-              <p><a class="icons-sm git-ic" href="https://www.github.com/shmsw25" target="_blank"><i class="fa fa-github"></i> /shmsw25</a></p>
-              <p><a class="icons-sm twitter-ic" href="https://twitter.com/sewon__min" target="_blank"><i class="fa fa-twitter-square"></i> @sewon__min</a></p>
-
+              
+              <div class="row">
+                <div class="column">
+                  <a href="assets/Sewon_Min_CV.pdf" target="_blank"><i class="fa fa-download"></i> Curriculum Vitae</a>
+                </div>
+                <div class="column">
+                  <a href="https://scholar.google.com/citations?user=jU4IZs4AAAAJ&hl=en" target="_blank"><i class="fa fa-google"></i> google scholar</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <a class="icons-sm git-ic" href="https://www.github.com/shmsw25" target="_blank"><i class="fa fa-github"></i> /shmsw25</a>     
+                </div>
+                <div class="column">
+                  <a class="icons-sm twitter-ic" href="https://twitter.com/sewon__min" target="_blank"><i class="fa fa-twitter-square"></i> @sewon__min</a>
+                </div>
+              </div>
+              <div class="row">
+                <a class="icons-sm email-ic" href="mailto:sewon@cs.washington.edu" target="_blank"><i class="fa fa-envelope-o"></i> sewon@cs.washington.edu</a>
+              </div>
+              
             </div>
           </div>
         </div>
         <hr />
 
-        <!-- introduction -->
         <div id="intro" class="field">
-          <p>
-            Hello! <br />
-            I am a 2nd-year Ph.D. student in the Natural Language Processing group at the University of Washington. I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a> and <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>.
-            Prior to UW, I received B.S. in CSE from Seoul National University.
-            <br /><br />
-            My primary research interests lie in the area of natural language processing and machine learning.
-            In particular, I am interested in developing methods for various natural language understanding and question anwering tasks with limited supervision.
-            <br /><br />
-            <span class="glyphicon glyphicon-ok"></span>
-            In 2019, I have 2 ACL papers, 1 EMNLP paper and 1 MRQA workshop paper. <br />
-            <span class="glyphicon glyphicon-ok"></span>
-            In 2018, I have 1 ICLR paper and 1 ACL paper. <br />
-            <span class="glyphicon glyphicon-ok"></span>
-            In 2017, I have 1 ICLR paper and 1 ACL paper.
+          <p id="intro-text">
           </p>
         </div>
         <div class="blank"></div>
-
       </div>
       <div class="blank"></div>
 
-      <div class="container">
-
-        <!-- publication -->
+      <div class="my-container">
         <div id="publication" class="field">
           <h3> Publications </h3>
-
-          <h4><em>Peer-Reviewed Conference Papers</em></h4>
-
-          <h4>A Discrete Hard EM Approach for Weakly Supervised Question Answering</h4>
-          <p><strong class="thicker">Sewon Min</strong>, Danqi Chen, Hannaneh Hajishirzi, Luke Zettlemoyer.</p>
-          <p>
-            In: <em>Proceedings of EMNLP (long)</em>. Hong Kong, China. 2019.
-            [<a href="https://arxiv.org/abs/1909.04849" target="_blank">paper</a>]
-            [<a href="https://github.com/shmsw25/qa-hard-em" target="_blank">code</a>]
-            [<a href="assets/emnlp2019_slides.pdf" target="_blank">slides</a>]
-            [<a href="assets/bibtex/emnlp2019.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Multi-hop Reading Comprehension through Question Decomposition and Rescoring</h4>
-          <p><strong class="thicker">Sewon Min</strong>, Victor Zhong, Luke Zettlemoyer, Hannaneh Hajishirzi.</p>
-          <p>
-            In: <em>Proceedings of ACL (long)</em>. Florence, Italy. 2019.
-            [<a href="https://arxiv.org/abs/1906.02916" target="_blank">paper</a>]
-            [<a href="https://github.com/shmsw25/DecompRC" target="_blank">code</a>]
-            [<a href="http://allgood.cs.washington.edu:2019" target="_blank">demo</a>]
-            [<a href="assets/acl2019a_poster.pdf" target="_blank">poster</a>]
-            [<a href="assets/bibtex/acl2019a.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Compositional Questions Do Not Necessitate Multi-hop Reasoning</h4>
-          <p><strong class="thicker">Sewon Min*</strong>, Eric Wallace*, Sameer Singh, Matt Gardner, Hannaneh Hajishirzi, Luke Zettlemoyer.</p>
-          <p>
-            <p>In: <em>Proceedings of ACL (short)</em>. Florence, Italy. 2019.
-            [<a href="https://arxiv.org/abs/1906.02900" target="_blank">paper</a>]
-            [<a href="https://github.com/shmsw25/single-hop-rc" target="_blank">code</a>]
-            [<a href="assets/acl2019b_slides.pdf" target="_blank">slides</a>]
-            [<a href="assets/bibtex/acl2019b.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Efficient and Robust Question Answering from Minimal Context over Documents</h4>
-          <p><strong class="thicker">Sewon Min</strong>, Victor Zhong, Richard Socher, Caiming Xiong.</p>
-          <p>
-            In: <em>Proceedings of ACL (long)</em>. Melbourne, Australia. 2018.
-            [<a href="http://arxiv.org/abs/1805.08092" target="_blank">paper</a>]
-            [<a href="assets/acl2018_poster.pdf" target="_blank">poster</a>]
-            [<a href="assets/bibtex/acl2018.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Neural Speed Reading via Skim-RNN</h4>
-          <p>Minjoon Seo*, <strong>Sewon Min*</strong>, Ali Farhadi, Hannaneh Hajishirzi. </p>
-          <p>
-            In: <em>Proceedings of ICLR</em>. Vancouver, Canada. 2018.
-            [<a href="https://arxiv.org/abs/1711.02085" target="_blank">paper</a>]
-            [<a href="assets/iclr2018_poster.pdf" target="_blank">poster</a>]
-            [<a href="assets/bibtex/iclr2018.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Question Answering through Transfer Learning from Large Fine-grained Supervision Data</h4>
-          <p><strong>Sewon Min</strong>, Minjoon Seo, Hannaneh Hajishirzi.</p>
-          <p>
-            In: <em>Proceedings of ACL (short)</em>. Vancouver, Canada. 2017.
-            [<a href="https://arxiv.org/abs/1702.02171" target="_blank">paper</a>]
-            [<a href="https://github.com/shmsw25/qa-transfer" target="_blank">code</a>]
-            [<a href="assets/acl2017_poster.pdf" target="_blank">poster</a>]
-            [<a href="assets/bibtex/acl2017.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4>Query-Reduction Networks for Question Answering</h4>
-          <p>Minjoon Seo, <strong>Sewon Min</strong>, Ali Farhadi, Hannaneh Hajishirzi.</p>
-          <p>
-            In: <em>Proceedings of ICLR</em>. Toulon, France. 2017.
-            [<a href="https://arxiv.org/abs/1606.04582" target="_blank">paper</a>]
-            [<a href="https://github.com/seominjoon/qrn" target="_blank">code</a>]
-            [<a href="assets/bibtex/iclr2017.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4><em>Peer-Reviewed Workshop Papers</em></h4>
-
-          <h4>On Making Reading Comprehension More Comprehensive</h4>
-          <p>Matt Gardner, Jonathan Berant, Hannaneh Hajishirzi, Alon Talmor, <strong class="thicker">Sewon Min</strong>.</p>
-          <p>
-            In: <em>Proceedings of MRQA @ EMNLP</em>. Hong Kong, China. 2019.
-            [<a href="https://mrqa.github.io/assets/papers/43_Paper.pdf" target="_blank">paper</a>]
-            [<a href="assets/bibtex/mrqa2019.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <h4><em>Preprints</em></h4>
-
-          <h4>Question Answering is a Format; When is it Useful?</h4>
-          <p>Matt Gardner, Jonathan Berant, Hannaneh Hajishirzi, Alon Talmor, <strong class="thicker">Sewon Min</strong>.</p>
-          <p>
-            <em>arXiv preprint arXiv:1909.11291</em>. 2019.
-            [<a href="https://arxiv.org/abs/1909.11291" target="_blank">paper</a>]
-            [<a href="assets/bibtex/preprint2019.txt" target="_blank">BibTeX</a>]
-          </p>
-
-          <br />*: equal contribution
         </div>
-
-        <!-- experience -->
         <div class="blank"></div>
 
       </div>
 
       <div class="blank"></div>
-      <div class="container">
-
-        <!-- education -->
+      <div class="my-container">
         <div id="education" class="field">
           <h3>Education</h3>
-
-          <h4>University of Washington <sup>2018.09 - Current</sup></h4>
-          <p>Ph.D. Student in Computer Science & Engineering </p>
-          <p>Advisers: <a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a>, <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a></p>
-
-          <h4>Seoul National University <sup>2014.03 - 2018.08</sup></h4>
-          <p>B.S. in Computer Science & Engineering (Summa Cum Laude)</p>
-          <p>GPA: 4.12/4.30 (total) 4.19/4.30 (major), 1st rank in CSE</p>
-
-          <h4>University of Washington <sup>2016.09 - 12</sup> </h4>
-          <p>Exchange student</p>
-
-          <h4>Gyeonggi Science High School <sup>2011.03 - 2013.02</sup> </h4>
-          <p>Specialized high school for students talented in math and science</p>
         </div>
         <div class="blank"></div>
 
       </div>
 
       <div class="blank"></div>
-      <div class="container">
+      <div class="my-container">
         <div id="experience" class="field">
-          <h3>Work Experience</h3>
-
-          <h4>Salesforce Research (Metamind) <sup>2017.11 - 2018.02</sup></h4>
-          <p>Research intern, advised by <a href="http://www.stat.ucla.edu/~caiming/" target="_blank">Caiming Xiong</a> and <a href="http://www.socher.org/" target="_blank">Richard Socher</a>.</p>
-          <ul>
-            <li>Worked on question answering. (ACL 2018) </li>
-          </ul>
-
-          <h4>University of Washington <sup>2016.10 - 2017.02</sup></h4>
-          <p>Undergraduate research intern, advised by <a href="https://seominjoon.github.io" target="_blank">Minjoon Seo</a>, <a href="https://homes.cs.washington.edu/~hannaneh/" target="_blank">Hannaneh Hajishirzi</a> and <a href="http://homes.cs.washington.edu/~ali/index.html" target="_blank">Ali Farhadi</a>.</p>
-          <ul>
-            <li>Worked on natural language processing, question answering and machine learning. (ICLR 2018, ACL 2017, ICLR 2017)
-          </ul>
-
-          <h4>Seoul National University <sup>2016.07 - 08</sup></h4>
-          <p>Undergraduate intern at <a href="http://vision.snu.ac.kr/" target="_blank">Vision&Learning Lab</a>, advised by <a href="http://www.cs.cmu.edu/~gunhee/" target="_blank">Gunhee Kim</a>.</p>
-          <ul>
-            <li>Worked on image caption generation.
-          </ul>
-
-          <h4>Seoul National University <sup>2016.02 - 06</sup></h4>
-		      <p>Participant of Undergraduate Research Opportunity Program, advised by <a href="http://ids.snu.ac.kr/wiki/Sang-goo_Lee" target="_blank">Sang-goo Lee</a>.</p>
-          <ul>
-            <li>Worked on natural language processing.</li>
-          </ul>
+          <h3>Research Experience</h3>
         </div>
-
-
-
         <div class="blank"></div>
       </div>
 
       <div class="blank"></div>
 
-      <div class="container">
-        <!-- honorship -->
+      <div class="my-container">
         <div id="honorship" class="field">
           <h3> Honorships </h3>
-          <ul>
-            <li>
-              <strong>Doctoral Study Abroad Program Fellowship</strong> granted by <a href="https://www.kfas.or.kr/?pCulture=en" target="_blank">Korea Foundation for Advanced Studies (KFAS)</a> (2018-2023)
-            </li>
-            <li>
-              Wissner-Slivka Endowed Graduate Fellowship granted by Paul G. Allen School (2018-2019)
-            </li>
-            <li>
-              Best Undergraduate Thesis Award granted by CSE, Seoul National University (2018)
-            </li>
-            <li>
-              Full Scholarship for all semesters attended at Seoul National University (merit-based, 2014-2018)
-            </li>
-            <li>
-              ICLR Travel Award (2018)
-            </li>
-            <li>
-              <a href="https://www.google.cn/intl/en/university/research/travelgrants.html" target="_blank">Google Travel Grants</a> (2017, 2018)</a>
-            </li>
-            <li>
-              <a href="http://cse.snu.ac.kr/scsc/node/19" target="_blank">Samsung Convergence Software Course</a> Mentor Scholarship (2017)
-            </li>
-          </ul>
         </div>
-
         <div class="blank"></div>
       </div>
 
       <div class="blank"></div>
 
-      <div class="container">
-        <!-- honorship -->
+      <div class="my-container">
         <div id="service" class="field">
           <h3> Services </h3>
-          <ul>
-            <li>
-              Reviewer/Program Committee: NeurIPS 2018, ICLR 2019, AKBC 2019, NAACL 2019 (secondary), ACL 2019, EMNLP 2019, AAAI 2020, ICLR 2020
-            </li>
-            <li>
-              Reviewer/Program Committee: Student Research Workshop (SRW @ ACL 2019), Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
-            </li>
-            <li>
-              UW CSE Prospective Student Committee Chair (2019)
-            </li>
-          </ul>
         </div>
-
         <div class="blank"></div>
       </div>
 
       <div class="blank"></div>
 
-      <div class="container">
-        <!-- honorship -->
+      <div class="my-container">
         <div id="personal" class="field">
           <h3> Personal </h3>
           <p>Traveling & Youtube.</p>
@@ -311,8 +135,8 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--<script src="content.js"></script>
-    <script src="index.js"></script>-->
+    <script src="contents.js"></script>
+    <script src="index.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -323,4 +147,3 @@
     </script>
   </body>
 </html>
-

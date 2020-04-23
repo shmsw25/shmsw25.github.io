@@ -1,0 +1,6 @@
+@article{ min2020ambigqa,
+    title={ AmbigQA: Answering Ambiguous Open-domain Questions },
+    author={ Min, Sewon and Michael, Julian and Hajishirzi, Hannaneh and Zettlemoyer, Luke },
+    journal={ arXiv preprint arXiv:2004.10645 },
+    year={2020}
+}
