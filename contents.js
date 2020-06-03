@@ -17,7 +17,7 @@ let people = {
   'sanggoo': "Sang-goo Lee",
   'kristina': "Kristina Toutanova",
   'kenton': "Kenton Lee",
-  'vlad': "Vladimir Karpukhin", 
+  'vlad': "Vladimir Karpukhin",
   'barlas': "Barlas Oguz",
   'ledell': "Ledell Wu",
   'sergey': "Sergey Edunov",
@@ -43,7 +43,7 @@ let intros = [
   I am a 2nd-year Ph.D. student in the Natural Language Processing group at the University of Washington.
   I am fortunate to be advised by [hanna] and [luke].
   Prior to UW, I received B.S. in CSE from Seoul National University. <br /><br />
-  
+
   My primary research interests lie in the area of natural language processing and machine learning.
   My long-term goal is to build a machine that can understand natural language text and reason about it
   through answering questions.
@@ -75,9 +75,14 @@ let pub_dictionary = {
         'website' :'https://nlp.cs.washington.edu/ambigqa/',
         'code': 'https://github.com/shmsw25/AmbigQA'},
   "preprint2020a": {'paper': "https://arxiv.org/abs/2004.04906",
-        'code': 'https://fburl.com/qa-dpr'},
+        'code': 'https://github.com/facebookresearch/DPR'},
   "preprint2019b": {'paper': "https://arxiv.org/abs/1911.03868"},
   "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"}
+}
+
+let website_directory = {
+  "uskb": "https://uskb-workshop.github.io/",
+  "efficientqa": "http://efficientqa.github.io/"
 }
 
 function add_link (title, link) {
@@ -93,16 +98,16 @@ function add_info (paper, infos) {
 }
 
 let news = [
-  /*`04/21/2020: Our new preprint, "AmbigQA: Answering Ambiguous Open-domain Questions" is out! ` +
-  add_info("preprint2020b", ["paper", "website"]),
-  `04/10/2020: Our new preprint, "Dense Passage Retrieval for Open-domain QA" is out! ` +
-  add_info("preprint2020a", ["paper"])*/
+  /*`06/23/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
+  `, hosted at NeurIPS 2020.`,
+  `06/15/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `, hosted at AKBC 2020.`,*/
   `04/22/2020: Our new preprint, ` +
   add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["preprint2020b"]["paper"]) + `
   is out! Visit ` + add_link("AmbigQA website", pub_dictionary["preprint2020b"]["website"]) + ` to download data and see examples.`,
-  `04/10/2020: Our new preprint, ` + 
+  `04/10/2020: Our new preprint, ` +
   add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["preprint2020a"]["paper"]) + `
-  is out!`
+  is out (w/ ` + add_link("Code", pub_dictionary["preprint2020a"]["code"]) + `)!`
 ];
 
 let publications = [
