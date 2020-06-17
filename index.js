@@ -23,7 +23,7 @@ window.onload = function () {
   document.getElementById("intro-text").innerHTML += introText;
   // load publications
   let pubText = "";
-  let ordered_options = ["paper", "website", "code", "demo", "slides", "poster", "BibTex"];
+  let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster", "BibTex"];
   for (let i=0; i<publications.length; i++) {
     console.assert(publications[i].length===2);
     pubText += "<h4><em>" + publications[i][0] + "</em></h4>";

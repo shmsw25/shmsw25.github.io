@@ -53,14 +53,16 @@ let intros = [
 let pub_dictionary = {
   "emnlp2019": {'paper': "https://arxiv.org/abs/1909.04849",
                 'code': "https://github.com/shmsw25/qa-hard-em",
-                'slides': "emnlp2019_slides.pdf"},
+                'slides': "emnlp2019_slides.pdf",
+                'talk': "https://vimeo.com/426355627"},
   "acl2019a": {'paper': "https://arxiv.org/abs/1906.02916",
         'code': "https://github.com/shmsw25/DecompRC",
         'demo': "http://allgood.cs.washington.edu:2019",
         'poster': "acl2019a_poster.pdf"},
   "acl2019b": {'paper': "https://arxiv.org/abs/1906.02900",
         'code': "https://github.com/shmsw25/single-hop-rc",
-        'slides': "acl2019b_slides.pdf"},
+        'slides': "acl2019b_slides.pdf",
+        'talk': "https://vimeo.com/385198551"},
   "acl2018": {'paper': "http://arxiv.org/abs/1805.08092",
         'poster': "acl2018_poster.pdf"},
   "iclr2018": {'paper': "https://arxiv.org/abs/1711.02085",
@@ -98,14 +100,14 @@ function add_info (paper, infos) {
 }
 
 let news = [
-  /*`06/23/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
+  `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
   `, hosted at NeurIPS 2020.`,
-  `06/15/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
-  `, hosted at AKBC 2020.`,*/
-  `04/22/2020: Our new preprint, ` +
+  `06/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `, hosted at AKBC 2020.`,
+  `04/2020: Our new preprint, ` +
   add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["preprint2020b"]["paper"]) + `
   is out! Visit ` + add_link("AmbigQA website", pub_dictionary["preprint2020b"]["website"]) + ` to download data and see examples.`,
-  `04/10/2020: Our new preprint, ` +
+  `04/2020: Our new preprint, ` +
   add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["preprint2020a"]["paper"]) + `
   is out (w/ ` + add_link("Code", pub_dictionary["preprint2020a"]["code"]) + `)!`
 ];
@@ -248,7 +250,7 @@ let experiences = [
   ],*/
   [
     "Facebook AI Research (FAIR)",
-    "2019.10 - 2020.06 (Expected)",
+    "2019.10 - 2020.09 (Expected)",
     "Part-time visiting researcher",
     ["luke"]
   ],
@@ -290,7 +292,8 @@ let honors = [
 ];
 
 let services = [
-  //"Co-organizer: Workshop on Structured and Unstructured KBs (@ AKBC 2020)",
+  "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (@ NeurIPS 2020)", website_directory["efficientqa"]),
+  "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (@ AKBC 2020)", website_directory["uskb"]),
   "Reviewer/Program Committee: NeurIPS 2018, ICLR 2019, AKBC 2019, "
   + "ACL 2019, EMNLP 2019, AAAI 2020, ICLR 2020, ACL 2020, AKBC 2020, "
   + "NeurIPS 2020, AACL 2020, EMNLP 2020",
