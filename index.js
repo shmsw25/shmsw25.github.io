@@ -90,7 +90,7 @@ window.onload = function () {
   let expText = "";
   for (let i=0; i<experiences.length; i++) {
     console.assert(experiences[i].length == 4);
-    let verb = (experiences[i][0].includes("University")) ? "advised" : "mentored";
+    let verb = "supervised"; //(experiences[i][0].includes("University")) ? "advised" : "mentored";
     expText += "<h4>" + experiences[i][0] + " <sup>" + experiences[i][1] + "</sup></h4>";
     expText += "<p>" + experiences[i][2] + ", " + verb + " by ";
     for (let j=0; j<experiences[i][3].length; j++) {
