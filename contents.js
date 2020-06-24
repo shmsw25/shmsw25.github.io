@@ -22,7 +22,8 @@ let people = {
   'ledell': "Ledell Wu",
   'sergey': "Sergey Edunov",
   'scott': "Wen-tau Yih",
-  'julian': "Julian Michael"
+  'julian': "Julian Michael",
+  'patrick': "Patrick Lewis"
 };
 
 let people_website = {
@@ -186,7 +187,7 @@ let publications = [
        "preprint2020b"
       ],
       ["Dense Passage Retrieval for Open-domain Question Answering",
-       ['vlad*', 'barlas*', 'sewon', 'ledell', 'sergey', 'danqi', 'scott'],
+       ['vlad*', 'barlas*', 'sewon', 'patrick', 'ledell', 'sergey', 'danqi', 'scott'],
        "arXiv preprint arXiv:2004.04906",
        "2020",
        "preprint2020a"
