@@ -192,7 +192,7 @@ let publications = [
        "2020",
        "preprint2020a"
       ],
-      ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answerin",
+      ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv preprint arXiv:1911.03868",
        "2019",
