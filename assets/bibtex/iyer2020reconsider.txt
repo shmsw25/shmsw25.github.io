@@ -1,0 +1,6 @@
+@article{ iyer2020reconsider,
+    title={ {R}e{C}onsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering },
+    author={ Iyer, Srinivasan and Min, Sewon and Mehdad, Yashar and Yih, Wen-tau },
+    journal={ Preprint },
+    year={2020}
+}

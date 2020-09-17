@@ -1,6 +1,6 @@
-@article{ min2020ambigqa,
+@inproceedings{ min2020ambigqa,
     title={ {A}mbig{QA}: Answering Ambiguous Open-domain Questions },
     author={ Min, Sewon and Michael, Julian and Hajishirzi, Hannaneh and Zettlemoyer, Luke },
-    journal={ arXiv preprint arXiv:2004.10645 },
+    booktitle={ EMNLP },
     year={2020}
 }

@@ -25,11 +25,12 @@ window.onload = function () {
   let pubText = "";
   let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster", "BibTex"];
   for (let i=0; i<publications.length; i++) {
-    console.assert(publications[i].length===2);
+    console.assert(publications[i].length===3);
     pubText += "<h4><em>" + publications[i][0] + "</em></h4>";
-    let papers = publications[i][1];
+    let papers = publications[i][2];
     for (let j=0; j<papers.length; j++) {
       let paper = papers[j];
+      //let prefix = "<sup>[" + publications[i][1] + (papers.length-j) + "]</sup>";
       pubText += "<h4>" + paper[0] + "</h4>"; // title
       pubText += "<p>"; //authors
       for (let k=0; k<paper[1].length; k++) {
@@ -48,7 +49,8 @@ window.onload = function () {
       let keyword;
       if (paper.length===6) {
         // proceedings
-        pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[3]+". "+paper[4]+". ";
+        //pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[3]+". "+paper[4]+". ";
+        pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[4]+". ";
         keyword = paper[5];
       } else if (paper.length==5) {
         // arxiv

@@ -23,7 +23,15 @@ let people = {
   'sergey': "Sergey Edunov",
   'scott': "Wen-tau Yih",
   'julian': "Julian Michael",
-  'patrick': "Patrick Lewis"
+  'patrick': "Patrick Lewis",
+  'daniel': "Daniel Khashabi",
+  'tushar': "Tushar Khot",
+  'ashish': "Ashish Sabharwal",
+  'oyvind': "Oyvind Tafjord",
+  'peter': "Peter Clark",
+  'srini': "Srinivasan Iyer",
+  'belinda': "Belinda Z. Li",
+  'yashar': "Yashar Mehdad"
 };
 
 let people_website = {
@@ -41,12 +49,12 @@ let people_website = {
 
 let intros = [
   `  Hello! <br />
-  I am a 2nd-year Ph.D. student in the Natural Language Processing group at the University of Washington.
+  I am a 3rd-year Ph.D. student in the Natural Language Processing group at the University of Washington.
   I am fortunate to be advised by [hanna] and [luke].
   Prior to UW, I received B.S. in CSE from Seoul National University. <br /><br />
 
   My primary research interests lie in the area of natural language processing and machine learning.
-  My long-term goal is to build a machine that can understand natural language text and reason about it
+  My long-term goal of research is to build a machine that can understand natural language text and reason about it
   through answering questions.
   `
 ]
@@ -74,13 +82,20 @@ let pub_dictionary = {
   "iclr2017": {'paper': "https://arxiv.org/abs/1606.04582",
         'code': "https://github.com/seominjoon/qrn"},
   "mrqa2019": {'paper': "https://mrqa.github.io/assets/papers/43_Paper.pdf"},
-  "preprint2020b": {'paper': "https://arxiv.org/abs/2004.10645",
+  "min2020ambigqa": {'paper': "https://arxiv.org/abs/2004.10645",
         'website' :'https://nlp.cs.washington.edu/ambigqa/',
         'code': 'https://github.com/shmsw25/AmbigQA'},
-  "preprint2020a": {'paper': "https://arxiv.org/abs/2004.04906",
-        'code': 'https://github.com/facebookresearch/DPR'},
+  "karpukhin2020dense": {'paper': "https://arxiv.org/abs/2004.04906",
+        'code': 'https://github.com/facebookresearch/DPR',
+        'demo': 'http://qa.cs.washington.edu:2020/'},
   "preprint2019b": {'paper': "https://arxiv.org/abs/1911.03868"},
-  "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"}
+  "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"},
+  "khashabi2020unifiedqa": {
+        //'paper': "https://arxiv.org/abs/2005.00700",
+        //'code': "https://github.com/allenai/unifiedqa"
+  },
+  "iyer2020reconsider": {}, //'paper': "https://arxiv.org/abs/xxxx.xxxxx"},
+  "li2020efficient": {} //'paper': "https://arxiv.org/abs/xxxx.xxxxx"}
 }
 
 let website_directory = {
@@ -101,21 +116,51 @@ function add_info (paper, infos) {
 }
 
 let news = [
+  `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
+      + ` using ` + add_link("DPR", pub_dictionary["karpukhin2020dense"]["paper"]) + `. Give it a try!`,
   `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
   `, hosted at NeurIPS 2020.`,
   `06/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
   `, hosted at AKBC 2020.`,
   `04/2020: Our new preprint, ` +
-  add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["preprint2020b"]["paper"]) + `
-  is out! Visit ` + add_link("AmbigQA website", pub_dictionary["preprint2020b"]["website"]) + ` to download data and see examples.`,
+  add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["min2020ambigqa"]["paper"]) + `
+  is out! Visit ` + add_link("AmbigQA website", pub_dictionary["min2020ambigqa"]["website"]) + ` to download data and see samples.`,
   `04/2020: Our new preprint, ` +
-  add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["preprint2020a"]["paper"]) + `
-  is out (w/ ` + add_link("Code", pub_dictionary["preprint2020a"]["code"]) + `)!`
+  add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["karpukhin2020dense"]["paper"]) + `
+  is out (w/ ` + add_link("code", pub_dictionary["karpukhin2020dense"]["code"]) + `)!`
 ];
 
 let publications = [
-  [ "Peer-Reviewed Conference Papers",
+  [ "Peer-Reviewed Conference Papers", "C",
     [
+      ["Efficient One-Pass End-to-End Entity Linking for Questions",
+       ['belinda', 'sewon', 'srini', 'yashar', 'scott'],
+       "EMNLP (short)",
+       "",
+       "2020",
+       "li2020efficient"
+      ],
+      ["AmbigQA: Answering Ambiguous Open-domain Questions",
+       ['sewon', 'julian', 'hanna', 'luke'],
+       "EMNLP (long)",
+       "",
+       "2020",
+       "min2020ambigqa"
+      ],
+      ["Dense Passage Retrieval for Open-domain Question Answering",
+       ['vlad*', 'barlas*', 'sewon', 'patrick', 'ledell', 'sergey', 'danqi', 'scott'],
+       "EMNLP (long)",
+       "",
+       "2020",
+       "karpukhin2020dense"
+      ],
+      ["UnifiedQA: Crossing Format Boundaries With a Single QA System",
+       ['daniel', 'sewon', 'tushar', 'ashish', 'oyvind', 'peter', 'hanna'],
+       "Findings of EMNLP (long)",
+       "",
+       "2020",
+       "khashabi2020unifiedqa"
+      ],
       ["A Discrete Hard EM Approach for Weakly Supervised Question Answering",
        ['sewon', 'danqi', 'hanna', 'luke'],
        "EMNLP (long)",
@@ -167,7 +212,7 @@ let publications = [
       ]
     ]
   ],
-  [ "Peer-Reviewed Workshop Papers",
+  [ "Peer-Reviewed Workshop Papers", "W",
     [
       ["On Making Reading Comprehension More Comprehensive",
        ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
@@ -178,24 +223,18 @@ let publications = [
       ]
     ]
   ],
-  [ "Preprints",
+  [ "Preprints", "P",
     [
-      ["AmbigQA: Answering Ambiguous Open-domain Questions",
-       ['sewon', 'julian', 'hanna', 'luke'],
-       "arXiv preprint arXiv:2004.10645",
+      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
+       ['srini', 'sewon', 'yashar', 'scott'],
+       "arXiv preprint arXiv:xxxx.xxxxx",
        "2020",
-       "preprint2020b"
-      ],
-      ["Dense Passage Retrieval for Open-domain Question Answering",
-       ['vlad*', 'barlas*', 'sewon', 'patrick', 'ledell', 'sergey', 'danqi', 'scott'],
-       "arXiv preprint arXiv:2004.04906",
-       "2020",
-       "preprint2020a"
+       "iyer2020reconsider"
       ],
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv preprint arXiv:1911.03868",
-       "2019",
+       "2020",
        "preprint2019b"
       ],
       ["Question Answering is a Format; When is it Useful?",
@@ -243,15 +282,15 @@ let experiences = [
     "Ph.D. student",
     ["hanna", "luke"]
   ],
-  /*[
+  [
     "Google AI Research",
-    "2020.06 - 2020.09 (Expected)",
+    "2020.09 - 2020.12 (Expected)",
     "Research intern",
     ["kenton", "kristina"]
-  ],*/
+  ],
   [
     "Facebook AI Research (FAIR)",
-    "2019.10 - 2020.09 (Expected)",
+    "2019.10 - 2020.09",
     "Part-time visiting researcher",
     ["luke"]
   ],
@@ -270,7 +309,7 @@ let experiences = [
   [
     "Seoul National University",
     "2016.07 - 08",
-    "Undergraduate intern at <a href='http://vision.snu.ac.kr/' target='_blank'>Vision&Learning Lab</a>",
+    "Undergraduate intern at <a href='http://vision.snu.ac.kr/' target='_blank'>Vision & Learning Lab</a>",
     ["gunhee"]
   ],
   [
@@ -293,13 +332,18 @@ let honors = [
 ];
 
 let services = [
-  "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (@ NeurIPS 2020)", website_directory["efficientqa"]),
-  "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (@ AKBC 2020)", website_directory["uskb"]),
-  "Reviewer/Program Committee: NeurIPS 2018, ICLR 2019, AKBC 2019, "
-  + "ACL 2019, EMNLP 2019, AAAI 2020, ICLR 2020, ACL 2020, AKBC 2020, "
-  + "NeurIPS 2020, AACL 2020, EMNLP 2020",
-  "Reviewer/Program Committee: Student Research Workshop (SRW @ ACL 2019), "
-  + "Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019), "
-  + "Student Research Workshop (SRW @ ACL 2020),",
+  "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
+  "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
+  `
+  Reviewer/Program Committee:
+  <ul style="padding-left: 40px;">
+    <li>NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), AKBC (2019, 2020), AACL (2020)</li>
+    <li>ML/AI conferences: NeurIPS (2018, 2020), ICLR (2019, 2020, 2021), AAAI (2020, 2021)</li>
+    <li>
+      Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021),
+      Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
+    </li>
+  </ul>
+  `,
   "UW CSE Prospective Student Committee Chair (2019)"
 ]
