@@ -225,12 +225,12 @@ let publications = [
   ],
   [ "Preprints", "P",
     [
-      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
+      /*["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
        "arXiv preprint arXiv:xxxx.xxxxx",
        "2020",
        "iyer2020reconsider"
-      ],
+      ],*/
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv preprint arXiv:1911.03868",
