@@ -90,12 +90,11 @@ let pub_dictionary = {
         'demo': 'http://qa.cs.washington.edu:2020/'},
   "preprint2019b": {'paper': "https://arxiv.org/abs/1911.03868"},
   "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"},
-  "khashabi2020unifiedqa": {
-        //'paper': "https://arxiv.org/abs/2005.00700",
-        //'code': "https://github.com/allenai/unifiedqa"
-  },
+  "khashabi2020unifiedqa": {'paper': "https://arxiv.org/abs/2005.00700",
+        'code': "https://github.com/allenai/unifiedqa"},
   "iyer2020reconsider": {}, //'paper': "https://arxiv.org/abs/xxxx.xxxxx"},
-  "li2020efficient": {} //'paper': "https://arxiv.org/abs/xxxx.xxxxx"}
+  "li2020efficient": {'paper': "https://arxiv.org/abs/2010.02413",
+        'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"}
 }
 
 let website_directory = {
