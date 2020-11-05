@@ -199,6 +199,12 @@ sup{
   	width: 50%;
 }
 
+.column-25 {
+  	float: left;
+  	width: 25%;
+}
+
+
 /* Clear floats after the columns */
 .row:after {
   	content: "";

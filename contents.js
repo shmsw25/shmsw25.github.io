@@ -84,7 +84,8 @@ let pub_dictionary = {
   "mrqa2019": {'paper': "https://mrqa.github.io/assets/papers/43_Paper.pdf"},
   "min2020ambigqa": {'paper': "https://arxiv.org/abs/2004.10645",
         'website' :'https://nlp.cs.washington.edu/ambigqa/',
-        'code': 'https://github.com/shmsw25/AmbigQA'},
+        'code': 'https://github.com/shmsw25/AmbigQA',
+    	'slides': 'ambigqa_slides.pdf'},
   "karpukhin2020dense": {'paper': "https://arxiv.org/abs/2004.04906",
         'code': 'https://github.com/facebookresearch/DPR',
         'demo': 'http://qa.cs.washington.edu:2020/'},
@@ -92,14 +93,15 @@ let pub_dictionary = {
   "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"},
   "khashabi2020unifiedqa": {'paper': "https://arxiv.org/abs/2005.00700",
         'code': "https://github.com/allenai/unifiedqa"},
-  "iyer2020reconsider": {}, //'paper': "https://arxiv.org/abs/xxxx.xxxxx"},
+  "iyer2020reconsider": {'paper': "https://arxiv.org/abs/2010.10757"},
   "li2020efficient": {'paper': "https://arxiv.org/abs/2010.02413",
         'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"}
 }
 
 let website_directory = {
   "uskb": "https://uskb-workshop.github.io/",
-  "efficientqa": "http://efficientqa.github.io/"
+  "efficientqa": "http://efficientqa.github.io/",
+  "mrqa": "https://mrqa.github.io/"
 }
 
 function add_link (title, link) {
@@ -118,7 +120,7 @@ let news = [
   `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
       + ` using ` + add_link("DPR", pub_dictionary["karpukhin2020dense"]["paper"]) + `. Give it a try!`,
   `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
-  `, hosted at NeurIPS 2020.`,
+  `, hosted at NeurIPS 2020. [` + add_link("leaderboard", "https://ai.google.com/research/NaturalQuestions/efficientqa") + `]`,
   `06/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
   `, hosted at AKBC 2020.`,
   `04/2020: Our new preprint, ` +
@@ -224,12 +226,12 @@ let publications = [
   ],
   [ "Preprints", "P",
     [
-      /*["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
+      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
-       "arXiv preprint arXiv:xxxx.xxxxx",
+       "arXiv preprint arXiv:2010.10757",
        "2020",
        "iyer2020reconsider"
-      ],*/
+      ],
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv preprint arXiv:1911.03868",
@@ -267,7 +269,7 @@ let educations = [
   ],
   [
     "Gyeonggi Science High School",
-    "2011.03 - 2013.02",
+    "2011.03 - 2014.02",
     [
       "Specialized high school for students talented in math and science"
     ],
@@ -331,12 +333,13 @@ let honors = [
 ];
 
 let services = [
+  "Co-organizer: " + add_link("3rd Workshop on Machine Reading for Question Answering (MRQA)", website_directory["mrqa"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <li>NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), AKBC (2019, 2020), AACL (2020)</li>
+    <li>NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), NAACL (2021), AKBC (2019, 2020), AACL (2020)</li>
     <li>ML/AI conferences: NeurIPS (2018, 2020), ICLR (2019, 2020, 2021), AAAI (2020, 2021)</li>
     <li>
       Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021),
