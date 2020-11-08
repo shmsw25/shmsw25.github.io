@@ -334,7 +334,7 @@ let honors = [
 ];
 
 let services = [
-  "Co-organizer: " + add_link("3rd Workshop on Machine Reading for Question Answering (MRQA)", website_directory["mrqa"]),
+  "Co-organizer: " + add_link("3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
   `
