@@ -39,10 +39,10 @@ let people_website = {
   'luke': "https://www.cs.washington.edu/people/faculty/lsz",
   'minjoon': "https://seominjoon.github.io",
   'ali': "https://homes.cs.washington.edu/~ali/index.html",
-  'caiming': "http://www.stat.ucla.edu/~caiming/",
+  'caiming': "http://cmxiong.com/",
   'richard': "http://www.socher.org/",
-  'gunhee': "https://www.cs.cmu.edu/~gunhee/",
-  'sanggoo': "http://ids.snu.ac.kr/wiki/Sang-goo_Lee",
+  'gunhee': "https://vision.snu.ac.kr/gunhee/",
+  'sanggoo': "http://ids.snu.ac.kr/site/members/M_Sang-goo_Lee.html",
   'kristina': "http://kristinatoutanova.com/",
   'kenton': "https://kentonl.com"
 };
