@@ -230,19 +230,19 @@ let publications = [
     [
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
-       "arXiv preprint arXiv:2010.10757",
+       "arXiv:2010.10757",
        "2020",
        "iyer2020reconsider"
       ],
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
-       "arXiv preprint arXiv:1911.03868",
+       "arXiv:1911.03868",
        "2020",
        "preprint2019b"
       ],
       ["Question Answering is a Format; When is it Useful?",
        ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
-       "arXiv preprint arXiv:1909.11291",
+       "arXiv:1909.11291",
        "2019",
        "preprint2019a"
       ]
