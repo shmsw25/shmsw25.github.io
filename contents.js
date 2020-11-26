@@ -300,7 +300,7 @@ let experiences = [
   [
     "Salesforce Research (Metamind)",
     "2017.11 - 2018.02",
-    "Research Intern",
+    "Research intern",
     ["caiming"]
   ],
   [
@@ -335,19 +335,21 @@ let honors = [
 ];
 
 let services = [
-  "Co-organizer: " + add_link("3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
+  "Co-organizer: " + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <li>NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), NAACL (2021), AKBC (2019, 2020), AACL (2020)</li>
+    <li>*CL conferences: ACL (2019, 2020), EMNLP (2019, 2020), NAACL (2021), AACL (2020)</li>
     <li>ML/AI conferences: NeurIPS (2018, 2020), ICLR (2019, 2020, 2021), AAAI (2020, 2021)</li>
+    <li>Other conferences: AKBC (2019, 2020)</li>
     <li>
       Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021),
-      Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
+      The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
     </li>
   </ul>
   `,
-  "UW CSE Prospective Student Committee Chair (2019)"
+  "Prospective Student Committee Chair for UW CSE Ph.D. Program (2019)",
+  "Admission Committee Member for UW CSE Ph.D. Program (2021)"
 ]
