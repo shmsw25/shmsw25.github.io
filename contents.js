@@ -341,9 +341,8 @@ let services = [
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <li>*CL conferences: ACL (2019, 2020), EMNLP (2019, 2020), NAACL (2021), AACL (2020)</li>
+    <li>*CL/NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
     <li>ML/AI conferences: NeurIPS (2018, 2020), ICLR (2019, 2020, 2021), AAAI (2020, 2021)</li>
-    <li>Other conferences: AKBC (2019, 2020)</li>
     <li>
       Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021),
       The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
