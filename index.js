@@ -14,13 +14,43 @@ window.onload = function () {
         text =  text.substring(0, start) + "<a href='" + pub_dictionary[key] + "' target='_blank'>" + key + "</a>" + text.substring(end+1, text.length);
       }
     }
-    introText += text+"<br /><br />";
+    introText += text + "<br /><br />News:<div id='news-text'></div>";
   }
-  // load news
-  for (let i=0; i<news.length; i++) {
-    introText += "<span class='glyphicon glyphicon-ok'></span> " + news[i] + "<br />";
+  function _add_button(button_id, button_text) {
+    return `<span id='` + button_id + `' style='
+      cursor: pointer;
+      margin-left: 10px;
+    '>
+    [<a>` + button_text + `</a>]
+    </span>`;
   }
+  introText += _add_button('news-load', 'Load all') + _add_button('news-collapse', 'Collapse');
   document.getElementById("intro-text").innerHTML += introText;
+
+  // load news
+  function _load_news(n_news) {
+    let newsText = "";
+    for (let i=0; i<n_news; i++) {
+      newsText += "<span id='news-" + i + "'><span class='glyphicon glyphicon-ok'></span> " + news[i] + "</span><br />";
+    }
+    newsText += "<p style='margin-top: 5px'>";
+    document.getElementById("news-text").innerHTML = newsText;
+  }
+  _load_news(2);
+  
+  // control # of news to show
+  $('#news-collapse').hide();
+  $('#news-load').click(function(){
+    _load_news(news.length);
+    $('#news-collapse').show();
+    $('#news-load').hide();
+  })
+  $('#news-collapse').click(function(){
+    _load_news(2);
+    $('#news-collapse').hide();
+    $('#news-load').show();
+  })
+
   // load publications
   let pubText = "";
   let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster", "BibTex"];
@@ -41,7 +71,11 @@ window.onload = function () {
         if (author.endsWith('*')) {
           pubText += people[author.substring(0, author.length-1)]+"*";
         } else {
-          pubText += people[author];
+          if (author in people) {
+            pubText += people[author];
+          } else {
+            pubText += author;
+          }
         }
       }
       pubText += "</p>"
@@ -66,7 +100,7 @@ window.onload = function () {
           let key = ordered_options[k];
           let value = optional_dict[key];
           if (key==="slides" || key==="poster") {
-            value = "assets/"+value;
+            value = "assets/slides/"+value;
           } else if (key==="BibTex") {
             value = "assets/bibtex/"+value;
           }

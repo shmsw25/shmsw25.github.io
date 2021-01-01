@@ -31,7 +31,16 @@ let people = {
   'peter': "Peter Clark",
   'srini': "Srinivasan Iyer",
   'belinda': "Belinda Z. Li",
-  'yashar': "Yashar Mehdad"
+  'yashar': "Yashar Mehdad",
+  'adam': "Adam Roberts",
+  'chris': "Chris Alberti",
+  'colin': "Colin Raffel",
+  'eunsol': "Eunsol Choi",
+  'jennimaria': "Jennimaria Palomaki",
+  'jordan': "Jordan Boyd-Graber",
+  'kelvin': "Kelvin Guu",
+  'michael': "Michael Collins",
+  'tom': "Tom Kwiatkowski"
 };
 
 let people_website = {
@@ -54,8 +63,9 @@ let intros = [
   Prior to UW, I received B.S. in CSE from Seoul National University. <br /><br />
 
   My primary research interests lie in the area of natural language processing and machine learning.
-  My long-term goal of research is to build a machine that can understand natural language text and reason about it
-  through answering questions.
+  My long-term goal of research is to build a system that can understand natural language text, reason about it, and
+  answer to any real-world questions.
+
   `
 ]
 
@@ -97,7 +107,10 @@ let pub_dictionary = {
         'code': "https://github.com/allenai/unifiedqa"},
   "iyer2020reconsider": {'paper': "https://arxiv.org/abs/2010.10757"},
   "li2020efficient": {'paper': "https://arxiv.org/abs/2010.02413",
-        'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"}
+        'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"},
+  "min2021neurips": {
+  	"paper": "assets/papers/efficientqa.pdf"
+  }
 }
 
 let website_directory = {
@@ -119,6 +132,14 @@ function add_info (paper, infos) {
 }
 
 let news = [
+  `01/2021: 
+  We, the NeurIPS 2020 EfficientQA organizers, together with participants,
+  wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
+  	Systems, Analyses and Lessons Learned`, pub_dictionary["min2021neurips"]["paper"]) + `.
+  The video of the NeuIPS event is also available ` + add_link(`here`, "https://www.youtube.com/watch?v=3tdWV4vAf2I") + `.
+  `,
+  `12/2020: I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
+  `, hosted at EMNLP 2021. Stay tuned for Call for papers!`,
   `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
       + ` using ` + add_link("DPR", pub_dictionary["karpukhin2020dense"]["paper"]) + `. Give it a try!`,
   `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
@@ -228,6 +249,20 @@ let publications = [
   ],
   [ "Preprints", "P",
     [
+      ["NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned",
+       //['<strong>Sewon Min</strong> et al.'],
+       ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
+       'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
+       "arXiv preprint",
+       "2021",
+       "min2021neurips"
+      ],
+      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
+       ['srini', 'sewon', 'yashar', 'scott'],
+       "arXiv:2010.10757",
+       "2020",
+       "iyer2020reconsider"
+      ],
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
        "arXiv:2010.10757",
@@ -287,14 +322,14 @@ let experiences = [
   ],
   [
     "Google AI Research",
-    "2020.09 - 2020.12 (Expected)",
-    "Research intern",
+    "2020.09 - 2021.03 (Expected)",
+    "Research intern / student researcher",
     ["kenton", "kristina"]
   ],
   [
     "Facebook AI Research (FAIR)",
     "2019.10 - 2020.09",
-    "Part-time visiting researcher",
+    "Visiting student researcher",
     ["luke"]
   ],
   [
