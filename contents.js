@@ -365,7 +365,7 @@ let honors = [
   "Best Undergraduate Thesis Award granted by CSE, Seoul National University (2018)",
   "Full Scholarship for all semesters attended at Seoul National University (merit-based, 2014-2018)",
   "ICLR Travel Award (2018)",
-  "<a href='https://www.google.cn/intl/en/university/research/travelgrants.html' target='_blank'>Google Travel Grants</a> (2017, 2018)",
+  "<a href='https://buildyourfuture.withgoogle.com/scholarships/google-travel-scholarships/' target='_blank'>Google Travel Grants</a> (2017, 2018)",
   "<a href='http://cse.snu.ac.kr/scsc/node/19' target='_blank'>Samsung Convergence Software Course</a> Mentor Scholarship (2017)"
 ];
 
