@@ -263,12 +263,6 @@ let publications = [
        "2020",
        "iyer2020reconsider"
       ],
-      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
-       ['srini', 'sewon', 'yashar', 'scott'],
-       "arXiv:2010.10757",
-       "2020",
-       "iyer2020reconsider"
-      ],
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv:1911.03868",
