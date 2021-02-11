@@ -36,7 +36,7 @@ window.onload = function () {
     newsText += "<p style='margin-top: 5px'>";
     document.getElementById("news-text").innerHTML = newsText;
   }
-  _load_news(2);
+  _load_news(3);
   
   // control # of news to show
   $('#news-collapse').hide();
@@ -46,7 +46,7 @@ window.onload = function () {
     $('#news-load').hide();
   })
   $('#news-collapse').click(function(){
-    _load_news(2);
+    _load_news(3);
     $('#news-collapse').hide();
     $('#news-load').show();
   })
