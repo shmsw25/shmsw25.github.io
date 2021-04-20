@@ -36,7 +36,7 @@ window.onload = function () {
     newsText += "<p style='margin-top: 5px'>";
     document.getElementById("news-text").innerHTML = newsText;
   }
-  _load_news(3);
+  _load_news(4);
   
   // control # of news to show
   $('#news-collapse').hide();
@@ -46,7 +46,7 @@ window.onload = function () {
     $('#news-load').hide();
   })
   $('#news-collapse').click(function(){
-    _load_news(3);
+    _load_news(4);
     $('#news-collapse').hide();
     $('#news-load').show();
   })
@@ -54,63 +54,69 @@ window.onload = function () {
   // load publications
   let pubText = "";
   let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster", "BibTex"];
-  for (let i=0; i<publications.length; i++) {
-    console.assert(publications[i].length===3);
-    pubText += "<h4><em>" + publications[i][0] + "</em></h4>";
-    let papers = publications[i][2];
-    for (let j=0; j<papers.length; j++) {
-      let paper = papers[j];
-      //let prefix = "<sup>[" + publications[i][1] + (papers.length-j) + "]</sup>";
-      pubText += "<h4>" + paper[0] + "</h4>"; // title
-      pubText += "<p>"; //authors
-      for (let k=0; k<paper[1].length; k++) {
-        let author = paper[1][k];
-        if (k>0) {
-          pubText += ", ";
-        }
-        if (author.endsWith('*')) {
-          pubText += people[author.substring(0, author.length-1)]+"*";
-        } else {
-          if (author in people) {
-            pubText += people[author];
-          } else {
-            pubText += author;
-          }
-        }
-      }
-      pubText += "</p>"
-      pubText += "<p>"
-      let keyword;
-      if (paper.length===6) {
-        // proceedings
-        //pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[3]+". "+paper[4]+". ";
-        pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[4]+". ";
-        keyword = paper[5];
-      } else if (paper.length==5) {
-        // arxiv
-        pubText += "<em>"+paper[2]+"</em>. "+paper[3]+". ";
-        keyword = paper[4];
-      } else {
-        console.assert(false);
-      }
-      // optional things
-      let optional_dict = pub_dictionary[keyword];
-      for (let k=0; k<ordered_options.length; k++) {
-        if (ordered_options[k] in optional_dict) {
-          let key = ordered_options[k];
-          let value = optional_dict[key];
-          if (key==="slides" || key==="poster") {
-            value = "assets/slides/"+value;
-          } else if (key==="BibTex") {
-            value = "assets/bibtex/"+value;
-          }
-          pubText += "[<a href='"+value+"' target='_blank'>"+key+"</a>] ";
-        }
-      }
-      pubText += "[<a href='assets/bibtex/"+keyword+".txt' target='_blank'>BibTeX</a>] ";
-      pubText += "</p>"
+  
+  let papers = publications;
+
+  //for (let i=0; i<publications.length; i++) {
+  //console.assert(publications[i].length===3);
+  //pubText += "<h4><em>" + publications[i][0] + "</em></h4>";
+  //let papers = publications[i][2];
+  for (let j=0; j<papers.length; j++) {
+    let paper = papers[j];
+    if (j===0 || paper[4]!=papers[j-1][4]) {
+      pubText += "<h4 class='year'>" + paper[4] + "</h4>";
     }
+
+    //let prefix = "<sup>[" + publications[i][1] + (papers.length-j) + "]</sup>";
+    pubText += "<h4>" + paper[0] + "</h4>"; // title
+    pubText += "<p>"; //authors
+    for (let k=0; k<paper[1].length; k++) {
+      let author = paper[1][k];
+      if (k>0) {
+        pubText += ", ";
+      }
+      if (author.endsWith('*')) {
+        pubText += people[author.substring(0, author.length-1)]+"*";
+      } else {
+        if (author in people) {
+          pubText += people[author];
+        } else {
+          pubText += author;
+        }
+      }
+    }
+    pubText += "</p>"
+    pubText += "<p>"
+    let keyword;
+    if (paper[2].startsWith("arXiv")) {
+      // arxiv
+      pubText += "<em>"+paper[2]+"</em>. "+paper[4]+". ";
+      keyword = paper[5];
+    } else {
+      // proceedings
+      //pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[3]+". "+paper[4]+". ";
+      pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[4]+". ";
+      keyword = paper[5];
+    }
+
+    // optional things
+    let optional_dict = pub_dictionary[keyword];
+    for (let k=0; k<ordered_options.length; k++) {
+      if (ordered_options[k] in optional_dict) {
+        let key = ordered_options[k];
+        let value = optional_dict[key];
+        if (key==="slides" || key==="poster") {
+          value = "assets/slides/"+value;
+        } else if (key==="BibTex") {
+          value = "assets/bibtex/"+value;
+        }
+        pubText += "[<a href='"+value+"' target='_blank'>"+key+"</a>] ";
+      }
+    }
+    pubText += "[<a href='assets/bibtex/"+keyword+".txt' target='_blank'>BibTeX</a>] ";
+    pubText += "</p>"
   }
+  //}
   document.getElementById("publication").innerHTML += pubText + "<br />*: equal contribution";
   // load education
   let eduText = "";

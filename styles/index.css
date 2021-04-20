@@ -133,11 +133,6 @@ sup{
     background-color: #FFC0CB;
 }
 
-#project-container {
-	display: none;
-}
-
-
 /* info */
 
 #info img{
@@ -145,25 +140,6 @@ sup{
 	border-radius: 50%;
 	max-width: 300px;
 	height: auto;
-}
-
-/* project container */
-
-#project-container .field {
-	margin-bottom: 50px;
-	clear: both;
-}
-
-#project-container img {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: 250px;
-	width: 600px;
-	border: solid gray 1px;
-	padding: 5px;
-	display: inline;
 }
 
 /* fields */
@@ -191,6 +167,15 @@ sup{
 #education span.loc, #experience span.loc {
 	border: solid 1px #7777aa;
 	color: #7777aa;
+}
+
+.year {
+    border-top: 1px solid #ccc;
+    color: #ccc;
+    margin: 2.5ex 0 -2.5ex 0;
+    /*padding-top: 1ex;*/
+    text-align: right;
+    font-size: 150%;
 }
 
 .row {

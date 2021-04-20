@@ -40,7 +40,8 @@ let people = {
   'jordan': "Jordan Boyd-Graber",
   'kelvin': "Kelvin Guu",
   'michael': "Michael Collins",
-  'tom': "Tom Kwiatkowski"
+  'tom': "Tom Kwiatkowski",
+  'mingwei': "Ming-Wei Chang"
 };
 
 let people_website = {
@@ -64,7 +65,10 @@ let intros = [
 
   My primary research interests lie in the area of natural language processing and machine learning.
   My long-term goal of research is to build a system that can understand natural language text, reason about it, and
-  answer to any real-world questions.
+  answer to any real-world questions. <br /><br />
+
+  During my Ph.D., I have been fortunate to be a visiting researcher / an intern at Facebook AI Research and Google AI Research,
+  and work closely with Allen Institute for AI.
 
   `
 ]
@@ -110,6 +114,9 @@ let pub_dictionary = {
         'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"},
   "min2021neurips": {
   	"paper": "assets/papers/efficientqa.pdf"
+  },
+  "min2021joint": {
+    "paper": "https://arxiv.org/abs/2104.08445"
   }
 }
 
@@ -132,6 +139,9 @@ function add_info (paper, infos) {
 }
 
 let news = [
+  `04/2021: Our new preprint, ` + 
+  add_link("Joint Passage Ranking for Diverse Multi-Answer Retrieval", pub_dictionary["min2021joint"]["paper"]) + `
+  is out! This is done as part of my internship at Google.`,
   `01/2021: 
   We, the NeurIPS 2020 EfficientQA organizers, together with participants,
   wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
@@ -154,9 +164,31 @@ let news = [
   is out (w/ ` + add_link("code", pub_dictionary["karpukhin2020dense"]["code"]) + `)!`
 ];
 
+
 let publications = [
-  [ "Peer-Reviewed Conference Papers", "C",
-    [
+     ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
+      ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
+      "arXiv preprint",
+      "",
+      "2021",
+      "min2021joint"
+      ],
+      ["NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned",
+       //['<strong>Sewon Min</strong> et al.'],
+       ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
+       'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
+       "arXiv preprint",
+       "",
+       "2021",
+       "min2021neurips"
+      ],
+      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
+       ['srini', 'sewon', 'yashar', 'scott'],
+       "NAACL (short)",
+       "",
+       "2021",
+       "iyer2020reconsider"
+      ],
       ["Efficient One-Pass End-to-End Entity Linking for Questions",
        ['belinda', 'sewon', 'srini', 'yashar', 'scott'],
        "EMNLP (short)",
@@ -185,12 +217,33 @@ let publications = [
        "2020",
        "khashabi2020unifiedqa"
       ],
+      ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
+       ['sewon', 'danqi', 'luke', 'hanna'],
+       "arXiv:1911.03868",
+       "",
+       "2019",
+       "preprint2019b"
+      ],
       ["A Discrete Hard EM Approach for Weakly Supervised Question Answering",
        ['sewon', 'danqi', 'hanna', 'luke'],
        "EMNLP (long)",
        "Hong Kong, China",
        "2019",
        "emnlp2019"
+      ],
+      ["On Making Reading Comprehension More Comprehensive",
+       ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
+       "MRQA @ EMNLP",
+       "Hong Kong, China",
+       "2019",
+       "mrqa2019"
+      ],
+      ["Question Answering is a Format; When is it Useful?",
+       ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
+       "arXiv:1909.11291",
+       "",
+       "2019",
+       "preprint2019a"
       ],
       ["Multi-hop Reading Comprehension through Question Decomposition and Rescoring",
        ['sewon', 'victor', 'luke', 'hanna'],
@@ -234,49 +287,6 @@ let publications = [
        "2017",
        "iclr2017"
       ]
-    ]
-  ],
-  [ "Peer-Reviewed Workshop Papers", "W",
-    [
-      ["On Making Reading Comprehension More Comprehensive",
-       ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
-       "MRQA @ EMNLP",
-       "Hong Kong, China",
-       "2019",
-       "mrqa2019"
-      ]
-    ]
-  ],
-  [ "Preprints", "P",
-    [
-      ["NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned",
-       //['<strong>Sewon Min</strong> et al.'],
-       ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
-       'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
-       "arXiv preprint",
-       "2021",
-       "min2021neurips"
-      ],
-      ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
-       ['srini', 'sewon', 'yashar', 'scott'],
-       "arXiv:2010.10757",
-       "2020",
-       "iyer2020reconsider"
-      ],
-      ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
-       ['sewon', 'danqi', 'luke', 'hanna'],
-       "arXiv:1911.03868",
-       "2020",
-       "preprint2019b"
-      ],
-      ["Question Answering is a Format; When is it Useful?",
-       ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
-       "arXiv:1909.11291",
-       "2019",
-       "preprint2019a"
-      ]
-    ]
-  ]
 ];
 
 let educations = [
@@ -316,7 +326,7 @@ let experiences = [
   ],
   [
     "Google AI Research",
-    "2020.09 - 2021.03 (Expected)",
+    "2020.09 - 2021.03",
     "Research intern / student researcher",
     ["kenton", "kristina"]
   ],
@@ -370,11 +380,14 @@ let services = [
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <li>*CL/NLP conferences: ACL (2019, 2020), EMNLP (2019, 2020), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
-    <li>ML/AI conferences: NeurIPS (2018, 2020), ICLR (2019, 2020, 2021), AAAI (2020, 2021)</li>
+    <li>*CL/NLP conferences: ACL (2019, 2020, 2021), EMNLP (2019, 2020, 2021), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
+    <li>ML/AI conferences: NeurIPS (2018, 2020, 2021), ICLR (2019, 2020, 2021, 2022), AAAI (2020, 2021), ICML (2021)</li>
     <li>
-      Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021),
+      Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021, SRW @ ACL 2021),
       The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
+    </li>
+    <li>
+      Competition Proposals: NeurIPS (2021)
     </li>
   </ul>
   `,
