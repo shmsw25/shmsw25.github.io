@@ -63,12 +63,14 @@ window.onload = function () {
   //let papers = publications[i][2];
   for (let j=0; j<papers.length; j++) {
     let paper = papers[j];
-    if (j===0 || paper[4]!=papers[j-1][4]) {
-      pubText += "<h4 class='year'>" + paper[4] + "</h4>";
-    }
+    let isFirst = j===0 || paper[4]!=papers[j-1][4];
 
-    //let prefix = "<sup>[" + publications[i][1] + (papers.length-j) + "]</sup>";
-    pubText += "<h4>" + paper[0] + "</h4>"; // title
+    if (isFirst) {
+      pubText += "<h4 class='year'>" + paper[4] + "</h4>";
+      pubText += "<h4 class='first'>" + paper[0] + "</h4>"; // title
+    } else {
+      pubText += "<h4>" + paper[0] + "</h4>"; // title
+    }
     pubText += "<p>"; //authors
     for (let k=0; k<paper[1].length; k++) {
       let author = paper[1][k];
