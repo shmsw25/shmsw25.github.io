@@ -36,7 +36,7 @@ window.onload = function () {
     newsText += "<p style='margin-top: 5px'>";
     document.getElementById("news-text").innerHTML = newsText;
   }
-  _load_news(4);
+  _load_news(5);
   
   // control # of news to show
   $('#news-collapse').hide();
@@ -46,7 +46,7 @@ window.onload = function () {
     $('#news-load').hide();
   })
   $('#news-collapse').click(function(){
-    _load_news(4);
+    _load_news(5);
     $('#news-collapse').hide();
     $('#news-load').show();
   })
@@ -90,7 +90,7 @@ window.onload = function () {
     pubText += "</p>"
     pubText += "<p>"
     let keyword;
-    if (paper[2].startsWith("arXiv")) {
+    if (paper[2].startsWith("arXiv") || paper[2].includes("Tutorial")) {
       // arxiv
       pubText += "<em>"+paper[2]+"</em>. "+paper[4]+". ";
       keyword = paper[5];

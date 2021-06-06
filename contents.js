@@ -41,7 +41,8 @@ let people = {
   'kelvin': "Kelvin Guu",
   'michael': "Michael Collins",
   'tom': "Tom Kwiatkowski",
-  'mingwei': "Ming-Wei Chang"
+  'mingwei': "Ming-Wei Chang",
+  'jungsoo': "Jungsoo Park"
 };
 
 let people_website = {
@@ -69,7 +70,6 @@ let intros = [
 
   During my Ph.D., I have been fortunate to be a visiting researcher / an intern at Facebook AI Research and Google AI Research,
   and work closely with Allen Institute for AI.
-
   `
 ]
 
@@ -95,7 +95,7 @@ let pub_dictionary = {
         'poster': "acl2017_poster.pdf"},
   "iclr2017": {'paper': "https://arxiv.org/abs/1606.04582",
         'code': "https://github.com/seominjoon/qrn"},
-  "mrqa2019": {'paper': "https://mrqa.github.io/assets/papers/43_Paper.pdf"},
+  "mrqa2019": {'paper': "https://mrqa.github.io/2019/assets/papers/43_Paper.pdf"},
   "min2020ambigqa": {'paper': "https://arxiv.org/abs/2004.10645",
         'website' :'https://nlp.cs.washington.edu/ambigqa/',
         'code': 'https://github.com/shmsw25/AmbigQA',
@@ -109,14 +109,22 @@ let pub_dictionary = {
   "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"},
   "khashabi2020unifiedqa": {'paper': "https://arxiv.org/abs/2005.00700",
         'code': "https://github.com/allenai/unifiedqa"},
-  "iyer2020reconsider": {'paper': "https://arxiv.org/abs/2010.10757"},
+  "iyer2021reconsider": {'paper': "https://arxiv.org/abs/2010.10757",
+        'code': "https://github.com/facebookresearch/reconsider"},
   "li2020efficient": {'paper': "https://arxiv.org/abs/2010.02413",
         'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"},
   "min2021neurips": {
-  	"paper": "assets/papers/efficientqa.pdf"
+  	"paper": "https://efficientqa.github.io/assets/report.pdf"
   },
   "min2021joint": {
     "paper": "https://arxiv.org/abs/2104.08445"
+  },
+  "beltagy2021beyond": {
+    "website": "https://github.com/allenai/naacl2021-longdoc-tutorial"
+  },
+  "part2021faviq": {
+    "paper": "",
+    "website": "https://faviq.github.io"
   }
 }
 
@@ -139,6 +147,8 @@ function add_info (paper, infos) {
 }
 
 let news = [
+  `06/2021: I co-taught the NAACL-HLT tutorial on ` + 
+  add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `.`,
   `04/2021: Our new preprint, ` + 
   add_link("Joint Passage Ranking for Diverse Multi-Answer Retrieval", pub_dictionary["min2021joint"]["paper"]) + `
   is out! This is done as part of my internship at Google.`,
@@ -147,7 +157,7 @@ let news = [
   wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
   	Systems, Analyses and Lessons Learned`, pub_dictionary["min2021neurips"]["paper"]) + `.
   The video of the NeuIPS event is also available ` + add_link(`here`, "https://www.youtube.com/watch?v=3tdWV4vAf2I") + `.
-  `,
+   (Update 05/2021: The paper was accepted to PMLR.)`,
   `12/2020: I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
   `, hosted at EMNLP 2021. Stay tuned for Call for papers!`,
   `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
@@ -166,6 +176,12 @@ let news = [
 
 
 let publications = [
+     /*["FaVIQ: Fact Verification from Information seeking Questions",
+      ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
+      "arXiv preprint",
+      "",
+      "2021",
+      "part2021faviq"],*/
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
       "arXiv preprint",
@@ -177,17 +193,24 @@ let publications = [
        //['<strong>Sewon Min</strong> et al.'],
        ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
        'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
-       "arXiv preprint",
+       "Maching Learning Research (PMLR)",
        "",
        "2021",
        "min2021neurips"
       ],
+      ["Beyond Paragraphs: NLP for Long Sequences",
+       ["Iz Beltagy", "Arman Cohan",'hanna', 'sewon', "Matthew E. Peters"],
+        "NAACL-HLT Tutorial",
+        "",
+        "2021",
+        "beltagy2021beyond"
+      ],
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
-       "NAACL (short)",
+       "NAACL-HLT (short)",
        "",
        "2021",
-       "iyer2020reconsider"
+       "iyer2021reconsider"
       ],
       ["Efficient One-Pass End-to-End Entity Linking for Questions",
        ['belinda', 'sewon', 'srini', 'yashar', 'scott'],
@@ -325,16 +348,16 @@ let experiences = [
     ["hanna", "luke"]
   ],
   [
+    "Facebook AI Research (FAIR)",
+    "2019.10 - 2020.09, 2021.04 - Current",
+    "Visiting researcher",
+    ["luke"]
+  ],
+  [
     "Google AI Research",
     "2020.09 - 2021.03",
     "Research intern / student researcher",
     ["kenton", "kristina"]
-  ],
-  [
-    "Facebook AI Research (FAIR)",
-    "2019.10 - 2020.09",
-    "Visiting student researcher",
-    ["luke"]
   ],
   [
     "Salesforce Research (Metamind)",
@@ -377,14 +400,43 @@ let services = [
   "Co-organizer: " + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
+  "Tutorial co-instructor: " + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["slides"]),
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <li>*CL/NLP conferences: ACL (2019, 2020, 2021), EMNLP (2019, 2020, 2021), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
+    <!--<li>*CL/NLP conferences: ACL (2019, 2020, 2021), EMNLP (2019, 2020, 2021), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
     <li>ML/AI conferences: NeurIPS (2018, 2020, 2021), ICLR (2019, 2020, 2021, 2022), AAAI (2020, 2021), ICML (2021)</li>
     <li>
       Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021, SRW @ ACL 2021),
-      The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)
+      The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019),
+      The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)
+    </li>
+    <li>
+      Competition Proposals: NeurIPS (2021)
+    </li>-->
+
+    <li>*CL/NLP conferences:
+      <ul style="padding-left: 40px;">
+        <li>ACL: 2019, 2020, 2021</li>
+        <li>EMNLP: 2019, 2020, 2021</li>
+        <li>AKBC: 2019, 2020, 2021</li>
+        <li>AACL: 2020</li>
+        <li>NAACL: 2021</li>
+      </ul>
+    </li>
+    <li>ML/AI conferences:
+      <ul style="padding-left: 40px;">
+        <li>NeurIPS: 2018, 2020, 2021</li>
+        <li>ICLR: 2019, 2020, 2021, 2022</li>
+        <li>AAAI: 2020, 2021</li>
+        <li>ICML: 2021</li>
+      </ul>
+    <li>Workshops:
+      <ul style="padding-left: 40px;">
+        <li>Student Research Workshop: ACL 2019, ACL 2020, AACL 2020, EACL 2021, ACL 2021</li>
+        <li>The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)</li>
+        <li>The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)</li>
+      </ul>
     </li>
     <li>
       Competition Proposals: NeurIPS (2021)

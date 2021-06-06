@@ -2,5 +2,5 @@
     title={ {A}mbig{QA}: Answering Ambiguous Open-domain Questions },
     author={ Min, Sewon and Michael, Julian and Hajishirzi, Hannaneh and Zettlemoyer, Luke },
     booktitle={ EMNLP },
-    year={2020}
+    year={ 2020 }
 }
