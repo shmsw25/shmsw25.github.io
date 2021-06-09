@@ -400,7 +400,7 @@ let services = [
   "Co-organizer: " + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
-  "Tutorial co-instructor: " + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["slides"]),
+  "Tutorial co-instructor: " + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]),
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
