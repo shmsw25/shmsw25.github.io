@@ -1,7 +1,7 @@
 /* overall */
 
-#background-container{
-	background-image: url('../assets/floor.jpg');
+body {
+	/*background-image: url('../assets/floor.jpg');*/
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
@@ -23,9 +23,22 @@
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 20px;
-	border: solid #4B0082 3px;
+	/*border: solid #4B0082 3px;*/
 	text-align: left;
 	padding: 10px;
+}
+
+.navbar-brand {
+	font-size: 20px;
+}
+
+.container {
+	max-width: 900px;
+}
+
+.navbar {
+	background-color: #dfe3ef;
+	border-color: #dfe3ef;
 }
 
 .fixed-top {
@@ -47,29 +60,40 @@
 	padding-left: 10px;
 }
 
+.badge {
+	background-color: white;
+	border: 2px solid;
+	color: #565656;
+}
+
 #news-text .badge-service {
 	font-weight: 500;
-	background-color: #8da0cb; /*#8dd3c7;*/
+	/*background-color: #8da0cb;*/
+	border-color: #8da0cb;
 }
 
 #news-text .badge-paper {
 	font-weight: 500;
-	background-color: #fc8d62; /*#ffffb3;*/
+	/*background-color: #fc8d62;*/
+	border-color: #fc8d62;
 }
 
 #news-text .badge-others {
 	font-weight: 500;
-	background-color: #66c2a5; /*#bebada*/
+	/*background-color: #66c2a5;*/
+	border-color: #66c2a5;
 }
 
 @media (min-width:1800px) {
 	#background-container{ font-size: 13pt; }
 	.my-container{ max-width: 1400px; }
+	.container{ max-width: 1400px; }
 	#info, .field, #menu{ max-width: 1200px; }
 }
 @media (min-width:2400px) {
 	#background-container{ font-size: 16pt; }
 	.my-container{ max-width: 1800px; }
+	.container{ max-width: 1800px; }
 	#info, .field, #menu{ max-width: 1600px; }
 }
 
@@ -92,7 +116,7 @@ h4 {
 }
 
 h4 em {
-	color: #4B0082;
+	color: #482086;
 }
 
 h4.first {
@@ -102,13 +126,13 @@ h4.first {
 .my-container h3, #info h2{
 	/*font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;*/
 	font-size: 180%;
-	color: #4B0082;
+	color: #222; /* #482086; */ /* #4B0082; */
 	font-weight: bold;
 }
 
 
 .my-container p{
-	margin-bottom: 1px;
+	margin-bottom: 5px;
 }
 
 .my-container a:hover{
@@ -145,20 +169,21 @@ sup{
     border-right: none;
 }
 
-#menu li a {
+.my-nav li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
 }
 
-#menu li:not(.active) a:hover {
-    background-color: #777777;
+.my-nav li:not(.active) a:hover {
+    color: #777;
 }
 
-#menu .active {
-    background-color: #FFC0CB;
+.my-nav .active {
+    color: #482086;
 }
 
 /* info */
@@ -178,7 +203,7 @@ sup{
 }
 
 
-#publication ul, #honorship ul, #service ul {
+#publication > ul, #honorship > ul, #service > ul, #talks > ul, #teaching > ul {
 	padding-left: 5px;
 }
 
@@ -208,7 +233,7 @@ sup{
 
 .row {
 	margin-left: 1%;
-	margin-right: 10%;
+	margin-right: 3%;
 }
 
 .column {
@@ -220,6 +245,33 @@ sup{
   	float: left;
   	width: 25%;
 }
+
+
+.column-20 {
+  	float: left;
+  	width: 20%;
+}
+
+.column-22 {
+  	float: left;
+  	width: 22%;
+}
+
+.column-12 {
+  	float: left;
+  	width: 12%;
+}
+
+.column-44 {
+  	float: left;
+  	width: 44%;
+}
+
+.column-56 {
+  	float: left;
+  	width: 56%;
+}
+
 
 
 /* Clear floats after the columns */

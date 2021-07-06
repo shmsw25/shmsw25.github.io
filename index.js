@@ -1,4 +1,49 @@
 window.onload = function () {
+  // setup buttons
+
+  function hideAll() {
+    $("#info").hide();
+    $("#intro").hide();
+    $("#publication").hide();
+    $("#education").hide();
+    $("#experience").hide();
+    $("#service").hide();
+    $("#honorship").hide();
+    $("#talks").hide();
+    $("#teaching").hide();
+    $("#personal").hide();
+  }
+
+  hideAll();
+  $("#info").show();
+  $("#intro").show();
+
+  $("#home-button").click(function(){
+    hideAll();
+    $("#info").show();
+    $("#intro").show();
+  })
+
+  $("#pub-button").click(function(){
+    hideAll();
+    $("#publication").show();
+  })
+
+  $("#service-button").click(function(){
+    hideAll();
+    $("#service").show();
+  })
+
+  $("#others-button").click(function(){
+    hideAll();
+    $("#education").show();
+    $("#experience").show();
+    $("#honorship").show();
+    $("#talks").show();
+    $("#teaching").show();
+    // $("#personal").hide();
+  })
+
   // load intro
   let introText = "";
   for (let i=0; i<intros.length; i++) {
@@ -14,7 +59,7 @@ window.onload = function () {
         text =  text.substring(0, start) + "<a href='" + pub_dictionary[key] + "' target='_blank'>" + key + "</a>" + text.substring(end+1, text.length);
       }
     }
-    introText += text + "<br /><br />News:<div id='news-text'></div>";
+    introText += text + `<br /><br /><h4 style="font-size: 150%">News</h4><div id='news-text'></div>`;
   }
   function _add_button(button_id, button_text) {
     return `<span id='` + button_id + `' style='
@@ -31,12 +76,12 @@ window.onload = function () {
   function _load_news(n_news) {
     let newsText = "";
     for (let i=0; i<n_news; i++) {
-      newsText += "<span id='news-" + i + "'><span class='glyphicon glyphicon-ok'></span> " + news[i] + "</span><br />";
+      newsText += "<p id='news-" + i + "'><span class='glyphicon glyphicon-ok'></span> " + news[i] + "</p>";
     }
     newsText += "<p style='margin-top: 5px'>";
     document.getElementById("news-text").innerHTML = newsText;
   }
-  _load_news(5);
+  _load_news(7);
   
   // control # of news to show
   $('#news-collapse').hide();
@@ -46,7 +91,7 @@ window.onload = function () {
     $('#news-load').hide();
   })
   $('#news-collapse').click(function(){
-    _load_news(5);
+    _load_news(7);
     $('#news-collapse').hide();
     $('#news-load').show();
   })
@@ -121,7 +166,7 @@ window.onload = function () {
     pubText += "</p>"
   }
   //}
-  document.getElementById("publication").innerHTML += pubText + "<br />*: equal contribution";
+  document.getElementById("publication").innerHTML += "*: equal contribution" +pubText;
   // load education
   let eduText = "";
   for (let i=0; i<educations.length; i++) {
@@ -151,6 +196,8 @@ window.onload = function () {
     expText += "</p>";
   }
   document.getElementById("experience").innerHTML += expText;
+
+
   // load honors
   let honorText = "";
   for (let i=0; i<honors.length; i++) {
@@ -163,4 +210,18 @@ window.onload = function () {
     serviceText += "<li>" + services[i] + "</li>";
   }
   document.getElementById("service").innerHTML += "<ul>" + serviceText + "</ul>";
+  // load talks
+  let talksText = "";
+  for (let i=0; i<talks.length; i++) {
+    talksText += "<li>" + talks[i] + "</li>";
+  }
+  document.getElementById("talks").innerHTML += "<ul>" + talksText + "</ul>";
+  // load services
+  let teachingText = "";
+  for (let i=0; i<teaching.length; i++) {
+    teachingText += "<p>" + teaching[i] + "</p>";
+  }
+  document.getElementById("teaching").innerHTML += teachingText;
+
+
 };

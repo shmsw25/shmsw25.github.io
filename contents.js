@@ -470,6 +470,52 @@ let services = [
     </li>
   </ul>
   `,
-  "Prospective Student Committee Co-Chair for UW CSE Ph.D. Program (2019)",
-  "Admission Committee Member for UW CSE Ph.D. Program (2021)"
-]
+  "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
+  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021)",
+  "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
+  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)"
+];
+
+let talks = [
+ //`08/2021: AI Summer School, Seoul National University, Korea`,
+ `08/2021: Summer AI Seminar Series, Postech, Korea`,
+ `04/2021: Colloquium Talk, Graduate School of AI at KAIST, Korea`,
+ `02/2021: School of Electronic Engineering at KAIST, Korea`,
+ `09/2020: Apple (Web Answers team), Seattle, WA`,
+ `08/2020: Facebook NLP Summit, Question Answering Workshop`,
+ `08/2018: Kakao Brain, Korea`,
+ `08/2018: Samsung Advanced Institute of Technology, Korea`,
+ `08/2017: Naver, Korea`,
+];
+
+
+let teaching = [
+ `NAACL 2021 Tutorial: ` + add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `
+  <ul style="padding-left: 40px;">
+    <li>Co-taught with Iz Beltagy, Arman Cohan, Hannaneh Hajishirzi and Matthew E. Peters</li>
+  </ul>`,
+ `Teaching assistant at University of Washington
+  <ul style="padding-left: 40px;">
+    <li>` + add_link("CSE 447+517 Natural Language Processing", "https://courses.cs.washington.edu/courses/cse517/") + ` 
+    (Instructor: ` + add_link("Noah Smith", "https://nasmith.github.io/") + `) ` + add_link("Winter 2021", "https://courses.cs.washington.edu/courses/cse517/21wi/") + `
+    <ul style="padding-left: 40px;">
+      <li>
+        In addition to typical TA role, responsible for the 517 Reproducibility Project and
+        guiding submissions to the ML Reproducibility Challenge
+      </li>
+    </ul>
+  </ul>`,
+ `Mentor at Samsung Convergence Software Course (2017)
+  <ul style="padding-left: 40px;">
+    <li>Program for non-major students with courses in computer science & engineering</li>
+  </ul>`
+];
+
+
+
+
+
+
+
+
+
