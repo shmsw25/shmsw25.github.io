@@ -35,6 +35,13 @@ window.onload = function () {
     $("#intro").show();
   })
 
+  $("#background-button").click(function(){
+    hideAll();
+    $("#education").show();
+    $("#experience").show();
+  })
+
+
   $("#pub-button").click(function(){
     hideAll();
     $("#publication").show();
@@ -47,8 +54,6 @@ window.onload = function () {
 
   $("#others-button").click(function(){
     hideAll();
-    $("#education").show();
-    $("#experience").show();
     $("#honorship").show();
     $("#talks").show();
     $("#teaching").show();
