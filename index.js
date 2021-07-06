@@ -2,6 +2,7 @@ window.onload = function () {
   // setup buttons
 
   function hideAll() {
+    window.scrollTo(0, 0);
     $("#info").hide();
     $("#intro").hide();
     $("#publication").hide();
