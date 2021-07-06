@@ -53,7 +53,7 @@ window.onload = function () {
 
   // load publications
   let pubText = "";
-  let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster", "BibTex"];
+  let ordered_options = ["paper", "website", "code", "demo", "slides", "talk", "poster"];
   
   let papers = publications;
 
@@ -109,13 +109,15 @@ window.onload = function () {
         let value = optional_dict[key];
         if (key==="slides" || key==="poster") {
           value = "assets/slides/"+value;
-        } else if (key==="BibTex") {
-          value = "assets/bibtex/"+value;
         }
         pubText += "[<a href='"+value+"' target='_blank'>"+key+"</a>] ";
       }
     }
-    pubText += "[<a href='assets/bibtex/"+keyword+".txt' target='_blank'>BibTeX</a>] ";
+    var bibtex = "assets/bibtex/"+keyword+".txt";
+    if ("BibTeX" in optional_dict) {
+      bibtex = optional_dict["BibTeX"]
+    }
+    pubText += "[<a href='" + bibtex + "' target='_blank'>BibTeX</a>] ";
     pubText += "</p>"
   }
   //}

@@ -28,6 +28,15 @@
 	padding: 10px;
 }
 
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    border-bottom: 1px solid #e8e8e8;
+ }
+
 #info, .field, #menu{
 	max-width: 800px;
 	margin-right: auto;
@@ -36,6 +45,21 @@
 
 #news-text{
 	padding-left: 10px;
+}
+
+#news-text .badge-service {
+	font-weight: 500;
+	background-color: #8da0cb; /*#8dd3c7;*/
+}
+
+#news-text .badge-paper {
+	font-weight: 500;
+	background-color: #fc8d62; /*#ffffb3;*/
+}
+
+#news-text .badge-others {
+	font-weight: 500;
+	background-color: #66c2a5; /*#bebada*/
 }
 
 @media (min-width:1800px) {

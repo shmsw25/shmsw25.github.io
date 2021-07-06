@@ -62,14 +62,16 @@ let intros = [
   `  Hello! <br />
   I am a 3rd-year Ph.D. student in the Natural Language Processing group at the University of Washington.
   I am fortunate to be advised by [hanna] and [luke].
+  I am also a part-time visiting researcher at Facebook AI Research.
   Prior to UW, I received B.S. in CSE from Seoul National University. <br /><br />
 
   My primary research interests lie in the area of natural language processing and machine learning.
   My long-term goal of research is to build a system that can understand natural language text, reason about it, and
-  answer to any real-world questions. <br /><br />
+  answer to any real-world questions.
 
-  During my Ph.D., I have been fortunate to be a visiting researcher / an intern at Facebook AI Research and Google AI Research,
-  and work closely with Allen Institute for AI.
+  <!--Previously, I interned at Google AI Research.-->
+  <!--During my Ph.D., I have been fortunate to be a visiting researcher / a research intern at Facebook AI Research and Google AI Research,
+  and work closely with Allen Institute for AI.-->
   `
 ]
 
@@ -122,9 +124,11 @@ let pub_dictionary = {
   "beltagy2021beyond": {
     "website": "https://github.com/allenai/naacl2021-longdoc-tutorial"
   },
-  "part2021faviq": {
-    "paper": "",
-    "website": "https://faviq.github.io"
+  "park2021faviq": {
+    "paper": "https://arxiv.org/abs/2107.02153",
+    "website": "https://faviq.github.io",
+    "code": "https://github.com/faviq/faviq",
+    "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt"
   }
 }
 
@@ -146,42 +150,63 @@ function add_info (paper, infos) {
   return text;
 }
 
+function add_tag(tag) {
+	if (tag==="paper") {
+		return `<span class="badge badge-pill badge-paper">Paper</span>`;
+	} else if (tag==="service") {
+		return `<span class="badge badge-pill badge-service">Service</span>`;
+	} else if (tag=="others") {
+		return `<span class="badge badge-pill badge-others">Others</span>`;
+	}
+	/*
+	`<span class="badge badge-pill badge-secondary">Secondary</span>`
+	`<span class="badge badge-pill badge-danger">Danger</span>`
+	`<span class="badge badge-pill badge-warning">Warning</span>`
+	`<span class="badge badge-pill badge-light">Light</span>`
+	`<span class="badge badge-pill badge-dark">Dark</span>`
+	*/
+}
+
 let news = [
-  `06/2021: I co-taught the NAACL-HLT tutorial on ` + 
+  `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
+  ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2021faviq"]["website"]) + ` to download data and see samples.`,
+  `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `, hosted at AKBC 2021. <!--Stay tuned for Call for abstracts!-->`,
+  `06/2021: ` + add_tag("service") + ` I co-taught the NAACL-HLT tutorial on ` + 
   add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `.`,
-  `04/2021: Our new preprint, ` + 
+  `04/2021: ` + add_tag("paper") + ` Our new preprint, ` + 
   add_link("Joint Passage Ranking for Diverse Multi-Answer Retrieval", pub_dictionary["min2021joint"]["paper"]) + `
   is out! This is done as part of my internship at Google.`,
-  `01/2021: 
+  `01/2021: ` + add_tag("service") + `
   We, the NeurIPS 2020 EfficientQA organizers, together with participants,
   wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
   	Systems, Analyses and Lessons Learned`, pub_dictionary["min2021neurips"]["paper"]) + `.
   The video of the NeuIPS event is also available ` + add_link(`here`, "https://www.youtube.com/watch?v=3tdWV4vAf2I") + `.
    (Update 05/2021: The paper was accepted to PMLR.)`,
-  `12/2020: I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
+  `12/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
   `, hosted at EMNLP 2021. Stay tuned for Call for papers!`,
-  `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
+  `09/2020: ` + add_tag("others") + ` I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
       + ` using ` + add_link("DPR", pub_dictionary["karpukhin2020dense"]["paper"]) + `. Give it a try!`,
-  `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
+  `06/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
   `, hosted at NeurIPS 2020. [` + add_link("leaderboard", "https://ai.google.com/research/NaturalQuestions/efficientqa") + `]`,
-  `06/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `06/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
   `, hosted at AKBC 2020.`,
-  `04/2020: Our new preprint, ` +
+  `04/2020: ` + add_tag("paper") + ` Our new preprint, ` +
   add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["min2020ambigqa"]["paper"]) + `
   is out! Visit ` + add_link("AmbigQA website", pub_dictionary["min2020ambigqa"]["website"]) + ` to download data and see samples.`,
-  `04/2020: Our new preprint, ` +
+  `04/2020: ` + add_tag("paper") + ` Our new preprint, ` +
   add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["karpukhin2020dense"]["paper"]) + `
   is out (w/ ` + add_link("code", pub_dictionary["karpukhin2020dense"]["code"]) + `)!`
 ];
 
 
 let publications = [
-     /*["FaVIQ: Fact Verification from Information seeking Questions",
+     ["FaVIQ: Fact Verification from Information-seeking Questions",
       ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
       "arXiv preprint",
       "",
       "2021",
-      "part2021faviq"],*/
+      "park2021faviq"],
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
       "arXiv preprint",
@@ -193,7 +218,7 @@ let publications = [
        //['<strong>Sewon Min</strong> et al.'],
        ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
        'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
-       "Maching Learning Research (PMLR)",
+       "Machine Learning Research (PMLR)",
        "",
        "2021",
        "min2021neurips"
@@ -349,7 +374,7 @@ let experiences = [
   ],
   [
     "Facebook AI Research (FAIR)",
-    "2019.10 - 2020.09, 2021.04 - Current",
+    "2019.10 - 2020.08, 2021.04 - Current",
     "Visiting researcher",
     ["luke"]
   ],
@@ -398,6 +423,7 @@ let honors = [
 
 let services = [
   "Co-organizer: " + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
+  "Co-organizer: " + add_link("The 2nd Workshop on Unstructured/Structured KBs (USKB @ AKBC 2021)", website_directory["uskb"]),
   "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
   "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
   "Tutorial co-instructor: " + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]),
@@ -422,6 +448,7 @@ let services = [
         <li>AKBC: 2019, 2020, 2021</li>
         <li>AACL: 2020</li>
         <li>NAACL: 2021</li>
+        <li>ACL Rolling Review</li>
       </ul>
     </li>
     <li>ML/AI conferences:
@@ -443,6 +470,6 @@ let services = [
     </li>
   </ul>
   `,
-  "Prospective Student Committee Chair for UW CSE Ph.D. Program (2019)",
+  "Prospective Student Committee Co-Chair for UW CSE Ph.D. Program (2019)",
   "Admission Committee Member for UW CSE Ph.D. Program (2021)"
 ]
