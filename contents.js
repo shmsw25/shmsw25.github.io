@@ -477,7 +477,7 @@ let services = [
 ];
 
 let talks = [
- //`08/2021: AI Summer School, Seoul National University, Korea`,
+ `08/2021: AI Summer School, Seoul National University, Korea`,
  `08/2021: Summer AI Seminar Series, Postech, Korea`,
  `04/2021: Colloquium Talk, Graduate School of AI at KAIST, Korea`,
  `02/2021: School of Electronic Engineering at KAIST, Korea`,

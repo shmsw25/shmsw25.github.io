@@ -1,7 +1,17 @@
 window.onload = function () {
-  // setup buttons
+  // setup nav
+  $(".navbar-toggle").click(function(){
+    if ($(".navbar-collapse").hasClass("collapse")) {
+      $(".navbar-collapse").removeClass("collapse");
+    } else {
+      $(".navbar-collapse").addClass("collapse");
+    }
+  })
 
   function hideAll() {
+    if (!$(".navbar-collapse").hasClass("collapse")) {
+      $(".navbar-collapse").addClass("collapse");
+    }
     window.scrollTo(0, 0);
     $("#info").hide();
     $("#intro").hide();

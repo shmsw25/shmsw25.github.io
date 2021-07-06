@@ -36,9 +36,29 @@ body {
 	max-width: 900px;
 }
 
+/* navigator section */
+
 .navbar {
 	background-color: #dfe3ef;
 	border-color: #dfe3ef;
+	color: #444;
+}
+
+.navbar a { color: inherit; } 
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.my-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .fixed-top {
@@ -151,41 +171,6 @@ sup{
 	font-family: Raleway;
 }
 
-/* navigator section */
-
-#menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #bababa;
-}
-
-#menu li {
-    float: left;
-}
-
-#menu li:last-child {
-    border-right: none;
-}
-
-.my-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.my-nav li:not(.active) a:hover {
-    color: #777;
-}
-
-.my-nav .active {
-    color: #482086;
-}
-
 /* info */
 
 #info img{
@@ -236,42 +221,40 @@ sup{
 	margin-right: 3%;
 }
 
+.column-long {
+  	float: left;
+  	min-width: 400px;
+}
+
 .column {
   	float: left;
-  	width: 50%;
+  	min-width: 45px;
 }
 
 .column-25 {
-  	float: left;
   	width: 25%;
 }
 
 
 .column-20 {
-  	float: left;
   	width: 20%;
 }
 
 .column-22 {
-  	float: left;
   	width: 22%;
 }
 
 .column-12 {
-  	float: left;
   	width: 12%;
 }
 
 .column-44 {
-  	float: left;
   	width: 44%;
 }
 
 .column-56 {
-  	float: left;
   	width: 56%;
 }
-
 
 
 /* Clear floats after the columns */
