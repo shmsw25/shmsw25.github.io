@@ -353,7 +353,7 @@ let educations = [
     "2014.03 - 2018.08",
     [
       "B.S. in Computer Science & Engineering (Summa Cum Laude)",
-      "GPA: 4.12/4.30 (total) 4.19/4.30 (major), 1st rank in CSE"
+      "GPA: 4.12/4.30 (total) 4.19/4.30 (major), Rank: 1st in CSE (class of 2018)"
     ],
   ],
   [
@@ -470,10 +470,10 @@ let services = [
     </li>
   </ul>
   `,
-  "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
-  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021)",
+  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)",
   "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
-  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)"
+  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021)",
+  "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
 ];
 
 let talks = [
