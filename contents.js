@@ -42,7 +42,8 @@ let people = {
   'michael': "Michael Collins",
   'tom': "Tom Kwiatkowski",
   'mingwei': "Ming-Wei Chang",
-  'jungsoo': "Jungsoo Park"
+  'jungsoo': "Jungsoo Park",
+  'mike': "Mike Lewis"
 };
 
 let people_website = {
@@ -129,6 +130,9 @@ let pub_dictionary = {
     "website": "https://faviq.github.io",
     "code": "https://github.com/faviq/faviq",
     "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt"
+  },
+  "min2021noisy": {
+  	"paper": "https://arxiv.org/abs/2108.04106"
   }
 }
 
@@ -168,6 +172,8 @@ function add_tag(tag) {
 }
 
 let news = [
+  `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2021noisy"]["paper"]) +
+  ` is out!`,
   `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
   ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2021faviq"]["website"]) + ` to download data and see samples.`,
   `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
@@ -201,6 +207,12 @@ let news = [
 
 
 let publications = [
+	 ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
+	  ["sewon", "mike", "hanna", "luke"],
+	  "arXiv preprint",
+      "",
+      "2021",
+      "min2021noisy"],
      ["FaVIQ: Fact Verification from Information-seeking Questions",
       ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
       "arXiv preprint",
@@ -470,14 +482,14 @@ let services = [
     </li>
   </ul>
   `,
-  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)",
-  "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
   "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021)",
   "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
+  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)",
+  "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
 ];
 
 let talks = [
- //`08/2021: AI Summer School, Seoul National University, Korea`,
+ `08/2021: AI Summer School, Seoul National University, Korea`,
  `08/2021: Summer AI Seminar Series, Postech, Korea`,
  `04/2021: Colloquium Talk, Graduate School of AI at KAIST, Korea`,
  `02/2021: School of Electronic Engineering at KAIST, Korea`,
