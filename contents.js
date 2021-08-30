@@ -182,7 +182,9 @@ let news = [
   add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `.`,
   `04/2021: ` + add_tag("paper") + ` Our new preprint, ` + 
   add_link("Joint Passage Ranking for Diverse Multi-Answer Retrieval", pub_dictionary["min2021joint"]["paper"]) + `
-  is out! This is done as part of my internship at Google.`,
+  is out! This is done as part of my internship at Google.
+  (Update 08/2021: The paper was accepted to EMNLP.)
+  `,
   `01/2021: ` + add_tag("service") + `
   We, the NeurIPS 2020 EfficientQA organizers, together with participants,
   wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
@@ -221,7 +223,7 @@ let publications = [
       "park2021faviq"],
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
-      "arXiv preprint",
+      "EMNLP (long)",
       "",
       "2021",
       "min2021joint"
@@ -423,7 +425,7 @@ let experiences = [
 ];
 
 let honors = [
-  "<strong>Doctoral Study Abroad Program Fellowship</strong> granted by "
+  "Doctoral Study Abroad Program Fellowship granted by "
   + "<a href='https://www.kfas.or.kr/?pCulture=en' target='_blank'>Korea Foundation for Advanced Studies (KFAS)</a> (2018-2023)",
   "Wissner-Slivka Endowed Graduate Fellowship granted by Paul G. Allen School (2018-2019)",
   "Best Undergraduate Thesis Award granted by CSE, Seoul National University (2018)",
