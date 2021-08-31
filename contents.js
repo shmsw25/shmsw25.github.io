@@ -132,7 +132,8 @@ let pub_dictionary = {
     "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt"
   },
   "min2021noisy": {
-  	"paper": "https://arxiv.org/abs/2108.04106"
+  	"paper": "https://arxiv.org/abs/2108.04106",
+    "code": "https://github.com/shmsw25/Channel-LM-Prompting"
   }
 }
 
@@ -173,7 +174,8 @@ function add_tag(tag) {
 
 let news = [
   `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2021noisy"]["paper"]) +
-  ` is out!`,
+  ` is out! (Update 09/2021: Code & Data available `+ add_link("here", pub_dictionary["min2021noisy"]["code"]) +
+  `. This includes our method as well as many baselines from prior work!)`,
   `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
   ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2021faviq"]["website"]) + ` to download data and see samples.`,
   `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
