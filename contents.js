@@ -174,8 +174,7 @@ function add_tag(tag) {
 
 let news = [
   `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2021noisy"]["paper"]) +
-  ` is out! (Update 09/2021: Code & Data available `+ add_link("here", pub_dictionary["min2021noisy"]["code"]) +
-  `. This includes our method as well as many baselines from prior work!)`,
+  ` is out (w/ `+ add_link("code", pub_dictionary["min2021noisy"]["code"]) + `)!`,
   `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
   ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2021faviq"]["website"]) + ` to download data and see samples.`,
   `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
@@ -446,17 +445,6 @@ let services = [
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
-    <!--<li>*CL/NLP conferences: ACL (2019, 2020, 2021), EMNLP (2019, 2020, 2021), AKBC (2019, 2020), AACL (2020), NAACL (2021)</li>
-    <li>ML/AI conferences: NeurIPS (2018, 2020, 2021), ICLR (2019, 2020, 2021, 2022), AAAI (2020, 2021), ICML (2021)</li>
-    <li>
-      Workshops: Student Research Workshop (SRW @ ACL 2019, SRW @ ACL 2020, SRW @ AACL 2020, SRW @ EACL 2021, SRW @ ACL 2021),
-      The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019),
-      The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)
-    </li>
-    <li>
-      Competition Proposals: NeurIPS (2021)
-    </li>-->
-
     <li>*CL/NLP conferences:
       <ul style="padding-left: 40px;">
         <li>ACL: 2019, 2020, 2021</li>
@@ -471,7 +459,7 @@ let services = [
       <ul style="padding-left: 40px;">
         <li>NeurIPS: 2018, 2020, 2021</li>
         <li>ICLR: 2019, 2020, 2021, 2022</li>
-        <li>AAAI: 2020, 2021</li>
+        <li>AAAI: 2020, 2021, 2022</li>
         <li>ICML: 2021</li>
       </ul>
     <li>Workshops:
