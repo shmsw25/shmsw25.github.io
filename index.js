@@ -19,6 +19,7 @@ window.onload = function () {
     $("#education").hide();
     $("#experience").hide();
     $("#service").hide();
+    $("#demo").hide();
     $("#honorship").hide();
     $("#talks").hide();
     $("#teaching").hide();
@@ -41,7 +42,6 @@ window.onload = function () {
     $("#experience").show();
   })
 
-
   $("#pub-button").click(function(){
     hideAll();
     $("#publication").show();
@@ -50,6 +50,11 @@ window.onload = function () {
   $("#service-button").click(function(){
     hideAll();
     $("#service").show();
+  })
+
+  $("#demo-button").click(function(){
+    hideAll();
+    $("#demo").show();
   })
 
   $("#others-button").click(function(){
@@ -75,7 +80,7 @@ window.onload = function () {
         text =  text.substring(0, start) + "<a href='" + pub_dictionary[key] + "' target='_blank'>" + key + "</a>" + text.substring(end+1, text.length);
       }
     }
-    introText += text + `<br /><br /><h4 style="font-size: 150%">News</h4><div id='news-text'></div>`;
+    introText += text + `<h4 style="font-size: 150%">News</h4><div id='news-text'></div>`;
   }
   function _add_button(button_id, button_text) {
     return `<span id='` + button_id + `' style='
@@ -213,6 +218,43 @@ window.onload = function () {
   }
   document.getElementById("experience").innerHTML += expText;
 
+  //load demos
+  let demoText = "<center>" + demoIntro + "</center><br />";
+  for (let i=0; i<demos.length; i++) {
+    let demoLink = "http://qa.cs.washington.edu:" + demos[i][0];
+    let title = demos[i][1];
+    let method = demos[i][2];
+    /*
+    let links = demos[i][3];
+    var linkText = `[<a href="` + demoLink + `" target="_blank">Demo Code</a>]<br />`
+    for (let j=0; j<links.length; j++) {
+      linkText += `[<a href="` + links[j][1] + `" target="_blank">` + links[j][0] + `</a>]<br />`;
+    }
+
+    demoText += `<div class="row">
+      <center style="margin-bottom: 5px;">
+        <span style="font-size: 140%">` + title + `</span></br />
+        <em>Using ` + method + `</em><br />
+        <a href="` + demoLink + `" target="_blank">` + demoLink.split("http://")[1] + `</a>
+      </center>
+      <div class="column column-72 wrap">
+        <iframe class="frame" src="` + demoLink + `" title="` + title + `"></iframe>
+      </div>
+      <div class="column column-25">` + linkText + `</div>
+    </div>
+    `;*/
+    demoText += `<div class="row">
+      <center style="margin-bottom: 5px;">
+        <span style="font-size: 140%">` + title + `</span></br />
+        <em>Using ` + method + `</em><br />
+        <a href="` + demoLink + `" target="_blank">` + demoLink.split("http://")[1] + `</a>
+      </center>
+      <div class="wrap">
+        <iframe class="frame" src="` + demoLink + `" title="` + title + `"></iframe>
+      </div>
+    </div>`;
+  }
+  document.getElementById("demo").innerHTML += demoText;
 
   // load honors
   let honorText = "";

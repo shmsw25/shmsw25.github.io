@@ -1,4 +1,4 @@
-@article{ min2021noisy ,
+@article{ min2021noisy,
   title={ Noisy Channel Language Model Prompting for Few-Shot Text Classification },
   author={ Min, Sewon and Lewis, Mike and Hajishirzi, Hannaneh and Zettlemoyer, Luke },
   journal={ arXiv preprint },

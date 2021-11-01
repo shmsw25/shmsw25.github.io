@@ -43,7 +43,8 @@ let people = {
   'tom': "Tom Kwiatkowski",
   'mingwei': "Ming-Wei Chang",
   'jungsoo': "Jungsoo Park",
-  'mike': "Mike Lewis"
+  'mike': "Mike Lewis",
+  'tim': "Tim Dettmers"
 };
 
 let people_website = {
@@ -59,23 +60,6 @@ let people_website = {
   'kenton': "https://kentonl.com"
 };
 
-let intros = [
-  `  Hello! <br />
-  I am a 3rd-year Ph.D. student in the Natural Language Processing group at the University of Washington.
-  I am fortunate to be advised by [hanna] and [luke].
-  I am also a part-time visiting researcher at Facebook AI Research.
-  Prior to UW, I received B.S. in CSE from Seoul National University. <br /><br />
-
-  My primary research interests lie in the area of natural language processing and machine learning.
-  My long-term goal of research is to build a system that can understand natural language text, reason about it, and
-  answer to any real-world questions.
-
-  <!--Previously, I interned at Google AI Research.-->
-  <!--During my Ph.D., I have been fortunate to be a visiting researcher / a research intern at Facebook AI Research and Google AI Research,
-  and work closely with Allen Institute for AI.-->
-  `
-]
-
 let pub_dictionary = {
   "emnlp2019": {'paper': "https://arxiv.org/abs/1909.04849",
                 'code': "https://github.com/shmsw25/qa-hard-em",
@@ -83,7 +67,8 @@ let pub_dictionary = {
                 'talk': "https://vimeo.com/426355627"},
   "acl2019a": {'paper': "https://arxiv.org/abs/1906.02916",
         'code': "https://github.com/shmsw25/DecompRC",
-        'demo': "http://allgood.cs.washington.edu:2019",
+        'demo': "http://qa.cs.washington.edu:2019",
+        'demo-code': "https://github.com/shmsw25/DecompRC/tree/master/demo",
         'poster': "acl2019a_poster.pdf"},
   "acl2019b": {'paper': "https://arxiv.org/abs/1906.02900",
         'code': "https://github.com/shmsw25/single-hop-rc",
@@ -106,7 +91,8 @@ let pub_dictionary = {
         'talk': 'https://slideslive.com/38938941'},
   "karpukhin2020dense": {'paper': "https://arxiv.org/abs/2004.04906",
         'code': 'https://github.com/facebookresearch/DPR',
-        'demo': 'http://qa.cs.washington.edu:2020/'},
+        'demo': 'http://qa.cs.washington.edu:2020',
+        'demo-code': 'https://github.com/shmsw25/AmbigQA/tree/demo/codes'},
   "preprint2019b": {'paper': "https://arxiv.org/abs/1911.03868",
         'code': "https://github.com/shmsw25/GraphRetriever"},
   "preprint2019a": {'paper': "https://arxiv.org/abs/1909.11291"},
@@ -117,7 +103,8 @@ let pub_dictionary = {
   "li2020efficient": {'paper': "https://arxiv.org/abs/2010.02413",
         'code': "https://github.com/facebookresearch/BLINK/tree/master/elq"},
   "min2021neurips": {
-  	"paper": "https://efficientqa.github.io/assets/report.pdf"
+  	"paper": "https://arxiv.org/abs/2101.00133",
+    "website": "http://efficientqa.github.io"
   },
   "min2021joint": {
     "paper": "https://arxiv.org/abs/2104.08445"
@@ -134,13 +121,22 @@ let pub_dictionary = {
   "min2021noisy": {
   	"paper": "https://arxiv.org/abs/2108.04106",
     "code": "https://github.com/shmsw25/Channel-LM-Prompting"
+  },
+  "min2021metaicl": {
+    "paper": "https://arxiv.org/abs/2110.15943",
+    "code": "https://github.com/facebookresearch/MetaICL",
+    "demo": "http://qa.cs.washington.edu:2021",
+    //"demo-code": "https://github.com/shmsw25/MetaICL"
   }
 }
 
 let website_directory = {
   "uskb": "https://uskb-workshop.github.io/",
   "efficientqa": "http://efficientqa.github.io/",
-  "mrqa": "https://mrqa.github.io/"
+  "mrqa": "https://mrqa.github.io/",
+  "semiparametric": "http://semiparametric.ml/",
+  "fl-tutorial": "",
+  "repl4nlp": "https://sites.google.com/view/repl4nlp-2021/"
 }
 
 function add_link (title, link) {
@@ -172,7 +168,58 @@ function add_tag(tag) {
 	*/
 }
 
+let intros = [
+  `  Hello! <br />
+  I am a fourth year Ph.D. student in the Natural Language Processing group at the University of Washington.
+  I am fortunate to be advised by [hanna] and [luke].
+  I am also a part-time visiting researcher at Facebook AI Research.
+  I have previously interned at Google Research (in 2020) and Salesforce Research (in 2017).
+  Prior to UW, I received B.S. in CSE from Seoul National University.
+  <br /><br />
+
+  My primary research interests lie in the area of natural language processing and machine learning.
+  My long-term goal of research is to build a system that can <em>understand</em> natural language text, <em>reason</em> about it, and
+  solve <em>real-world</em> problems.
+  Toward this goal, my work spans across
+
+  <ul style="padding-left: 20px; margin-top: 10px">
+    <li>Identifying and defining new tasks that relax assumptions in academic problems
+        (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `,
+        ` + add_link(`FaVIQ`, pub_dictionary["park2021faviq"]["paper"]) + `)</li>
+    <li>Developing new models for real-world tasks requiring world knowledge
+        (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
+        ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
+        ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
+        ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)</li>
+    <li>Designing learning methods for generalization and extrapolation to new tasks/domains
+        (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
+        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2021noisy"]["paper"]) + `,
+        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)</li>
+  </ul>
+  
+  <br />
+
+  <!--I have been a strong advocate and an active organizing member of research communities for
+  question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `),
+  representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Semiparametric workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `)
+  and few-shot learning (` + add_link(`tutorial`, website_directory["fl-tutorial"]) + `).
+  -->
+  I have been a strong advocate and an active organizing member of research communities for
+  question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `) and
+  representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `).
+  <br /><br />
+
+  &#8251 I happily mentor a few undergraduate/master students interested in NLP research in topics above, but I am usually of full capacity.
+  If you are interested in research opportunities at ` + add_link(`H2Lab`, "https://h2lab.cs.washington.edu/") + `, please apply ` + add_link(`here`, "https://forms.gle/sC19ou4qxGztw1wZ7") + `.
+  
+  <br /><br />
+  `
+]
+
 let news = [
+  `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2021metaicl"]["paper"]) +
+  ` is out (w/ `+ add_link("code", pub_dictionary["min2021metaicl"]["code"]) + `).
+  Check out the ` + add_link("demo", pub_dictionary["min2021metaicl"]["demo"]) + `!`,
   `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2021noisy"]["paper"]) +
   ` is out (w/ `+ add_link("code", pub_dictionary["min2021noisy"]["code"]) + `)!`,
   `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
@@ -208,8 +255,14 @@ let news = [
   is out (w/ ` + add_link("code", pub_dictionary["karpukhin2020dense"]["code"]) + `)!`
 ];
 
-
 let publications = [
+   ["MetaICL: Learning to Learn In Context",
+    ["sewon", "mike", "luke", "hanna"],
+    "arXiv preprint",
+    "",
+    "2021",
+    "min2021metaicl"
+   ],
 	 ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
 	  ["sewon", "mike", "hanna", "luke"],
 	  "arXiv preprint",
@@ -425,6 +478,33 @@ let experiences = [
   ]
 ];
 
+let demoIntro = "I often enjoy making simple demos for some of my work. I happen to make one demo every year. <br /><em>Feedback welcomed!</em>";
+
+let demos = [
+    ["2021", "Few-shot Learning",
+     "Channel LM (" + add_link("paper", pub_dictionary["min2021noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2021metaicl"]["paper"]) + ")",
+     /*[["Channel LM Paper", pub_dictionary["min2021noisy"]["paper"]],
+      ["Channel LM Code", pub_dictionary["min2021noisy"]["code"]],
+      ["MetaICL Paper", pub_dictionary["min2021metaicl"]["paper"]],
+      ["MetaICL Code", pub_dictionary["min2021metaicl"]["code"]]
+     ]*/
+    ],
+    ["2020", "Open-domain Question Answering",
+     "DPR (" + add_link("paper", pub_dictionary["karpukhin2020dense"]["paper"]) + ") + Reader (" + add_link("paper", pub_dictionary["preprint2019b"]["paper"]) + ")",
+     /*[["DPR Paper", pub_dictionary["karpukhin2020dense"]["paper"]],
+      ["DPR code", pub_dictionary["karpukhin2020dense"]["code"]],
+      ["Reader Paper (GraphQA)", pub_dictionary["preprint2019b"]["paper"]],
+      ["Reader Code (AmbigQA)", pub_dictionary["min2020ambigqa"]["code"]]
+     ]*/
+    ],
+    ["2019", "Multi-hop Question Answering",
+     "DecompRC (" + add_link("paper", pub_dictionary["acl2019a"]["paper"]) + ")",
+     /*[["DecompRC Paper", pub_dictionary["acl2019a"]["paper"]],
+      ["DecompRC Code", pub_dictionary["acl2019a"]["code"]]
+     ]*/
+    ]
+  ];
+
 let honors = [
   "Doctoral Study Abroad Program Fellowship granted by "
   + "<a href='https://www.kfas.or.kr/?pCulture=en' target='_blank'>Korea Foundation for Advanced Studies (KFAS)</a> (2018-2023)",
@@ -437,11 +517,39 @@ let honors = [
 ];
 
 let services = [
-  "Co-organizer: " + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]),
-  "Co-organizer: " + add_link("The 2nd Workshop on Unstructured/Structured KBs (USKB @ AKBC 2021)", website_directory["uskb"]),
-  "Co-organizer: " + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]),
-  "Co-organizer: " + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]),
-  "Tutorial co-instructor: " + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]),
+  `
+  Workshop Co-organizer
+  <ul style="padding-left: 40px;">
+    <li>
+      ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ *CL 2022)", website_directory["repl4nlp"]) + ` -- under review
+    </li>
+    <li>
+      ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (*CL 2022)", website_directory["semiparametric"]) + ` -- under review
+    </li>
+    <li>
+     ` + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]) + `
+    </li>
+    <li>
+      ` + add_link("The 2nd Workshop on Unstructured/Structured KBs (USKB @ AKBC 2021)", website_directory["uskb"]) + `
+    </li>
+    <li>
+      ` + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]) + `
+    </li>
+    <li>
+      ` + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]) + `
+    </li>
+  </ul>
+  `,
+  `Tutorial Co-instructor
+  <ul style="padding-left: 40px;">
+    <li>
+      ` + add_link("Few-shot Learning with Language Models (*CL 2022)", website_directory["fl-tutorial"]) + ` -- under review
+    </li>
+    <li>
+      ` + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]) + `
+    </li>
+  </ul>
+  `,
   `
   Reviewer/Program Committee:
   <ul style="padding-left: 40px;">
@@ -452,7 +560,7 @@ let services = [
         <li>AKBC: 2019, 2020, 2021</li>
         <li>AACL: 2020</li>
         <li>NAACL: 2021</li>
-        <li>ACL Rolling Review</li>
+        <li>ACL Rolling Review: 2021</li>
       </ul>
     </li>
     <li>ML/AI conferences:
@@ -481,6 +589,8 @@ let services = [
 ];
 
 let talks = [
+ `12/2021: AIRS, Hyundai, Korea`,
+ `10/2021: Facebook AI`,
  `08/2021: AI Summer School, Seoul National University, Korea`,
  `08/2021: Summer AI Seminar Series, Postech, Korea`,
  `04/2021: Colloquium Talk, Graduate School of AI at KAIST, Korea`,
@@ -489,16 +599,20 @@ let talks = [
  `08/2020: Facebook NLP Summit, Question Answering Workshop`,
  `08/2018: Kakao Brain, Korea`,
  `08/2018: Samsung Advanced Institute of Technology, Korea`,
- `08/2017: Naver, Korea`,
+ `08/2017: NAVER, Korea`,
 ];
 
 
 let teaching = [
+ `*CL 2022 Tutorial: ` + add_link("Few-shot Learning with Language Models", website_directory["fl-tutorial"]) + ` -- under review
+  <ul style="padding-left: 40px;">
+    <li>Co-taught with Iz Beltagy, Arman Cohan, Sameer Singh and Robert Logan</li>
+  </ul>`,
  `NAACL 2021 Tutorial: ` + add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `
   <ul style="padding-left: 40px;">
     <li>Co-taught with Iz Beltagy, Arman Cohan, Hannaneh Hajishirzi and Matthew E. Peters</li>
   </ul>`,
- `Teaching assistant at University of Washington
+  `Teaching assistant at University of Washington
   <ul style="padding-left: 40px;">
     <li>` + add_link("CSE 447+517 Natural Language Processing", "https://courses.cs.washington.edu/courses/cse517/") + ` 
     (Instructor: ` + add_link("Noah Smith", "https://nasmith.github.io/") + `) ` + add_link("Winter 2021", "https://courses.cs.washington.edu/courses/cse517/21wi/") + `
@@ -509,6 +623,14 @@ let teaching = [
       </li>
     </ul>
   </ul>`,
+ `Pre-doctoral Student mentoring
+ <ul style="padding-left: 40px;">
+  <li>Shane Lyu, an undergraduate at UW (2021-Current)</li>
+  <!--<li>Skyler Hallinan, an undergraduate at UW (2021-Current)</li>-->
+  <li>Jungsoo Park, a master student at Korea University, now at NAVER (2021)</li>
+  <li>Belinda Li, a software engineer at Facebook, now a PhD student at MIT (2020)</li>
+ </ul>
+ `,
  `Mentor at Samsung Convergence Software Course (2017)
   <ul style="padding-left: 40px;">
     <li>Program for non-major students with courses in computer science & engineering</li>
