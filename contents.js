@@ -199,18 +199,14 @@ let intros = [
   
   <br />
 
-  <!--I have been a strong advocate and an active organizing member of research communities for
+  I have been a strong advocate and an active organizing member of research communities for
   question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `),
   representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Semiparametric workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `)
   and few-shot learning (` + add_link(`tutorial`, website_directory["fl-tutorial"]) + `).
-  -->
-  I have been a strong advocate and an active organizing member of research communities for
-  question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `) and
-  representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `).
   <br /><br />
 
   &#8251 I happily mentor a few undergraduate/master students interested in NLP research in topics above, but I am usually of full capacity.
-  If you are interested in research opportunities at ` + add_link(`H2Lab`, "https://h2lab.cs.washington.edu/") + `, please apply ` + add_link(`here`, "https://forms.gle/sC19ou4qxGztw1wZ7") + `.
+  If you are interested in research opportunities at ` + add_link(`H2Lab`, "https://h2lab.cs.washington.edu/") + `, please apply ` + add_link(`here`, "https://forms.gle/MyUVaLBY8CzxA4Ye8") + `.
   
   <br /><br />
   `
