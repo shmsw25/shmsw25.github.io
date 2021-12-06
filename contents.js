@@ -136,7 +136,7 @@ let website_directory = {
   "mrqa": "https://mrqa.github.io/",
   "semiparametric": "http://semiparametric.ml/",
   "fl-tutorial": "",
-  "repl4nlp": "https://sites.google.com/view/repl4nlp-2021/"
+  "repl4nlp": "https://sites.google.com/view/repl4nlp2022/home"
 }
 
 function add_link (title, link) {
@@ -201,8 +201,7 @@ let intros = [
 
   I have been a strong advocate and an active organizing member of research communities for
   question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `),
-  representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Semiparametric workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `)
-  and few-shot learning (` + add_link(`tutorial`, website_directory["fl-tutorial"]) + `).
+  and representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Semiparametric workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `).
   <br /><br />
 
   &#8251 I happily mentor a few undergraduate/master students interested in NLP research in topics above, but I am usually of full capacity.
@@ -404,7 +403,7 @@ let publications = [
 let educations = [
   [
     "University of Washington",
-    "2018.09 - Current",
+    "09/2018&#8211;Current",
     [
       "Ph.D. student in Computer Science & Engineering",
       "Advisers: <a href='" + people_website['hanna'] + "' target='_blank'>" + people['hanna'] + "</a> and " +
@@ -414,7 +413,7 @@ let educations = [
   ],
   [
     "Seoul National University",
-    "2014.03 - 2018.08",
+    "03/2014&#8211;08/2018",
     [
       "B.S. in Computer Science & Engineering (Summa Cum Laude)",
       "GPA: 4.12/4.30 (total) 4.19/4.30 (major), Rank: 1st in CSE (class of 2018)"
@@ -422,53 +421,51 @@ let educations = [
   ],
   [
     "Gyeonggi Science High School",
-    "2011.03 - 2014.02",
-    [
-      "Specialized high school for students talented in math and science"
-    ],
+    "02/2011&#8211;02/2014",
+    [],
   ]
 ];
 
 let experiences = [
   [
     "University of Washington",
-    "2018.09 - Current",
+    "09/2018&#8211;Current",
     "Ph.D. student",
     ["hanna", "luke"]
   ],
   [
     "Facebook AI Research (FAIR)",
-    "2019.10 - 2020.08, 2021.04 - Current",
+    "10/2019&#8211;08/2020, 2021.04&#8211;Current",
     "Visiting researcher",
     ["luke"]
   ],
   [
     "Google AI Research",
-    "2020.09 - 2021.03",
+    "09/2020&#8211;03/2021",
     "Research intern / student researcher",
     ["kenton", "kristina"]
   ],
   [
     "Salesforce Research (Metamind)",
-    "2017.11 - 2018.02",
+    "11/2017&#8211;02/2018",
     "Research intern",
     ["caiming"]
   ],
   [
     "University of Washington",
-    "2016.10 - 2017.02",
+    "10/2016&#8211;02/2017",
     "Undergraduate research intern",
     ["hanna", "ali"]
   ],
   [
     "Seoul National University",
-    "2016.07 - 08",
+    "07/2016&#8211;08/2016",
     "Undergraduate intern at <a href='http://vision.snu.ac.kr/' target='_blank'>Vision & Learning Lab</a>",
     ["gunhee"]
   ],
   [
     "Seoul National University",
-    "2016.02 - 06",
+    "02/2016&#8211;06/2016",
     "Participant of Undergraduate Research Opportunity Program (UROP)",
     ["sanggoo"]
   ]
@@ -517,10 +514,10 @@ let services = [
   Workshop Co-organizer
   <ul style="padding-left: 40px;">
     <li>
-      ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ *CL 2022)", website_directory["repl4nlp"]) + ` -- under review
+      ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ ACL 2022)", website_directory["repl4nlp"]) + `
     </li>
     <li>
-      ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (*CL 2022)", website_directory["semiparametric"]) + ` -- under review
+      ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (ACL 2022)", website_directory["semiparametric"]) + `
     </li>
     <li>
      ` + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]) + `
@@ -539,7 +536,7 @@ let services = [
   `Tutorial Co-instructor
   <ul style="padding-left: 40px;">
     <li>
-      ` + add_link("Few-shot Learning with Language Models (*CL 2022)", website_directory["fl-tutorial"]) + ` -- under review
+      ` + add_link("Few-Shot NLP with Pretrained Language Models (*CL 2022)", website_directory["fl-tutorial"]) + ` (<em>Submitted</em>)
     </li>
     <li>
       ` + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]) + `
@@ -551,12 +548,12 @@ let services = [
   <ul style="padding-left: 40px;">
     <li>*CL/NLP conferences:
       <ul style="padding-left: 40px;">
-        <li>ACL: 2019, 2020, 2021</li>
-        <li>EMNLP: 2019, 2020, 2021</li>
+        <li>ACL: 2019, 2020, 2021 <em>(outstanding reviewer)</em></li>
+        <li>EMNLP: 2019 <em>(outstanding reviewer)</em>, 2020, 2021 <em>(outstanding reviewer)</em></li>
         <li>AKBC: 2019, 2020, 2021</li>
         <li>AACL: 2020</li>
         <li>NAACL: 2021</li>
-        <li>ACL Rolling Review: 2021</li>
+        <li>ACL Rolling Review: 2021&#8211;</li>
       </ul>
     </li>
     <li>ML/AI conferences:
@@ -578,7 +575,7 @@ let services = [
     </li>
   </ul>
   `,
-  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021)",
+  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021, 2022)",
   "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
   "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)",
   "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
@@ -600,7 +597,7 @@ let talks = [
 
 
 let teaching = [
- `*CL 2022 Tutorial: ` + add_link("Few-shot Learning with Language Models", website_directory["fl-tutorial"]) + ` -- under review
+ `*CL 2022 Tutorial: ` + add_link("Few-Shot NLP with Pretrained Language Models", website_directory["fl-tutorial"]) + ` (<em>Submitted</em>)
   <ul style="padding-left: 40px;">
     <li>Co-taught with Iz Beltagy, Arman Cohan, Sameer Singh and Robert Logan</li>
   </ul>`,
@@ -621,10 +618,10 @@ let teaching = [
   </ul>`,
  `Pre-doctoral Student mentoring
  <ul style="padding-left: 40px;">
-  <li>Shane Lyu, an undergraduate at UW (2021-Current)</li>
-  <!--<li>Skyler Hallinan, an undergraduate at UW (2021-Current)</li>-->
-  <li>Jungsoo Park, a master student at Korea University, now at NAVER (2021)</li>
-  <li>Belinda Li, a software engineer at Facebook, now a PhD student at MIT (2020)</li>
+  <li>Shane Lyu, BS->MS at UW (2021&#8211;Current)</li>
+  <li>Skyler Hallinan, BS->MS at UW (2021&#8211;Current)</li>
+  <li>Jungsoo Park, MS student at Korea University, now at NAVER (2021)</li>
+  <li>Belinda Li, software engineer at Facebook, now a PhD student at MIT (2020)</li>
  </ul>
  `,
  `Mentor at Samsung Convergence Software Course (2017)
