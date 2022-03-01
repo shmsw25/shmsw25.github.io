@@ -153,8 +153,7 @@ window.onload = function () {
         }
       }
     }
-    pubText += "</p>"
-    pubText += "<p>"
+    pubText += "<br />"
     let keyword;
     if (paper[2].startsWith("arXiv") || paper[2].includes("Tutorial")) {
       // arxiv
@@ -224,25 +223,6 @@ window.onload = function () {
     let demoLink = "http://qa.cs.washington.edu:" + demos[i][0];
     let title = demos[i][1];
     let method = demos[i][2];
-    /*
-    let links = demos[i][3];
-    var linkText = `[<a href="` + demoLink + `" target="_blank">Demo Code</a>]<br />`
-    for (let j=0; j<links.length; j++) {
-      linkText += `[<a href="` + links[j][1] + `" target="_blank">` + links[j][0] + `</a>]<br />`;
-    }
-
-    demoText += `<div class="row">
-      <center style="margin-bottom: 5px;">
-        <span style="font-size: 140%">` + title + `</span></br />
-        <em>Using ` + method + `</em><br />
-        <a href="` + demoLink + `" target="_blank">` + demoLink.split("http://")[1] + `</a>
-      </center>
-      <div class="column column-72 wrap">
-        <iframe class="frame" src="` + demoLink + `" title="` + title + `"></iframe>
-      </div>
-      <div class="column column-25">` + linkText + `</div>
-    </div>
-    `;*/
     demoText += `<div class="row">
       <center style="margin-bottom: 5px;">
         <span style="font-size: 140%">` + title + `</span></br />

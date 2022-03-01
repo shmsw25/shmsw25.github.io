@@ -15,6 +15,7 @@ body {
 	margin-left: auto;
 	text-align: justify;
 	padding: 10px;
+	line-height: 1.5;
 }
 
 .my-container{
@@ -26,6 +27,18 @@ body {
 	/*border: solid #4B0082 3px;*/
 	text-align: left;
 	padding: 10px;
+}
+
+.my-container ul {
+	line-height: 1.6;
+}
+
+#service > ul > li {
+	margin-bottom: 10px;
+}
+
+#teaching > p {
+	margin-top: 10px;
 }
 
 .navbar-brand {
@@ -86,6 +99,10 @@ body {
 	color: #565656;
 }
 
+#intro-text {
+	font-size: 104%;
+}
+
 #news-text .badge-service {
 	font-weight: 500;
 	/*background-color: #8da0cb;*/
@@ -96,6 +113,12 @@ body {
 	font-weight: 500;
 	/*background-color: #fc8d62;*/
 	border-color: #fc8d62;
+}
+
+#news-text .badge-event {
+	font-weight: 500;
+	/*background-color: #66c2a5;*/
+	border-color: #a6d854;
 }
 
 #news-text .badge-others {
@@ -142,8 +165,8 @@ body {
 }
 
 h4 {
-	margin-top: 2.8%;
-	margin-bottom: 1%;
+	margin-top: 32px;
+	margin-bottom: 8px;
 	font-size: 110%;
 }
 
@@ -151,7 +174,14 @@ h4 em {
 	color: #482086;
 }
 
-h4.first {
+/*#publication h4 {
+	margin-top: 4%;
+}*/
+#publication .year {
+	margin-top: 3%;
+}
+#publication h4.first {
+	margin-top: 3%;
 	margin-right: 40px;
 }
 
@@ -162,9 +192,16 @@ h4.first {
 	font-weight: bold;
 }
 
+.my-container p {
+	margin-bottom: 8px;
+}
 
-.my-container p{
-	margin-bottom: 5px;
+#news-text p {
+	margin-bottom: 14px;
+}
+
+#education h4, #experience h4 {
+	margin-top: 24px;
 }
 
 .my-container a:hover{
@@ -223,7 +260,7 @@ sup{
     border-top: 1px solid #ccc;
     color: #ccc;
     margin: 2.5ex 0 -2.5ex 0;
-    /*padding-top: 1ex;*/
+    padding-top: 1ex;
     text-align: right;
     font-size: 150%;
 }

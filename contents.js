@@ -44,7 +44,10 @@ let people = {
   'mingwei': "Ming-Wei Chang",
   'jungsoo': "Jungsoo Park",
   'mike': "Mike Lewis",
-  'tim': "Tim Dettmers"
+  'tim': "Tim Dettmers",
+  'shane': "Xinxi Lyu",
+  'ari': "Ari Holtzman",
+  'mikel': "Mikel Artetxe"
 };
 
 let people_website = {
@@ -112,13 +115,13 @@ let pub_dictionary = {
   "beltagy2021beyond": {
     "website": "https://github.com/allenai/naacl2021-longdoc-tutorial"
   },
-  "park2021faviq": {
+  "park2022faviq": {
     "paper": "https://arxiv.org/abs/2107.02153",
     "website": "https://faviq.github.io",
     "code": "https://github.com/faviq/faviq",
     "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt"
   },
-  "min2021noisy": {
+  "min2022noisy": {
   	"paper": "https://arxiv.org/abs/2108.04106",
     "code": "https://github.com/shmsw25/Channel-LM-Prompting"
   },
@@ -127,6 +130,13 @@ let pub_dictionary = {
     "code": "https://github.com/facebookresearch/MetaICL",
     "demo": "http://qa.cs.washington.edu:2021",
     //"demo-code": "https://github.com/shmsw25/MetaICL"
+  },
+  "khashabi2021prompt": {
+  	"paper": "https://arxiv.org/abs/2112.08348"
+  },
+  "min2022rethinking": {
+  	"paper": "https://arxiv.org/abs/2202.12837",
+  	"code": "https://github.com/Alrope123/rethinking-demonstrations"
   }
 }
 
@@ -158,14 +168,9 @@ function add_tag(tag) {
 		return `<span class="badge badge-pill badge-service">Service</span>`;
 	} else if (tag=="others") {
 		return `<span class="badge badge-pill badge-others">Others</span>`;
+	} else if (tag=="event") {
+		return `<span class="badge badge-pill badge-event">Event</span>`;
 	}
-	/*
-	`<span class="badge badge-pill badge-secondary">Secondary</span>`
-	`<span class="badge badge-pill badge-danger">Danger</span>`
-	`<span class="badge badge-pill badge-warning">Warning</span>`
-	`<span class="badge badge-pill badge-light">Light</span>`
-	`<span class="badge badge-pill badge-dark">Dark</span>`
-	*/
 }
 
 let intros = [
@@ -178,14 +183,15 @@ let intros = [
   <br /><br />
 
   My primary research interests lie in the area of natural language processing and machine learning.
-  My long-term goal of research is to build a system that can <em>understand</em> natural language text, <em>reason</em> about it, and
+  My long-term goal of research is to build a <em>general-purpose</em> machine learning system
+  that can <em>understand</em> natural language text and
   solve <em>real-world</em> problems.
   Toward this goal, my work spans across
 
-  <ul style="padding-left: 20px; margin-top: 10px">
-    <li>Identifying and defining new tasks that relax assumptions in academic problems
+  <!--<ul style="padding-left: 20px; margin-top: 20px">
+    <li>Identifying and defining new problems with relaxed assumptions
         (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `,
-        ` + add_link(`FaVIQ`, pub_dictionary["park2021faviq"]["paper"]) + `)</li>
+        ` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `)</li>
     <li>Developing new models for real-world tasks requiring world knowledge
         (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
         ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
@@ -193,15 +199,62 @@ let intros = [
         ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)</li>
     <li>Designing learning methods for generalization and extrapolation to new tasks/domains
         (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
-        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2021noisy"]["paper"]) + `,
-        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)</li>
-  </ul>
+        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
+        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)
+        as well as understanding them (`
+        + add_link("Prompt Waywardness", pub_dictionary["khashabi2021prompt"]["paper"]) + ", "
+        + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
+        </li>
+  </ul>-->
+
+<ol style="padding-left: 20px; margin-top: 20px">
+    <li>Making progress on real-world tasks requiring world knowledge:
+      <ul>
+        <li>
+          Identification of new problems with relaxed assumptions
+    (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `)
+        </li>
+        <li>
+          Building better models
+     (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
+        ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
+        ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
+        ` + add_link(`ReConsider`, pub_dictionary["iyer2021reconsider"]["paper"]) + `,
+        ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)
+        </li>
+        <li>
+          Analyzing data and models
+          (` + add_link("analysis of compositional QA", pub_dictionary["acl2019b"]["paper"]) + `,
+          ` + add_link("analysis of open-domain QA", pub_dictionary["min2021neurips"]["paper"]) + `)
+        </li>
+        <li>
+          Extrapolation to a wider range of tasks
+          (` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `)
+        </li>
+      </ul>
+    </li>
+    <li>
+      Building models for generalization and extrapolation to new tasks/domains:
+      <ul>
+        <li>Designing new methods
+    (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
+        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
+        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)
+        </li>
+        <li>Understanding models (`
+        + add_link("Prompt Waywardness", pub_dictionary["khashabi2021prompt"]["paper"]) + ", "
+        + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
+        </li>
+      </ul>
+    </ul>
+  </ol>
   
   <br />
 
   I have been a strong advocate and an active organizing member of research communities for
   question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `),
-  and representation/access of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Semiparametric workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `).
+  representation/retrieval of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Spa-NLP workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `)
+  and few-shot learning (upcoming ACL tutorial).
   <br /><br />
 
   &#8251 I happily mentor a few undergraduate/master students interested in NLP research in topics above, but I am usually of full capacity.
@@ -212,13 +265,34 @@ let intros = [
 ]
 
 let news = [
+  `02/2022: ` + add_tag("paper") + ` Check out our new preprint, ` + add_link("Rethinking the Role of Demonstrations: What makes In-context Learning Work?", pub_dictionary["min2022rethinking"]["paper"]) + `
+  (All experiments reproducible from `+ add_link("this code", pub_dictionary["min2022rethinking"]["code"]) + `.)`,
+  `02/2022: `+ add_tag("service") + ` I am co-organizing two workshops at ACL 2022: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
+   ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
+   `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
+   add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `).`,
+  /*
+  `02/2022: `+ add_tag("event") + ` ACL 2022 News ---
+  I will present two papers: ` + add_link("Noicy Channel LM", pub_dictionary["min2022noisy"]["paper"]) + " and " + add_link("FaVIQ", pub_dictionary["park2022faviq"]["paper"]) + `.
+  In addition, I will co-instruct ` +
+  `the tutorial on few-shot learning` +
+  //add_link("the tutorial on few-shot learning", website_directory["fl-tutorial"]) +
+  ` and co-organize two workshops: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
+   ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
+   `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
+   add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `). Join us at Dublin, Ireland!`,
+   */
   `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2021metaicl"]["paper"]) +
   ` is out (w/ `+ add_link("code", pub_dictionary["min2021metaicl"]["code"]) + `).
   Check out the ` + add_link("demo", pub_dictionary["min2021metaicl"]["demo"]) + `!`,
-  `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2021noisy"]["paper"]) +
-  ` is out (w/ `+ add_link("code", pub_dictionary["min2021noisy"]["code"]) + `)!`,
-  `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2021faviq"]["paper"]) +
-  ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2021faviq"]["website"]) + ` to download data and see samples.`,
+  `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2022noisy"]["paper"]) +
+  ` is out w/ `+ add_link("code", pub_dictionary["min2022noisy"]["code"]) + `!
+  (Update 02/2022: The paper was accepted to ACL 2022.)
+  `,
+  `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2022faviq"]["paper"]) +
+  ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2022faviq"]["website"]) + ` to download data and see samples.
+  (Update 02/2022: The paper was accepted to ACL 2022.)
+  `,
   `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
   `, hosted at AKBC 2021. <!--Stay tuned for Call for abstracts!-->`,
   `06/2021: ` + add_tag("service") + ` I co-taught the NAACL-HLT tutorial on ` + 
@@ -251,6 +325,36 @@ let news = [
 ];
 
 let publications = [
+   ["Rethinking the Role of Demonstrations: What makes In-context Learning Work?",
+    ['sewon', 'shane', 'ari', 'mikel', 'mike', 'hanna', 'luke'],
+    "arXiv preprint",
+     "",
+     "2022",
+     "min2022rethinking"
+   ],
+   ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
+	  ["sewon", "mike", "hanna", "luke"],
+	  "ACL (long)",
+      "",
+      "2022",
+      "min2022noisy"
+   ],
+   ["FaVIQ: Fact Verification from Information-seeking Questions",
+      ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
+      "ACL (long)",
+      "",
+      "2022",
+      "park2022faviq"
+   ],
+   ["Prompt Waywardness: The Curious Case of Discretized Interpretation of Continuous Prompts",
+    ["Daniel Khashabi", "shane", "sewon",
+     "Lianhui Qin", "Kyle Richardson", "Sameer Singh", "Sean Welleck",
+     "hanna", "Tushar Khot", "Ashish Sabharwal", "Yejin Choi"],
+     "arXiv preprint",
+     "",
+     "2021",
+     "khashabi2021prompt"
+   ],
    ["MetaICL: Learning to Learn In Context",
     ["sewon", "mike", "luke", "hanna"],
     "arXiv preprint",
@@ -258,18 +362,6 @@ let publications = [
     "2021",
     "min2021metaicl"
    ],
-	 ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
-	  ["sewon", "mike", "hanna", "luke"],
-	  "arXiv preprint",
-      "",
-      "2021",
-      "min2021noisy"],
-     ["FaVIQ: Fact Verification from Information-seeking Questions",
-      ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
-      "arXiv preprint",
-      "",
-      "2021",
-      "park2021faviq"],
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
       "EMNLP (long)",
@@ -415,8 +507,9 @@ let educations = [
     "Seoul National University",
     "03/2014&#8211;08/2018",
     [
-      "B.S. in Computer Science & Engineering (Summa Cum Laude)",
-      "GPA: 4.12/4.30 (total) 4.19/4.30 (major), Rank: 1st in CSE (class of 2018)"
+      `B.S. in Computer Science & Engineering (Summa Cum Laude)
+      <br />
+      GPA: 4.12/4.30 (total) 4.19/4.30 (major), Rank: 1st in CSE (class of 2018)`
     ],
   ],
   [
@@ -475,35 +568,23 @@ let demoIntro = "I often enjoy making simple demos for some of my work. I happen
 
 let demos = [
     ["2021", "Few-shot Learning",
-     "Channel LM (" + add_link("paper", pub_dictionary["min2021noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2021metaicl"]["paper"]) + ")",
-     /*[["Channel LM Paper", pub_dictionary["min2021noisy"]["paper"]],
-      ["Channel LM Code", pub_dictionary["min2021noisy"]["code"]],
-      ["MetaICL Paper", pub_dictionary["min2021metaicl"]["paper"]],
-      ["MetaICL Code", pub_dictionary["min2021metaicl"]["code"]]
-     ]*/
+     "Channel LM (" + add_link("paper", pub_dictionary["min2022noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2021metaicl"]["paper"]) + ")",
     ],
     ["2020", "Open-domain Question Answering",
      "DPR (" + add_link("paper", pub_dictionary["karpukhin2020dense"]["paper"]) + ") + Reader (" + add_link("paper", pub_dictionary["preprint2019b"]["paper"]) + ")",
-     /*[["DPR Paper", pub_dictionary["karpukhin2020dense"]["paper"]],
-      ["DPR code", pub_dictionary["karpukhin2020dense"]["code"]],
-      ["Reader Paper (GraphQA)", pub_dictionary["preprint2019b"]["paper"]],
-      ["Reader Code (AmbigQA)", pub_dictionary["min2020ambigqa"]["code"]]
-     ]*/
     ],
     ["2019", "Multi-hop Question Answering",
      "DecompRC (" + add_link("paper", pub_dictionary["acl2019a"]["paper"]) + ")",
-     /*[["DecompRC Paper", pub_dictionary["acl2019a"]["paper"]],
-      ["DecompRC Code", pub_dictionary["acl2019a"]["code"]]
-     ]*/
     ]
   ];
 
 let honors = [
+  "JP Morgan Ph.D. Fellowship (2022&#8211;2023)",
   "Doctoral Study Abroad Program Fellowship granted by "
-  + "<a href='https://www.kfas.or.kr/?pCulture=en' target='_blank'>Korea Foundation for Advanced Studies (KFAS)</a> (2018-2023)",
-  "Wissner-Slivka Endowed Graduate Fellowship granted by Paul G. Allen School (2018-2019)",
+  + "<a href='https://www.kfas.or.kr/?pCulture=en' target='_blank'>Korea Foundation for Advanced Studies (KFAS)</a> (2018&#8211;2023)",
+  "Wissner-Slivka Endowed Graduate Fellowship granted by Paul G. Allen School (2018&#8211;2019)",
   "Best Undergraduate Thesis Award granted by CSE, Seoul National University (2018)",
-  "Full Scholarship for all semesters attended at Seoul National University (merit-based, 2014-2018)",
+  "Full Scholarship for all semesters attended at Seoul National University (merit-based, 2014&#8211;2018)",
   "ICLR Travel Award (2018)",
   "<a href='https://buildyourfuture.withgoogle.com/scholarships/google-travel-scholarships/' target='_blank'>Google Travel Grants</a> (2017, 2018)",
   "<a href='http://cse.snu.ac.kr/scsc/node/19' target='_blank'>Samsung Convergence Software Course</a> Mentor Scholarship (2017)"
@@ -517,7 +598,7 @@ let services = [
       ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ ACL 2022)", website_directory["repl4nlp"]) + `
     </li>
     <li>
-      ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (ACL 2022)", website_directory["semiparametric"]) + `
+      ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (Spa-NLP @ ACL 2022)", website_directory["semiparametric"]) + `
     </li>
     <li>
      ` + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]) + `
@@ -529,14 +610,14 @@ let services = [
       ` + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]) + `
     </li>
     <li>
-      ` + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]) + `
+      ` + add_link("Workshop on Unstructured/Structured KBs (USKB @ AKBC 2020)", website_directory["uskb"]+"/2020") + `
     </li>
   </ul>
   `,
   `Tutorial Co-instructor
   <ul style="padding-left: 40px;">
     <li>
-      ` + add_link("Few-Shot NLP with Pretrained Language Models (*CL 2022)", website_directory["fl-tutorial"]) + ` (<em>Submitted</em>)
+      ` + add_link("Few-Shot NLP with Pretrained Language Models (ACL 2022)", website_directory["fl-tutorial"]) + `
     </li>
     <li>
       ` + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]) + `
@@ -544,7 +625,7 @@ let services = [
   </ul>
   `,
   `
-  Reviewer/Program Committee:
+  Reviewer/Program Committee
   <ul style="padding-left: 40px;">
     <li>*CL/NLP conferences:
       <ul style="padding-left: 40px;">
@@ -556,18 +637,20 @@ let services = [
         <li>ACL Rolling Review: 2021&#8211;</li>
       </ul>
     </li>
-    <li>ML/AI conferences:
+    <li>ML/AI conferences/journals:
       <ul style="padding-left: 40px;">
         <li>NeurIPS: 2018, 2020, 2021</li>
         <li>ICLR: 2019, 2020, 2021, 2022</li>
         <li>AAAI: 2020, 2021, 2022</li>
         <li>ICML: 2021</li>
+        <li>TMLR: 2022</li>
       </ul>
     <li>Workshops:
       <ul style="padding-left: 40px;">
-        <li>Student Research Workshop: ACL 2019, ACL 2020, AACL 2020, EACL 2021, ACL 2021</li>
-        <li>The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)</li>
+        <li>The 2nd Workshop on NLP for Positive Impact (NLP4PI @ EMNLP 2022)</li>
         <li>The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)</li>
+        <li>Student Research Workshop (SRW): ACL 2019, ACL 2020, AACL 2020, EACL 2021, ACL 2021</li>
+        <li>The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)</li>
       </ul>
     </li>
     <li>
@@ -575,29 +658,44 @@ let services = [
     </li>
   </ul>
   `,
-  "UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021, 2022)",
-  "UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)",
-  "UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)",
-  "UW NLP: Student Co-organizer of the NLP Retreat (2021)",
+  `
+  Departmental Servic
+  <ul style="padding-left: 40px;">
+    <li>
+    	UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021, 2022)
+    </li>
+    <li>
+	  	UW CSE: Prospective Student Committee Co-Chair for the CSE Ph.D. Program (2019)
+	</li>
+	<li>
+	  	UW NLP: Student Co-organizer of the NLP Invited Talk Series (2021)
+	</li>
+	<li>
+	  	UW NLP: Student Co-organizer of the NLP Retreat (2021)
+	</li>
+  </ul>
+  `,
 ];
 
 let talks = [
- `12/2021: AIRS, Hyundai, Korea`,
+ `06/2022: MLOPT Research Group, University of Wisconsin–Madison`,
+ `04/2022: Language & Intelligence Lab, MIT`,
+ `12/2021: AIRS, Hyundai`,
  `10/2021: Facebook AI`,
- `08/2021: AI Summer School, Seoul National University, Korea`,
- `08/2021: Summer AI Seminar Series, Postech, Korea`,
- `04/2021: Colloquium Talk, Graduate School of AI at KAIST, Korea`,
- `02/2021: School of Electronic Engineering at KAIST, Korea`,
- `09/2020: Apple (Web Answers team), Seattle, WA`,
+ `08/2021: AI Summer School, Seoul National University`,
+ `08/2021: Summer AI Seminar Series, Postech`,
+ `04/2021: Colloquium Talk, Graduate School of AI at KAIST`,
+ `02/2021: School of Electronic Engineering at KAIST`,
+ `09/2020: Apple (Web Answers team)`,
  `08/2020: Facebook NLP Summit, Question Answering Workshop`,
- `08/2018: Kakao Brain, Korea`,
- `08/2018: Samsung Advanced Institute of Technology, Korea`,
+ `08/2018: Kakao Brain`,
+ `08/2018: Samsung Advanced Institute of Technology`,
  `08/2017: NAVER, Korea`,
 ];
 
 
 let teaching = [
- `*CL 2022 Tutorial: ` + add_link("Few-Shot NLP with Pretrained Language Models", website_directory["fl-tutorial"]) + ` (<em>Submitted</em>)
+ `ACL 2022 Tutorial: ` + add_link("Few-Shot NLP with Pretrained Language Models", website_directory["fl-tutorial"]) + `
   <ul style="padding-left: 40px;">
     <li>Co-taught with Iz Beltagy, Arman Cohan, Sameer Singh and Robert Logan</li>
   </ul>`,
@@ -618,8 +716,9 @@ let teaching = [
   </ul>`,
  `Pre-doctoral Student mentoring
  <ul style="padding-left: 40px;">
-  <li>Shane Lyu, BS->MS at UW (2021&#8211;Current)</li>
-  <li>Skyler Hallinan, BS->MS at UW (2021&#8211;Current)</li>
+  <li>Xinyan (Velocity) Yu, BS->MS at UW (2022&#8211;Current)</li>
+  <li>Xinxi (Shane) Lyu, BS->MS at UW (2021&#8211;Current)</li>
+  <li>Skyler Hallinan, BS->MS at UW (2021)</li>
   <li>Jungsoo Park, MS student at Korea University, now at NAVER (2021)</li>
   <li>Belinda Li, software engineer at Facebook, now a PhD student at MIT (2020)</li>
  </ul>
