@@ -215,17 +215,16 @@ let intros = [
     (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `)
         </li>
         <li>
-          Building better models
+          Developing models that retrieve evidence from knowledge sources
      (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
         ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
         ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-        ` + add_link(`ReConsider`, pub_dictionary["iyer2021reconsider"]["paper"]) + `,
         ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)
         </li>
         <li>
-          Analyzing data and models
+          Understanding data and models
           (` + add_link("analysis of compositional QA", pub_dictionary["acl2019b"]["paper"]) + `,
-          ` + add_link("analysis of open-domain QA", pub_dictionary["min2021neurips"]["paper"]) + `)
+          ` + add_link("EfficientQA report", pub_dictionary["min2021neurips"]["paper"]) + `)
         </li>
         <li>
           Extrapolation to other tasks
