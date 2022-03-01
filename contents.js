@@ -228,7 +228,7 @@ let intros = [
           ` + add_link("analysis of open-domain QA", pub_dictionary["min2021neurips"]["paper"]) + `)
         </li>
         <li>
-          Extrapolation to a wider range of tasks
+          Extrapolation to other tasks
           (` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `)
         </li>
       </ul>
