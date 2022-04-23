@@ -1,6 +1,0 @@
-@article{ min2021metaicl,
-  title={ Meta{ICL}: Learning to Learn In Context },
-  author={ Min, Sewon and Lewis, Mike and Zettlemoyer, Luke and Hajishirzi, Hannaneh },
-  journal={ arXiv preprint },
-  year={ 2021 }
-}

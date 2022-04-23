@@ -110,7 +110,9 @@ let pub_dictionary = {
     "website": "http://efficientqa.github.io"
   },
   "min2021joint": {
-    "paper": "https://arxiv.org/abs/2104.08445"
+    "paper": "https://arxiv.org/abs/2104.08445",
+    "slides": "EMNLP2021_JPR_slides.pdf",
+    "poster": "EMNLP2021_JPR_poster.pdf"
   },
   "beltagy2021beyond": {
     "website": "https://github.com/allenai/naacl2021-longdoc-tutorial"
@@ -119,19 +121,21 @@ let pub_dictionary = {
     "paper": "https://arxiv.org/abs/2107.02153",
     "website": "https://faviq.github.io",
     "code": "https://github.com/faviq/faviq",
-    "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2021faviq.txt"
+    "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2022faviq.txt"
   },
   "min2022noisy": {
   	"paper": "https://arxiv.org/abs/2108.04106",
-    "code": "https://github.com/shmsw25/Channel-LM-Prompting"
+    "code": "https://github.com/shmsw25/Channel-LM-Prompting",
+    "slides": "ACL2022_Channel_Prompt_Learning_slides.pdf",
+    "poster": "ACL2022_Channel_Prompt_Learning_poster.pdf"
   },
-  "min2021metaicl": {
+  "min2022metaicl": {
     "paper": "https://arxiv.org/abs/2110.15943",
     "code": "https://github.com/facebookresearch/MetaICL",
     "demo": "http://qa.cs.washington.edu:2021",
     //"demo-code": "https://github.com/shmsw25/MetaICL"
   },
-  "khashabi2021prompt": {
+  "khashabi2022prompt": {
   	"paper": "https://arxiv.org/abs/2112.08348"
   },
   "min2022rethinking": {
@@ -145,7 +149,7 @@ let website_directory = {
   "efficientqa": "http://efficientqa.github.io/",
   "mrqa": "https://mrqa.github.io/",
   "semiparametric": "http://semiparametric.ml/",
-  "fl-tutorial": "",
+  "fl-tutorial": "https://github.com/allenai/acl2022-zerofewshot-tutorial",
   "repl4nlp": "https://sites.google.com/view/repl4nlp2022/home"
 }
 
@@ -200,9 +204,9 @@ let intros = [
     <li>Designing learning methods for generalization and extrapolation to new tasks/domains
         (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
         ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
-        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)
+        `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `)
         as well as understanding them (`
-        + add_link("Prompt Waywardness", pub_dictionary["khashabi2021prompt"]["paper"]) + ", "
+        + add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
         + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
         </li>
   </ul>-->
@@ -238,10 +242,10 @@ let intros = [
         <li>Designing new methods
     (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
         ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
-        `+ add_link(`MetaICL`, pub_dictionary["min2021metaicl"]["paper"]) + `)
+        `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `)
         </li>
         <li>Understanding models (`
-        + add_link("Prompt Waywardness", pub_dictionary["khashabi2021prompt"]["paper"]) + ", "
+        + add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
         + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
         </li>
       </ul>
@@ -281,9 +285,11 @@ let news = [
    `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
    add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `). Join us at Dublin, Ireland!`,
    */
-  `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2021metaicl"]["paper"]) +
-  ` is out (w/ `+ add_link("code", pub_dictionary["min2021metaicl"]["code"]) + `).
-  Check out the ` + add_link("demo", pub_dictionary["min2021metaicl"]["demo"]) + `!`,
+  `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2022metaicl"]["paper"]) +
+  ` is out (w/ `+ add_link("code", pub_dictionary["min2022metaicl"]["code"]) + `).
+  Check out the ` + add_link("demo", pub_dictionary["min2022metaicl"]["demo"]) + `!
+  (Update 04/2022: The paper was accepted to NAACL 2022.)
+  `,
   `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2022noisy"]["paper"]) +
   ` is out w/ `+ add_link("code", pub_dictionary["min2022noisy"]["code"]) + `!
   (Update 02/2022: The paper was accepted to ACL 2022.)
@@ -324,43 +330,43 @@ let news = [
 ];
 
 let publications = [
-   ["Rethinking the Role of Demonstrations: What makes In-context Learning Work?",
-    ['sewon', 'shane', 'ari', 'mikel', 'mike', 'hanna', 'luke'],
-    "arXiv preprint",
-     "",
-     "2022",
-     "min2022rethinking"
-   ],
-   ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
-	  ["sewon", "mike", "hanna", "luke"],
-	  "ACL (long)",
+     ["Rethinking the Role of Demonstrations: What makes In-context Learning Work?",
+      ['sewon', 'shane', 'ari', 'mikel', 'mike', 'hanna', 'luke'],
+      "arXiv preprint",
+       "",
+       "2022",
+       "min2022rethinking"
+     ],
+     ["Prompt Waywardness: The Curious Case of Discretized Interpretation of Continuous Prompts",
+      ["Daniel Khashabi", "shane", "sewon",
+       "Lianhui Qin", "Kyle Richardson", "Sameer Singh", "Sean Welleck",
+       "hanna", "Tushar Khot", "Ashish Sabharwal", "Yejin Choi"],
+       "NAACL (long)",
+       "",
+       "2022",
+       "khashabi2022prompt"
+     ],
+     ["MetaICL: Learning to Learn In Context",
+      ["sewon", "mike", "luke", "hanna"],
+      "NAACL (long)",
+      "",
+      "2022",
+      "min2022metaicl"
+     ],
+     ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
+  	  ["sewon", "mike", "hanna", "luke"],
+  	  "ACL (long)",
       "",
       "2022",
       "min2022noisy"
-   ],
-   ["FaVIQ: Fact Verification from Information-seeking Questions",
+     ],
+     ["FaVIQ: Fact Verification from Information-seeking Questions",
       ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
       "ACL (long)",
       "",
       "2022",
       "park2022faviq"
-   ],
-   ["Prompt Waywardness: The Curious Case of Discretized Interpretation of Continuous Prompts",
-    ["Daniel Khashabi", "shane", "sewon",
-     "Lianhui Qin", "Kyle Richardson", "Sameer Singh", "Sean Welleck",
-     "hanna", "Tushar Khot", "Ashish Sabharwal", "Yejin Choi"],
-     "arXiv preprint",
-     "",
-     "2021",
-     "khashabi2021prompt"
-   ],
-   ["MetaICL: Learning to Learn In Context",
-    ["sewon", "mike", "luke", "hanna"],
-    "arXiv preprint",
-    "",
-    "2021",
-    "min2021metaicl"
-   ],
+     ],
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
       "EMNLP (long)",
@@ -386,7 +392,7 @@ let publications = [
       ],
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
-       "NAACL-HLT (short)",
+       "NAACL (short)",
        "",
        "2021",
        "iyer2021reconsider"
@@ -567,7 +573,7 @@ let demoIntro = "I often enjoy making simple demos for some of my work. I happen
 
 let demos = [
     ["2021", "Few-shot Learning",
-     "Channel LM (" + add_link("paper", pub_dictionary["min2022noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2021metaicl"]["paper"]) + ")",
+     "Channel LM (" + add_link("paper", pub_dictionary["min2022noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2022metaicl"]["paper"]) + ")",
     ],
     ["2020", "Open-domain Question Answering",
      "DPR (" + add_link("paper", pub_dictionary["karpukhin2020dense"]["paper"]) + ") + Reader (" + add_link("paper", pub_dictionary["preprint2019b"]["paper"]) + ")",
@@ -658,7 +664,7 @@ let services = [
   </ul>
   `,
   `
-  Departmental Servic
+  Departmental Service
   <ul style="padding-left: 40px;">
     <li>
     	UW CSE: Admission Committee Member for the CSE Ph.D. Program (2021, 2022)
@@ -704,16 +710,27 @@ let teaching = [
   </ul>`,
   `Teaching assistant at University of Washington
   <ul style="padding-left: 40px;">
-    <li>` + add_link("CSE 447+517 Natural Language Processing", "https://courses.cs.washington.edu/courses/cse517/") + ` 
-    (Instructor: ` + add_link("Noah Smith", "https://nasmith.github.io/") + `) ` + add_link("Winter 2021", "https://courses.cs.washington.edu/courses/cse517/21wi/") + `
-    <ul style="padding-left: 40px;">
-      <li>
-        In addition to typical TA role, responsible for the 517 Reproducibility Project and
-        guiding submissions to the ML Reproducibility Challenge
-      </li>
-    </ul>
+    <li>
+      ` + add_link("CSE 573 Artificial Intelligence", "https://courses.cs.washington.edu/courses/cse573/") + ` 
+      (Instructor: ` + add_link("Hanna Hajishirzi", people["hanna"]) + `) ` + add_link("Spring 2022", "https://courses.cs.washington.edu/courses/cse573/22sp/") + `
+      <ul style="padding-left: 40px;">
+        <li>
+          In addition to typical TA role, gave guest lectures and made assignments
+        </li>
+      </ul>
+    </li>
+    <li>
+      ` + add_link("CSE 447+517 Natural Language Processing", "https://courses.cs.washington.edu/courses/cse517/") + ` 
+      (Instructor: ` + add_link("Noah Smith", "https://nasmith.github.io/") + `) ` + add_link("Winter 2021", "https://courses.cs.washington.edu/courses/cse517/21wi/") + `
+      <ul style="padding-left: 40px;">
+        <li>
+          In addition to typical TA role, led the 517 Reproducibility Project and
+          guided submissions to the ML Reproducibility Challenge
+        </li>
+      </ul>
+    </li>
   </ul>`,
- `Pre-doctoral Student mentoring
+ `Pre-doctoral student mentoring
  <ul style="padding-left: 40px;">
   <li>Xinyan (Velocity) Yu, BS->MS at UW (2022&#8211;Current)</li>
   <li>Xinxi (Shane) Lyu, BS->MS at UW (2021&#8211;Current)</li>
