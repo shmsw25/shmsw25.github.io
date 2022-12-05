@@ -223,7 +223,7 @@ window.onload = function () {
 
   //load demos
   let demoText = "<center>" + demoIntro + "</center><br />";
-  for (let i=0; i<demos.length; i++) {
+  /*for (let i=0; i<demos.length; i++) {
     let demoLink = "http://qa.cs.washington.edu:" + demos[i][0];
     let title = demos[i][1];
     let method = demos[i][2];
@@ -237,7 +237,7 @@ window.onload = function () {
         <iframe class="frame" src="` + demoLink + `" title="` + title + `"></iframe>
       </div>
     </div>`;
-  }
+  }*/
   document.getElementById("demo").innerHTML += demoText;
 
   // load honors
