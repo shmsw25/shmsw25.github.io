@@ -121,27 +121,66 @@ let pub_dictionary = {
     "paper": "https://arxiv.org/abs/2107.02153",
     "website": "https://faviq.github.io",
     "code": "https://github.com/faviq/faviq",
-    "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2022faviq.txt"
+    "BibTeX": "https://raw.githubusercontent.com/faviq/faviq/main/park2022faviq.txt",
+    "talk": "https://underline.io/events/284/sessions/10691/lecture/49741-long-faviq-fact-verification-from-information-seeking-questions"
   },
   "min2022noisy": {
   	"paper": "https://arxiv.org/abs/2108.04106",
     "code": "https://github.com/shmsw25/Channel-LM-Prompting",
     "slides": "ACL2022_Channel_Prompt_Learning_slides.pdf",
-    "poster": "ACL2022_Channel_Prompt_Learning_poster.pdf"
+    "poster": "ACL2022_Channel_Prompt_Learning_poster.pdf",
+    "talk": "https://underline.io/events/284/sessions/10759/lecture/50536-long-noisy-channel-language-model-prompting-for-few-shot-text-classification"
   },
   "min2022metaicl": {
     "paper": "https://arxiv.org/abs/2110.15943",
     "code": "https://github.com/facebookresearch/MetaICL",
     "demo": "http://qa.cs.washington.edu:2021",
+    "slides": "NAACL2022_MetaICL.pdf",
+    "talk": "https://underline.io/events/325/sessions/11415/lecture/53942-metaicl-learning-to-learn-in-context"
     //"demo-code": "https://github.com/shmsw25/MetaICL"
   },
   "khashabi2022prompt": {
-  	"paper": "https://arxiv.org/abs/2112.08348"
+  	"paper": "https://arxiv.org/abs/2112.08348",
+    "code": "https://github.com/Alrope123/prompt-waywardness",
+    "talk": "https://underline.io/events/325/sessions/11415/lecture/53940-prompt-waywardness-the-curious-case-of-discretized-interpretation-of-continuous-prompts"
   },
   "min2022rethinking": {
   	"paper": "https://arxiv.org/abs/2202.12837",
   	"code": "https://github.com/Alrope123/rethinking-demonstrations"
-  }
+  },
+  "wu2022inscit": {
+    "paper": "https://arxiv.org/abs/2207.00746",
+    "code": "https://github.com/ellenmellon/INSCIT",
+  },
+  "si2022re": {
+    "paper": "https://arxiv.org/abs/2205.12507"
+  },
+  "press2022measuring": {
+    "paper": "https://ofir.io/self-ask.pdf",
+    "code": "https://github.com/ofirpress/self-ask"
+  },
+  "awadalla2022exploring": {
+    "paper": "https://arxiv.org/abs/2210.12517",
+  },
+  "yu2022crepe": {
+    "paper": "https://arxiv.org/abs/2211.17257",
+    "code": "https://github.com/velocityCavalry/CREPE",
+    "data": "https://github.com/velocityCavalry/CREPE#download-data"
+  },
+  "lyu2022zero": {
+    "paper": "",
+    "code": "",
+  },
+  "min2022nonparametric": {
+    "paper": "https://arxiv.org/abs/2212.01349",
+    "code": "https://github.com/facebookresearch/NPM",
+  },
+  "shi2022retrieval": {
+    "paper": "",
+  },
+  "wang2022rethinking": {
+    "paper": "",
+  },
 }
 
 let website_directory = {
@@ -169,7 +208,7 @@ function add_tag(tag) {
 	if (tag==="paper") {
 		return `<span class="badge badge-pill badge-paper">Paper</span>`;
 	} else if (tag==="service") {
-		return `<span class="badge badge-pill badge-service">Service</span>`;
+		return `<span class="badge badge-pill badge-service">Event</span>`;
 	} else if (tag=="others") {
 		return `<span class="badge badge-pill badge-others">Others</span>`;
 	} else if (tag=="event") {
@@ -179,9 +218,10 @@ function add_tag(tag) {
 
 let intros = [
   `  Hello! <br />
-  I am a fourth year Ph.D. student in the Natural Language Processing group at the University of Washington.
+  I am a fifth year Ph.D. student in the Natural Language Processing group at the University of Washington.
   I am fortunate to be advised by [hanna] and [luke].
-  I am also a part-time visiting researcher at Facebook AI Research.
+  I am also a part-time visiting researcher at Meta AI (formerly Facebook AI Research).
+  I am supported by a ` + add_link("J.P. Morgan PhD Fellowship", "https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/phd-fellowship") + `.
   I have previously interned at Google Research (in 2020) and Salesforce Research (in 2017).
   Prior to UW, I received B.S. in CSE from Seoul National University.
   <br /><br />
@@ -192,72 +232,62 @@ let intros = [
   solve <em>real-world</em> problems.
   Toward this goal, my work spans across
 
-  <!--<ul style="padding-left: 20px; margin-top: 20px">
-    <li>Identifying and defining new problems with relaxed assumptions
-        (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `,
-        ` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `)</li>
-    <li>Developing new models for real-world tasks requiring world knowledge
-        (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
-        ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-        ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-        ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)</li>
-    <li>Designing learning methods for generalization and extrapolation to new tasks/domains
-        (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
-        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
-        `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `)
-        as well as understanding them (`
-        + add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
-        + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
-        </li>
-  </ul>-->
-
-<ol style="padding-left: 20px; margin-top: 20px">
-    <li>Making progress on real-world tasks requiring world knowledge:
+  <ol style="padding-left: 20px; margin-top: 20px">
+    <li>Representation and Retrieval of Text:
       <ul>
         <li>
-          Identification of new problems with relaxed assumptions
-    (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `)
+          Text retrieval for question answering (` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
+          ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `) or
+          multi-hop question answering
+          (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `),
+          reranking
+          (` + add_link(`ReConsider`, pub_dictionary["iyer2021reconsider"]["paper"]) + `,
+          ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `),
+          and entity linking
+          (` + add_link(`ELQ`, pub_dictionary["li2020efficient"]["paper"]) + `)
         </li>
         <li>
-          Developing models that retrieve evidence from knowledge sources
-     (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `,
-        ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-        ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-        ` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `)
-        </li>
-        <li>
-          Understanding data and models
-          (` + add_link("analysis of compositional QA", pub_dictionary["acl2019b"]["paper"]) + `,
-          ` + add_link("EfficientQA report", pub_dictionary["min2021neurips"]["paper"]) + `)
-        </li>
-        <li>
-          Extrapolation to other tasks
-          (` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `)
+          Nonparametric masked language modeling
+          (` + add_link(`NPM`, pub_dictionary["min2022nonparametric"]["paper"]) + `)
         </li>
       </ul>
     </li>
     <li>
-      Building models for generalization and extrapolation to new tasks/domains:
+      General-Purpose, Multi-task/Generalizable Models
       <ul>
-        <li>Designing new methods
-    (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
-        ` + add_link(`Noisy Channel LM`, pub_dictionary["min2022noisy"]["paper"]) + `,
-        `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `)
-        </li>
-        <li>Understanding models (`
-        + add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
-        + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
+        <li>
+          Building better training
+          (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
+          `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `) and inference
+          (` + add_link(`Noisy Channel`, pub_dictionary["min2022noisy"]["paper"]) + `),
+          and better understanding them (`
+          //+ add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
+          + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
         </li>
       </ul>
-    </ul>
+    </li>
+   <li>
+      Application to more open-ended NLP problems:
+      <ul>
+        <li>
+          Answering ambiguous questions
+          (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `)
+          or questions with false presuppositions
+          (` + add_link(`CREPE`, pub_dictionary["yu2022crepe"]["paper"]) + `),
+          and fact checking (` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `
+          )
+        </li>
+      </ul>
+    </li>
   </ol>
-  
+
   <br />
+  
 
   I have been a strong advocate and an active organizing member of research communities for
   question answering (` + add_link(`MRQA workshop`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA competition`, website_directory["efficientqa"]) + `),
   representation/retrieval of world knowledge (` + add_link(`USKB workshop`, website_directory["uskb"]) + `, ` + add_link(`Spa-NLP workshop`, website_directory["semiparametric"]) + ", " + add_link("Repl4NLP workshop", website_directory["repl4nlp"]) + `)
-  and few-shot learning (upcoming ACL tutorial).
+  and zero/few-shot learning (` + add_link(`ACL 2022 Tutorial`, website_directory["fl-tutorial"]) + `).
   <br /><br />
 
   &#8251 I happily mentor a few undergraduate/master students interested in NLP research in topics above, but I am usually of full capacity.
@@ -268,8 +298,24 @@ let intros = [
 ]
 
 let news = [
+  `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
+  ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2022nonparametric"]["paper"]) + `.
+  Stay tuned for the code and model checkpoints!
+  `,
+  `09/2022: ` + add_tag("others") + ` I was selected by the EECS Rising Stars Program.`,
+  `08/2022: ` + add_tag("others") + ` Together with `
+  + add_link(`Sang Michael Xie`, "https://cs.stanford.edu/~eix/")
+  + `, we wrote a post on `
+  + add_link("How does in-context learning work? A framework for understanding the differences from traditional supervised learning", "https://ai.stanford.edu/blog/understanding-incontext/")
+  + " at Stanford AI Blog.",
+  `05/2022: ` + add_tag("service") + ` I co-taught the ACL tutorial on ` + 
+  `Few-Shot NLP with Pretrained Language Models (` +
+  add_link("slides", website_directory["fl-tutorial"]) + `, ` +
+  add_link("recordings", "https://underline.io/events/284/sessions?eventSessionId=10748") + `).`,
   `02/2022: ` + add_tag("paper") + ` Check out our new preprint, ` + add_link("Rethinking the Role of Demonstrations: What makes In-context Learning Work?", pub_dictionary["min2022rethinking"]["paper"]) + `
-  (All experiments reproducible from `+ add_link("this code", pub_dictionary["min2022rethinking"]["code"]) + `.)`,
+  All experiments reproducible from `+ add_link("this code", pub_dictionary["min2022rethinking"]["code"]) + `.
+  (Update 10/2022: The paper was accepted to EMNLP 2022.)
+  `,
   `02/2022: `+ add_tag("service") + ` I am co-organizing two workshops at ACL 2022: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
    ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
    `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
@@ -330,9 +376,51 @@ let news = [
 ];
 
 let publications = [
+    ["Nonparametric Masked Language Modeling",
+     ['sewon', 'Weijia Shi', 'mike', "Xilun Chen", 'scott', 'hanna', 'luke'],
+     "arXiv preprint",
+     "",
+     "2022",
+     "min2022nonparametric"
+     ],
+    ["CREPE: Open-Domain Question Answering with False Presuppositions",
+     ["Xinyan Yu", "sewon", "luke", "hanna"],
+     "arXiv preprint",
+     "",
+     "2022",
+     "yu2022crepe"
+     ],
+     ["Measuring and Narrowing the Compositionality Gap in Language Models",
+      ['Ofir Press', 'Muru Zhang', 'sewon', 'Ludwig Schmidt', 'Noah A. Smith', 'mike'],
+      "arXiv preprint",
+      "",
+      "2022",
+      "press2022measuring"
+     ],
+     ["INSCIT: Information-Seeking Conversations with Mixed-Initiative Interactions",
+      ['Zeqiu Wu', 'Ryu Parish', 'Hao Cheng', 'sewon', 'Prithviraj Ammanabrolu', 'Mari Ostendorf', 'hanna'],
+      "TACL",
+      "",
+      "2022",
+      "wu2022inscit"
+     ],
+     ["Re-Examining Calibration: The Case of Question Answering",
+      ['Chenglei Si', 'Chen Zhao', 'sewon', 'Jordan Boyd-Graber'],
+      "Findings of EMNLP (long)",
+      "",
+      "2022",
+      "si2022re"
+     ],
+     ["Exploring The Landscape of Distributional Robustness for Question Answering Models",
+      ["Anas Awadalla", "Mitchell Wortsman", "Gabriel Ilharco", 'sewon', 'hanna', "Ludwig Schmidt"],
+      "Findings of EMNLP (long)",
+      "",
+      "2022",
+      "awadalla2022exploring"
+     ],
      ["Rethinking the Role of Demonstrations: What makes In-context Learning Work?",
       ['sewon', 'shane', 'ari', 'mikel', 'mike', 'hanna', 'luke'],
-      "arXiv preprint",
+      "EMNLP (long)",
        "",
        "2022",
        "min2022rethinking"
@@ -383,13 +471,13 @@ let publications = [
        "2021",
        "min2021neurips"
       ],
-      ["Beyond Paragraphs: NLP for Long Sequences",
+      /*["Beyond Paragraphs: NLP for Long Sequences",
        ["Iz Beltagy", "Arman Cohan",'hanna', 'sewon', "Matthew E. Peters"],
         "NAACL-HLT Tutorial",
         "",
         "2021",
         "beltagy2021beyond"
-      ],
+      ],*/
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
        "NAACL (short)",
@@ -532,7 +620,7 @@ let experiences = [
     ["hanna", "luke"]
   ],
   [
-    "Facebook AI Research (FAIR)",
+    "Meta AI (formerly Facebook AI Research)",
     "10/2019&#8211;08/2020, 2021.04&#8211;Current",
     "Visiting researcher",
     ["luke"]
@@ -544,7 +632,7 @@ let experiences = [
     ["kenton", "kristina"]
   ],
   [
-    "Salesforce Research (Metamind)",
+    "Salesforce Research (formerly Metamind)",
     "11/2017&#8211;02/2018",
     "Research intern",
     ["caiming"]
@@ -569,8 +657,13 @@ let experiences = [
   ]
 ];
 
-let demoIntro = "I often enjoy making simple demos for some of my work. I happen to make one demo every year. <br /><em>Feedback welcomed!</em>";
-
+let demoIntro = `
+<!--I often enjoy making simple demos for some of my work.
+I happen to make one demo every year. <br /><em>Feedback welcomed!</em>-->
+<p style="color: red;">Due to shortage of resources, all demos have been ceased.
+Sorry about that! <br />
+If you are interested in hosting a demo, please reach out to me.</p> 
+`;
 let demos = [
     ["2021", "Few-shot Learning",
      "Channel LM (" + add_link("paper", pub_dictionary["min2022noisy"]["paper"]) + ") + MetaICL (" + add_link("paper", pub_dictionary["min2022metaicl"]["paper"]) + ")",
@@ -584,6 +677,7 @@ let demos = [
   ];
 
 let honors = [
+  "EECS Rising Stars (2022)",
   "JP Morgan Ph.D. Fellowship (2022&#8211;2023)",
   "Doctoral Study Abroad Program Fellowship granted by "
   + "<a href='https://www.kfas.or.kr/?pCulture=en' target='_blank'>Korea Foundation for Advanced Studies (KFAS)</a> (2018&#8211;2023)",
@@ -600,16 +694,19 @@ let services = [
   Workshop Co-organizer
   <ul style="padding-left: 40px;">
     <li>
+      ` + add_link("4th Workshop on Machine Reading for Question Answering: Long-Form Question Answering (Submitted to *CL 2023)", website_directory["mrqa"]) + `
+    </li>
+    <li>
       ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ ACL 2022)", website_directory["repl4nlp"]) + `
     </li>
     <li>
       ` + add_link("Semiparametric Methods in NLP: Decoupling Logic from Knowledge (Spa-NLP @ ACL 2022)", website_directory["semiparametric"]) + `
     </li>
     <li>
-     ` + add_link("The 3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]) + `
+     ` + add_link("3rd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2021)", website_directory["mrqa"]+"/2021") + `
     </li>
     <li>
-      ` + add_link("The 2nd Workshop on Unstructured/Structured KBs (USKB @ AKBC 2021)", website_directory["uskb"]) + `
+      ` + add_link("2nd Workshop on Unstructured/Structured KBs (USKB @ AKBC 2021)", website_directory["uskb"]) + `
     </li>
     <li>
       ` + add_link("Competition on Efficient Open-Domain Question Answering (EfficientQA @ NeurIPS 2020)", website_directory["efficientqa"]) + `
@@ -622,6 +719,9 @@ let services = [
   `Tutorial Co-instructor
   <ul style="padding-left: 40px;">
     <li>
+      Retrieval-based Language Models and Applications (Submitted to *CL 2023)
+    </li>
+    <li>
       ` + add_link("Few-Shot NLP with Pretrained Language Models (ACL 2022)", website_directory["fl-tutorial"]) + `
     </li>
     <li>
@@ -629,29 +729,40 @@ let services = [
     </li>
   </ul>
   `,
+  `Area Chair
+  <ul style="padding-left: 40px;">
+    <li>COLING 2022</li>
+  </ul>
+  `,
   `
   Reviewer/Program Committee
   <ul style="padding-left: 40px;">
+    <li>Journals:
+      <ul style="padding-left: 40px;">
+        <li>Transactions of the Association for Computational Linguistics (TACL): 2022</li>
+        <li>Transactions on Machine Learning Research (TMLR): 2022</li>
+      </ul>
+    </li>
     <li>*CL/NLP conferences:
       <ul style="padding-left: 40px;">
         <li>ACL: 2019, 2020, 2021 <em>(outstanding reviewer)</em></li>
-        <li>EMNLP: 2019 <em>(outstanding reviewer)</em>, 2020, 2021 <em>(outstanding reviewer)</em></li>
-        <li>AKBC: 2019, 2020, 2021</li>
+        <li>EMNLP: 2019 <em>(outstanding reviewer)</em>, 2020, 2021 <em>(outstanding reviewer)</em>, 2022</li>
+        <li>AKBC: 2019, 2020, 2021, 2022</li>
         <li>AACL: 2020</li>
         <li>NAACL: 2021</li>
         <li>ACL Rolling Review: 2021&#8211;</li>
       </ul>
     </li>
-    <li>ML/AI conferences/journals:
+    <li>ML/AI conferences:
       <ul style="padding-left: 40px;">
-        <li>NeurIPS: 2018, 2020, 2021</li>
-        <li>ICLR: 2019, 2020, 2021, 2022</li>
+        <li>NeurIPS: 2018, 2020, 2021, 2022</li>
+        <li>ICLR: 2019, 2020, 2021, 2022, 2023</li>
         <li>AAAI: 2020, 2021, 2022</li>
         <li>ICML: 2021</li>
-        <li>TMLR: 2022</li>
       </ul>
     <li>Workshops:
       <ul style="padding-left: 40px;">
+        <li>Workshop on Knowledge Retrieval and Language Models (ICML 2022)</li>
         <li>The 2nd Workshop on NLP for Positive Impact (NLP4PI @ EMNLP 2022)</li>
         <li>The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)</li>
         <li>Student Research Workshop (SRW): ACL 2019, ACL 2020, AACL 2020, EACL 2021, ACL 2021</li>
@@ -683,7 +794,9 @@ let services = [
 ];
 
 let talks = [
- `06/2022: MLOPT Research Group, University of Wisconsin–Madison`,
+ `12/2022: Data Science & Business Analytics Lab, Korea University`,
+ `10/2022: USC ISI NL Seminar`,
+ `07/2022: MLOPT Research Group, University of Wisconsin–Madison`,
  `04/2022: Language & Intelligence Lab, MIT`,
  `12/2021: AIRS, Hyundai`,
  `10/2021: Facebook AI`,
@@ -700,7 +813,12 @@ let talks = [
 
 
 let teaching = [
+ `*CL 2023 Tutorial (Submitted): Retrieval-based Language Models and Applications
+  <ul style="padding-left: 40px;">
+    <li>Will be co-teaching with Akari Asai, Zexuan Zhong and Danqi Chen</li>
+  </ul>`,
  `ACL 2022 Tutorial: ` + add_link("Few-Shot NLP with Pretrained Language Models", website_directory["fl-tutorial"]) + `
+  (` + add_link("recordings from underline", "https://underline.io/events/284/sessions?eventSessionId=10748") + `)
   <ul style="padding-left: 40px;">
     <li>Co-taught with Iz Beltagy, Arman Cohan, Sameer Singh and Robert Logan</li>
   </ul>`,

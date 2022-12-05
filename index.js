@@ -159,6 +159,10 @@ window.onload = function () {
       // arxiv
       pubText += "<em>"+paper[2]+"</em>. "+paper[4]+". ";
       keyword = paper[5];
+    } else if (paper[2].includes("TACL")){
+      // journal
+      pubText += "In: <em>"+paper[2]+"</em>. "+paper[4]+". ";
+      keyword = paper[5];
     } else {
       // proceedings
       //pubText += "In: <em> Proceedings of "+paper[2]+"</em>. "+paper[3]+". "+paper[4]+". ";
