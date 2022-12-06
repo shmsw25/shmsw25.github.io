@@ -689,13 +689,11 @@ let honors = [
   "<a href='http://cse.snu.ac.kr/scsc/node/19' target='_blank'>Samsung Convergence Software Course</a> Mentor Scholarship (2017)"
 ];
 
+
 let services = [
   `
   Workshop Co-organizer
   <ul style="padding-left: 40px;">
-    <li>
-      ` + add_link("4th Workshop on Machine Reading for Question Answering: Long-Form Question Answering (Submitted to *CL 2023)", website_directory["mrqa"]) + `
-    </li>
     <li>
       ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ ACL 2022)", website_directory["repl4nlp"]) + `
     </li>
@@ -718,9 +716,6 @@ let services = [
   `,
   `Tutorial Co-instructor
   <ul style="padding-left: 40px;">
-    <li>
-      Retrieval-based Language Models and Applications (Submitted to *CL 2023)
-    </li>
     <li>
       ` + add_link("Few-Shot NLP with Pretrained Language Models (ACL 2022)", website_directory["fl-tutorial"]) + `
     </li>
@@ -813,10 +808,6 @@ let talks = [
 
 
 let teaching = [
- `*CL 2023 Tutorial (Submitted): Retrieval-based Language Models and Applications
-  <ul style="padding-left: 40px;">
-    <li>Will be co-teaching with Akari Asai, Zexuan Zhong and Danqi Chen</li>
-  </ul>`,
  `ACL 2022 Tutorial: ` + add_link("Few-Shot NLP with Pretrained Language Models", website_directory["fl-tutorial"]) + `
   (` + add_link("recordings from underline", "https://underline.io/events/284/sessions?eventSessionId=10748") + `)
   <ul style="padding-left: 40px;">
