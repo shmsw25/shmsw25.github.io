@@ -47,7 +47,8 @@ let people = {
   'tim': "Tim Dettmers",
   'shane': "Xinxi Lyu",
   'ari': "Ari Holtzman",
-  'mikel': "Mikel Artetxe"
+  'mikel': "Mikel Artetxe",
+  'iz': "Iz Beltagy"
 };
 
 let people_website = {
@@ -478,13 +479,6 @@ let publications = [
        "2021",
        "min2021neurips"
       ],
-      /*["Beyond Paragraphs: NLP for Long Sequences",
-       ["Iz Beltagy", "Arman Cohan",'hanna', 'sewon', "Matthew E. Peters"],
-        "NAACL-HLT Tutorial",
-        "",
-        "2021",
-        "beltagy2021beyond"
-      ],*/
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
        "NAACL (short)",
