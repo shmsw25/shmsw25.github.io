@@ -167,9 +167,9 @@ let pub_dictionary = {
     "code": "https://github.com/velocityCavalry/CREPE",
     "data": "https://github.com/velocityCavalry/CREPE#download-data"
   },
-  "lyu2022zero": {
-    "paper": "",
-    "code": "",
+  "lyu2022z": {
+    "paper": "https://arxiv.org/abs/2212.09865",
+    "code": "https://github.com/alrope123/z-icl",
   },
   "min2022nonparametric": {
     "paper": "https://arxiv.org/abs/2212.01349",
@@ -178,8 +178,9 @@ let pub_dictionary = {
   "shi2022retrieval": {
     "paper": "",
   },
-  "wang2022rethinking": {
-    "paper": "",
+  "wang2022towards": {
+    "paper": "https://arxiv.org/abs/2212.10001",
+    "code": "https://github.com/sunlab-osu/Understanding-CoT"
   },
 }
 
@@ -247,7 +248,7 @@ let intros = [
           (` + add_link(`ELQ`, pub_dictionary["li2020efficient"]["paper"]) + `)
         </li>
         <li>
-          Nonparametric masked language modeling
+          Nonparametric language modeling
           (` + add_link(`NPM`, pub_dictionary["min2022nonparametric"]["paper"]) + `)
         </li>
       </ul>
@@ -259,10 +260,13 @@ let intros = [
           Building better training
           (` + add_link(`UnifiedQA`, pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
           `+ add_link(`MetaICL`, pub_dictionary["min2022metaicl"]["paper"]) + `) and inference
-          (` + add_link(`Noisy Channel`, pub_dictionary["min2022noisy"]["paper"]) + `),
-          and better understanding them (`
-          //+ add_link("Prompt Waywardness", pub_dictionary["khashabi2022prompt"]["paper"]) + ", "
-          + add_link("Rethinking Demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `)
+          (` + add_link(`Noisy Channel`, pub_dictionary["min2022noisy"]["paper"]) + `).
+        </li>
+        <li>
+          Better understanding `
+          + add_link("demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
+          + add_link("CoT", pub_dictionary["wang2022towards"]["paper"]) + `, and `
+          + add_link("zero-shot", pub_dictionary["lyu2022z"]["paper"]) + `.
         </li>
       </ul>
     </li>
@@ -320,17 +324,6 @@ let news = [
    ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
    `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
    add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `).`,
-  /*
-  `02/2022: `+ add_tag("event") + ` ACL 2022 News ---
-  I will present two papers: ` + add_link("Noicy Channel LM", pub_dictionary["min2022noisy"]["paper"]) + " and " + add_link("FaVIQ", pub_dictionary["park2022faviq"]["paper"]) + `.
-  In addition, I will co-instruct ` +
-  `the tutorial on few-shot learning` +
-  //add_link("the tutorial on few-shot learning", website_directory["fl-tutorial"]) +
-  ` and co-organize two workshops: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
-   ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
-   `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
-   add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `). Join us at Dublin, Ireland!`,
-   */
   `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2022metaicl"]["paper"]) +
   ` is out (w/ `+ add_link("code", pub_dictionary["min2022metaicl"]["code"]) + `).
   Check out the ` + add_link("demo", pub_dictionary["min2022metaicl"]["demo"]) + `!
@@ -376,6 +369,20 @@ let news = [
 ];
 
 let publications = [
+    ["Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
+     ["Boshi Wang", 'sewon', "Xiang Deng", "Jiaming Shen", "You Wu", 'luke', "Huan Sun"],
+     "arXiv preprint",
+     "",
+     "2022",
+     "wang2022towards"
+    ],
+    ["Z-ICL: Zero-Shot In-Context Learning with Pseudo-Demonstrations",
+     ['shane', 'sewon', 'iz', 'luke', 'hanna'],
+     "arXiv preprint",
+     "",
+     "2022",
+     "lyu2022z"
+    ],
     ["Nonparametric Masked Language Modeling",
      ['sewon', 'Weijia Shi', 'mike', "Xilun Chen", 'scott', 'hanna', 'luke'],
      "arXiv preprint",
