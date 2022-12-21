@@ -305,7 +305,7 @@ let intros = [
 let news = [
   `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
   ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2022nonparametric"]["paper"]) + `.
-  Stay tuned for the code and model checkpoints!
+  Code and model checkpoints available ` + add_link("here", pub_dictionary["min2022nonparametric"]["code"]) + `.
   `,
   `09/2022: ` + add_tag("others") + ` I was selected by the EECS Rising Stars Program.`,
   `08/2022: ` + add_tag("others") + ` Together with `
