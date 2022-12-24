@@ -659,11 +659,11 @@ let experiences = [
 ];
 
 let demoIntro = `
-<!--I often enjoy making simple demos for some of my work.
-I happen to make one demo every year. <br /><em>Feedback welcomed!</em>-->
-<p style="color: red;">Due to shortage of resources, all demos have been ceased.
-Sorry about that! <br />
-If you are interested in hosting a demo, please reach out to me.</p> 
+I often enjoy making simple demos for some of my work.
+I happen to make one demo every year. <br /><em>Feedback welcomed!</em>
+<p style="color: red;">Update in Dec 2022: Due to some issues with our server,
+the demo websites are often down. <br />
+Drop me an email if you found them down, and we will fix the issue ASAP.</p> 
 `;
 let demos = [
     ["2021", "Few-shot Learning",
