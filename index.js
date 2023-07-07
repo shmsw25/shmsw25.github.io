@@ -190,7 +190,17 @@ window.onload = function () {
     pubText += "</p>"
   }
   //}
-  document.getElementById("publication").innerHTML += "*: equal contribution" +pubText;
+  document.getElementById("publication").innerHTML += `
+
+  Please see my <a href="https://scholar.google.com/citations?user=jU4IZs4AAAAJ&hl=en" target="_blank">
+  <span style="font-size:120%"><i class="ai ai-google-scholar"></i></span>
+  <!--<span style="font-size:110%"><i class="fa fa-google"></i></span>-->
+  google scholar</a> or <a href="https://www.semanticscholar.org/author/Sewon-Min/48872685" target="_blank">
+  <span style="font-size:120%"><i class="ai ai-semantic-scholar"></i></span>
+  <!--<span style="font-size:110%"><i class="fa fa-google"></i></span>-->
+  semantic scholar</a> for an up-to-date list.
+  <br /><br />
+  *: equal contribution` +pubText;
   // load education
   let eduText = "";
   for (let i=0; i<educations.length; i++) {
@@ -221,6 +231,7 @@ window.onload = function () {
   }
   document.getElementById("experience").innerHTML += expText;
 
+  /*
   //load demos
   let demoText = "<center>" + demoIntro + "</center><br />";
   for (let i=0; i<demos.length; i++) {
@@ -238,7 +249,7 @@ window.onload = function () {
       </div>
     </div>`;
   }
-  document.getElementById("demo").innerHTML += demoText;
+  document.getElementById("demo").innerHTML += demoText;*/
 
   // load honors
   let honorText = "";
@@ -247,13 +258,13 @@ window.onload = function () {
   }
   document.getElementById("honorship").innerHTML += "<ul>" + honorText + "</ul>";
   // load services
-  let serviceText = "";
+  let serviceText = `Please see my <a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> CV</a> for an up-to-date list.<br /><br />`;
   for (let i=0; i<services.length; i++) {
     serviceText += "<li>" + services[i] + "</li>";
   }
   document.getElementById("service").innerHTML += "<ul>" + serviceText + "</ul>";
   // load talks
-  let talksText = "";
+  let talksText = `Please see my <a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> CV</a> for an up-to-date list.<br /><br />`;
   for (let i=0; i<talks.length; i++) {
     talksText += "<li>" + talks[i] + "</li>";
   }
