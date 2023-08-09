@@ -50,6 +50,7 @@ let people = {
   'mikel': "Mikel Artetxe",
   'iz': "Iz Beltagy",
   'kalpesh': "Kalpesh Krishna",
+  'suchin': "Suchin Gururangan"
 };
 
 let people_website = {
@@ -188,7 +189,11 @@ let pub_dictionary = {
     "paper": "https://arxiv.org/abs/2305.14251",
     "code": "https://github.com/shmsw25/FActScore",
     "slides": "FActScore.pdf"
-  }
+  },
+  "min2023silo": {
+    "paper": "https://arxiv.org/abs/2308.04430",
+    "code": "https://github.com/kernelmachine/silo-lm",
+  },
 }
 
 let website_directory = {
@@ -258,10 +263,11 @@ let intros = [
           and entity linking
           (` + add_link(`ELQ`, pub_dictionary["li2020efficient"]["paper"]) + `).
     </li>
-    <li><em>Retrieval-based language modeling</em>: I strongly believe language models should be a function of the data given at inference time,
-    and have built nonparametric language models in various approaches (` +
+    <li><em>Retrieval-based language modeling</em>: I strongly believe language models should be a function of the data given at inference time.
+    I have built nonparametric language models in various approaches (` +
       add_link("NPM", pub_dictionary["min2023nonparametric"]["paper"]) + ", " +
-      add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + `).
+      add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + `),
+      and also stuided how they can be used for ` + add_link("lowering legal risk", pub_dictionary["min2023silo"]["paper"]) + `.
     </li>
     <li>
         <em>Applications</em>: I study open-ended NLP problems such as
@@ -286,8 +292,13 @@ let intros = [
 ]
 
 let news = [
-  `07/2023: ` + add_tag("service") + ` I am co-teaching a tutorial on ` + 
-  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Stay tuned for the slides and recordings!`,
+  `08/2023: ` + add_tag("paper") + " Together with " + add_link("Suchin Gururangan", "https://suchin.io/") + `,
+  we present ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `, a new way of lowering legal risk by leveraging a nonparametric LM.`,
+  `07/2023: ` + add_tag("paper") + " " + add_link("Our paper that examines the role of demonstrations in CoT prompting", pub_dictionary["wang2023towards"]["paper"]) + `,
+  led by ` + add_link(`Boshi Wang`, "https://boshi-wang.github.io/") + `, won an Honorable Mention at ACL 2023.
+  `,
+  `07/2023: ` + add_tag("service") + ` I co-taught a tutorial on ` + 
+  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides are available on the website. Stay tuned for the recordings!`,
   `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
   ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2023nonparametric"]["paper"]) + `.
   Code and model checkpoints available ` + add_link("here", pub_dictionary["min2023nonparametric"]["code"]) + `.
@@ -355,6 +366,13 @@ let news = [
 ];
 
 let publications = [
+    ["SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore",
+      ['sewon*', 'suchin*', 'Eric Wallace', 'hanna', 'Noah A. Smith', 'luke'],
+      "arXiv preprint",
+      "",
+      "2023",
+      "min2023silo"
+    ],
     ["FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
       ["sewon*", "kalpesh*", "shane", "mike", "scott", "Pang Wei Koh", "Mohit Iyyer", "luke", "hanna"],
       "arXiv preprint",
@@ -677,6 +695,7 @@ let demos = [
   ];
 
 let honors = [
+  "Honorable Mentions (ACL 2023)",
   "EECS Rising Stars (2022)",
   "JP Morgan Ph.D. Fellowship (2022&#8211;2023)",
   "Doctoral Study Abroad Program Fellowship granted by "
