@@ -259,17 +259,17 @@ let intros = [
       I am excited about ` + add_link(`<b>language modeling</b>`, website_directory["fl-tutorial"]) + ` more broadly:
       how we can improve them for downstream tasks by better ` + add_link("inference", pub_dictionary["min2022noisy"]["paper"]) + ` and ` + 
       add_link("trai", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + add_link("ning", pub_dictionary["min2022metaicl"]["paper"]) + `
-      (` +  add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `
-      is one of the first multi-task learned LMs, and
-      ` + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `
-      is one of the first that learns to learn in context, combined with instructions).
+      (` +  add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
+      one of the first multi-task learned LMs, and
+      ` + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `,
+      one of the first that learns to learn in context, combined with instructions).
       Our work also has been some of leading work on better understanding how LMs work
-      (` + add_link("Rethinking demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
-          + add_link("Chain-of-Thought", pub_dictionary["wang2023towards"]["paper"]) + `, and `
+      (` + add_link("rethinking demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
+          + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `, and `
           + add_link("zero-shot", pub_dictionary["lyu2023z"]["paper"]) + `).
     </li>
     <li>
-      My work includes some of impactful work in <b>retrieval/representation learning</b>.
+      I have worked on <b>retrieval/representation learning</b> more broadly.
       This includes ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
       one of the first and most widely-used dense retrieval systems,
       ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
@@ -278,8 +278,9 @@ let intros = [
       </li>
     <li>
       I am an advocate for tackling <b>open-ended information-seeking</b> problems.
-      ` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `)
-      is one of the first work that moves one step further from short-answer open-domain QA.
+      We have introduced
+      ` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `),
+      a new task for ambiguous open-domain questions.
       We also have studied ` + add_link(`questions with false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `
       and ` + add_link(`fact checking`, pub_dictionary["park2022faviq"]["paper"]) + `.
       These problems are still largely unsolved by current state-of-the-art LMs.
