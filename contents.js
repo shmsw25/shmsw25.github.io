@@ -242,50 +242,57 @@ let intros = [
 
   My primary research lies in the area of natural language processing and machine learning.
   These days, I am mainly interested in language modeling, retrieval, and their intersection.
-  My work spans across:
 
   <ul style="padding-left: 30px; margin-top: 20px">
     <li>
-      <em>Language modeling</em>: I build better models/methods through better ` + add_link("inference", pub_dictionary["min2022noisy"]["paper"]) + ` or ` + 
-      add_link("training", pub_dictionary["min2022metaicl"]["paper"]) + `. My work also tries to better understand these models and provide new insights (`
-          + add_link("demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
-          + add_link("CoT", pub_dictionary["wang2023towards"]["paper"]) + `, `
+      These days, I am most excited about ` + add_link("<b>retrieval-based language models</b>", website_directory["retrieval-lm-tutorial"]) + `,
+      a class of LMs that use a large collection of text data at inference time
+      (` + add_link("NPM", pub_dictionary["min2023nonparametric"]["paper"]) + `,
+      ` + add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + `,
+      ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `).
+      These models are parameter-efficient, can grow & update, and
+      provide controllability/attribution/opt-out functions that are widely useful, e.g.,
+      ` + add_link("for lowering legal risk", pub_dictionary["min2023silo"]["paper"]) + `.
+    </li>
+
+    <li>
+      I am excited about ` + add_link(`<b>language modeling</b>`, website_directory["fl-tutorial"]) + ` more broadly:
+      how we can improve them for downstream tasks by better ` + add_link("inference", pub_dictionary["min2022noisy"]["paper"]) + ` and ` + 
+      add_link("trai", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + add_link("ning", pub_dictionary["min2022metaicl"]["paper"]) + `
+      (` +  add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `
+      is one of the first multi-task learned LMs, and
+      ` + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `
+      is one of the first that learns to learn in context, combined with instructions).
+      Our work also has been some of leading work on better understanding how LMs work
+      (` + add_link("Rethinking demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
+          + add_link("Chain-of-Thought", pub_dictionary["wang2023towards"]["paper"]) + `, and `
           + add_link("zero-shot", pub_dictionary["lyu2023z"]["paper"]) + `).
     </li>
-    <li><em>Retreval</em>: I develop better representation learning and retrieval methods
-          for question answering (` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-          ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-          ` + add_link(`ReConsider`, pub_dictionary["iyer2021reconsider"]["paper"]) + `),
-          multi-hop question answering
-          (` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `),
-          multi-answer question answering
-          (` + add_link(`JPR`, pub_dictionary["min2021joint"]["paper"]) + `),
-          and entity linking
-          (` + add_link(`ELQ`, pub_dictionary["li2020efficient"]["paper"]) + `).
-    </li>
-    <li><em>Retrieval-based language modeling</em>: I strongly believe language models should be a function of the data given at inference time.
-    I have built nonparametric language models in various approaches (` +
-      add_link("NPM", pub_dictionary["min2023nonparametric"]["paper"]) + ", " +
-      add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + `),
-      and also stuided how they can be used for ` + add_link("lowering legal risk", pub_dictionary["min2023silo"]["paper"]) + `.
-    </li>
     <li>
-        <em>Applications</em>: I study open-ended NLP problems such as
-            answering ambiguous questions
-            (` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + `) or questions with false presuppositions
-            (` + add_link(`CREPE`, pub_dictionary["yu2023crepe"]["paper"]) + `),
-            and fact checking (` + add_link(`FaVIQ`, pub_dictionary["park2022faviq"]["paper"]) + `).
+      My work includes some of impactful work in <b>retrieval/representation learning</b>.
+      This includes ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
+      one of the first and most widely-used dense retrieval systems,
+      ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
+      one of the first that uses structured and unstructured text for open-domain QA, and
+      ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `, one of the early multi-hop QA systems.
+      </li>
+    <li>
+      I am an advocate for tackling <b>open-ended information-seeking</b> problems.
+      ` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `)
+      is one of the first work that moves one step further from short-answer open-domain QA.
+      We also have studied ` + add_link(`questions with false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `
+      and ` + add_link(`fact checking`, pub_dictionary["park2022faviq"]["paper"]) + `.
+      These problems are still largely unsolved by current state-of-the-art LMs.
     </li>
   </ul>
-
+  
   <br />
   
-
-  I have been a strong advocate for
-  nonparametric LMs (an upcoing ACL 2023 tutorial, ` + add_link(`Spa-NLP`, website_directory["semiparametric"]) + `),
+  Check out resources for the topics I am excited about:
+  nonparametric LMs (` + add_link("ACL 2023 tutorial", website_directory["retrieval-lm-tutorial"]) + `, ` + add_link(`Spa-NLP`, website_directory["semiparametric"]) + `),
   representation learning (` + add_link(`USKB`, website_directory["uskb"]) + `, ` + add_link("Repl4NLP", website_directory["repl4nlp"]) + `),
-  and zero-/few-shot learning (` + add_link(`ACL 2022 tutorial`, website_directory["fl-tutorial"]) + `).
-  I also have been active in question answering (` + add_link(`MRQA`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA`, website_directory["efficientqa"]) + `).
+  zero-/few-shot learning (` + add_link(`ACL 2022 tutorial`, website_directory["fl-tutorial"]) + `), and
+  question answering (` + add_link(`MRQA`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA`, website_directory["efficientqa"]) + `).
 
   <br /><br />
   `
