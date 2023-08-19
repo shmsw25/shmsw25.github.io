@@ -273,7 +273,7 @@ let intros = [
       This includes ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
       one of the first and most widely-used dense retrieval systems,
       ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-      one of the first that uses structured and unstructured text for open-domain QA, and
+      an open-domain QA system using structured and unstructured text jointly, and
       ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `, one of the early multi-hop QA systems.
       </li>
     <li>
