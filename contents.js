@@ -270,8 +270,8 @@ let intros = [
     </li>
     <li>
       I have worked on <b>retrieval/representation learning</b> more broadly.
-      This includes ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-      one of the first and most widely-used dense retrieval systems,
+      We have developed ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
+      one of the most widely-used dense retrieval systems,
       ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
       an open-domain QA system using structured and unstructured text jointly, and
       ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `, one of the early multi-hop QA systems.
