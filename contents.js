@@ -259,11 +259,9 @@ let intros = [
       I am excited about ` + add_link(`<b>language modeling</b>`, website_directory["fl-tutorial"]) + ` more broadly:
       how we can improve them for downstream tasks by better ` + add_link("inference", pub_dictionary["min2022noisy"]["paper"]) + ` and ` + 
       add_link("trai", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + add_link("ning", pub_dictionary["min2022metaicl"]["paper"]) + `
-      (` +  add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `,
-      one of the first multi-task learned LMs, and
-      ` + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `,
-      one of the first that learns to learn in context, combined with instructions).
-      Our work also has been some of leading work on better understanding how LMs work
+      (through ` +  add_link("multi-task learning", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `
+      or ` + add_link("learning to learn in context", pub_dictionary["min2022metaicl"]["paper"]) + `).
+      Our work also tries to better understand how LMs work
       (` + add_link("rethinking demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
           + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `, and `
           + add_link("zero-shot", pub_dictionary["lyu2023z"]["paper"]) + `).
