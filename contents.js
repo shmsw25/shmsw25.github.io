@@ -219,7 +219,8 @@ function add_info (paper, infos) {
 }
 
 function add_tag(tag) {
-	if (tag==="paper") {
+	return ""
+  if (tag==="paper") {
 		return `<span class="badge badge-pill badge-paper">Paper</span>`;
 	} else if (tag==="service") {
 		return `<span class="badge badge-pill badge-service">Event</span>`;
