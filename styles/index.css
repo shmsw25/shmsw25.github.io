@@ -197,7 +197,7 @@ h4 em {
 }
 
 .my-container p {
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 }
 
 #news-text p {
@@ -213,7 +213,7 @@ h4 em {
 }
 
 .blank{
-	height: 30px;
+	height: 20px;
 }
 
 strong.thicker{
@@ -229,7 +229,7 @@ sup{
 #info img{
 	padding: 20px;
 	border-radius: 50%;
-	max-width: 300px;
+	max-width: 270px;
 	height: auto;
 }
 
