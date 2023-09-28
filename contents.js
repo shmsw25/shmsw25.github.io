@@ -293,12 +293,14 @@ let intros = [
 
 let news = [
   `08/2023: ` + add_tag("paper") + " Together with " + add_link("Suchin Gururangan", "https://suchin.io/") + `,
-  we present ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `, a new way of lowering legal risk by leveraging a nonparametric LM.`,
+  we present ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `, 
+  proposing to segregate the training data and the inference-time data in nonparametric LMs to mitigate legal risk in LMs.
+  `,
   `07/2023: ` + add_tag("paper") + " " + add_link("Our paper that examines the role of demonstrations in CoT prompting", pub_dictionary["wang2023towards"]["paper"]) + `,
   led by ` + add_link(`Boshi Wang`, "https://boshi-wang.github.io/") + `, won an Honorable Mention at ACL 2023.
   `,
   `07/2023: ` + add_tag("service") + ` I co-taught a tutorial on ` + 
-  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides are available on the website. Stay tuned for the recordings!`,
+  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides are available on the website.`,
   `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
   ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2023nonparametric"]["paper"]) + `.
   Code and model checkpoints available ` + add_link("here", pub_dictionary["min2023nonparametric"]["code"]) + `.
