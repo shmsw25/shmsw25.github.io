@@ -227,7 +227,9 @@ function add_tag(tag) {
 		return `<span class="badge badge-pill badge-others">Others</span>`;
 	} else if (tag=="event") {
 		return `<span class="badge badge-pill badge-event">Event</span>`;
-	}
+	} else if (tag=="talk") {
+    return `<span class="badge badge-pill badge-event">Talks/Teaching</span>`;
+  }
 }
 
 let intros = [
@@ -235,53 +237,44 @@ let intros = [
   I am a Ph.D. candidate in the Natural Language Processing group at the University of Washington.
   I am fortunate to be advised by [hanna] and [luke].
   I am supported by a ` + add_link("J.P. Morgan PhD Fellowship", "https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/phd-fellowship") + `.
-  I have been a part-time visiting researcher at Meta AI (formerly Facebook AI Research) for four years during my Ph.D.
-  I have previously interned at Google Research (in 2020) and Salesforce Research (in 2017).
+  I have been a part-time visiting researcher at Meta AI (formerly Facebook AI Research) during my Ph.D., and
+  previously interned at Google Research (in 2020) and Salesforce Research (in 2017).
   Prior to UW, I received B.S. in CSE from Seoul National University.
   <br /><br />
 
   My primary research lies in the area of natural language processing and machine learning.
-  These days, I am mainly interested in language modeling, retrieval, and their intersection.
-
+  Specifically:
   <ul style="padding-left: 30px; margin-top: 20px">
-    <li>
-      These days, I am most excited about ` + add_link("<b>retrieval-based language models</b>", website_directory["retrieval-lm-tutorial"]) + `,
-      a class of LMs that use a large collection of text data at inference time
-      (` + add_link("NPM", pub_dictionary["min2023nonparametric"]["paper"]) + `,
-      ` + add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + `,
-      ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `).
-      These models are parameter-efficient, can grow & update, and
-      provide controllability/attribution/opt-out functions that are widely useful, e.g.,
-      ` + add_link("for lowering legal risk", pub_dictionary["min2023silo"]["paper"]) + `.
-    </li>
+    
 
     <li>
-      I am excited about ` + add_link(`<b>language modeling</b>`, website_directory["fl-tutorial"]) + ` more broadly:
-      how we can improve them for downstream tasks by better ` + add_link("inference", pub_dictionary["min2022noisy"]["paper"]) + ` and ` + 
-      add_link("trai", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + add_link("ning", pub_dictionary["min2022metaicl"]["paper"]) + `
-      (through ` +  add_link("multi-task learning", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + `
-      or ` + add_link("learning to learn in context", pub_dictionary["min2022metaicl"]["paper"]) + `).
-      Our work also tries to better understand how LMs work
-      (` + add_link("rethinking demonstrations", pub_dictionary["min2022rethinking"]["paper"]) + `, `
-          + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `, and `
+      ` + add_link(`<b>Language modeling</b>`, website_directory["fl-tutorial"]) + `:
+      I study new methods to improve the current class of LMs (` + add_link("noisy channel", pub_dictionary["min2022noisy"]["paper"]) + `, ` + 
+      add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + ", " + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `),
+      and also develop new analysis methods to understand them better (` + add_link("in-context learning", pub_dictionary["min2022rethinking"]["paper"]) + `, `
+          + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `, `
           + add_link("zero-shot", pub_dictionary["lyu2023z"]["paper"]) + `).
     </li>
+
     <li>
-      I have worked on <b>retrieval/representation learning</b> more broadly.
-      We have developed ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `,
-      one of the most widely-used dense retrieval systems,
-      ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-      an open-domain QA system using structured and unstructured text jointly, and
-      ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `, one of the early multi-hop QA systems.
-      </li>
+      ` + add_link("<b>Nonparametric language models</b>", website_directory["retrieval-lm-tutorial"]) + `:
+      I study the class of LMs with a new dimension in scaling: the data given at inference time.
+      This addresses key issues of current LMs: staleness, inefficiency, and lack of data attribution. 
+      My approaches range from ` + add_link("retrieval augmentation", pub_dictionary["shi2023replug"]["paper"]) + ` to ` 
+      + `an LM with ` + add_link("a nonparametric softmax", pub_dictionary["min2023nonparametric"]["paper"]) + `.
+      I also study how these new functionalities can change how we used to build models (` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `).
+    </li>
+
     <li>
-      I am an advocate for tackling <b>open-ended information-seeking</b> problems.
-      We have introduced
-      ` + add_link(`AmbigQA`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `),
-      a new task for ambiguous open-domain questions.
-      We also have studied ` + add_link(`questions with false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `
-      and ` + add_link(`fact checking`, pub_dictionary["park2022faviq"]["paper"]) + `.
-      These problems are still largely unsolved by current state-of-the-art LMs.
+      <b>Information-seeking</b>:
+      My earlier work includes systems for retrieval/representation learning for question answering, including
+      ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `, ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
+      and ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `.
+      These days, I am more interested in open-ended information-seeking,
+      such as ` + add_link(`ambiguous question answering`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `)
+      and ` + add_link(`questions with false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `,
+      which are still largely unsolved by current state-of-the-art LMs.
+      I also study ` + add_link("new evaluation", pub_dictionary["min2023factscore"]["paper"]) + ` for these problems.
     </li>
   </ul>
   
@@ -846,13 +839,24 @@ let services = [
 
 let talks = [
  `12/2023 (Expected): Big Picture Workshop at EMNLP 2023`,
- `06/2023: Microsoft Semantic Machines`,
+  `09/2023: UMass Amherst NLP Group <br />
+  <em>Redesigning the Softmax: Nonparametric Prediction in Language Modeling</em>`,
+  `09/2023: Privacy in ML Seminar, Google Deepmind <br />
+  <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
+  `09/2023: IBS Data Science Group, KAIST <br />
+  <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
+ `06/2023: Microsoft Semantic Machines <br />
+  <em> FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation</em>
+ `,
  `03/2023: Gradient Podcast Interview (` + add_link("link", "https://thegradientpub.substack.com/p/sewon-min-the-science-of-natural") + `)`,
- `02/2023: Conversation & Reasoning Group, Meta`,
- `12/2022: Data Science & Business Analytics Lab, Korea University`,
- `10/2022: USC ISI NL Seminar`,
- `07/2022: MLOPT Research Group, University of Wisconsin–Madison`,
- `04/2022: Language & Intelligence Lab, MIT`,
+ `02/2023: Conversation & Reasoning Group, Meta <br />
+ <em>Nonparametric Masked Language Modeling</em>
+ `,
+ `12/2022: Data Science & Business Analytics Lab, Korea University <br />
+ <em>Open-domain, Open-ended Question Answering</em>`,
+ `10/2022: USC ISI NL Seminar <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
+ `07/2022: MLOPT Research Group, University of Wisconsin–Madison <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
+ `04/2022: Language & Intelligence Lab, MIT <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
  `12/2021: AIRS, Hyundai`,
  `10/2021: Facebook AI`,
  `08/2021: AI Summer School, Seoul National University`,

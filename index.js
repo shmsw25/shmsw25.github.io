@@ -52,16 +52,17 @@ window.onload = function () {
     $("#service").show();
   })
 
-  $("#demo-button").click(function(){
+  $("#talk-button").click(function(){
     hideAll();
-    $("#demo").show();
+    $("#talks").show();
+    $("#teaching").show();
   })
 
   $("#others-button").click(function(){
     hideAll();
     $("#honorship").show();
-    $("#talks").show();
-    $("#teaching").show();
+    //$("#talks").show();
+    //$("#teaching").show();
     // $("#personal").hide();
   })
 
