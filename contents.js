@@ -912,8 +912,9 @@ let teaching = [
   </ul>`,
  `Pre-doctoral student mentoring
  <ul style="padding-left: 40px;">
-  <li>Xinyan (Velocity) Yu, BS->MS at UW (2022&#8211;Current)</li>
+  <li>Michael Duan, BS student at UW (2023&#8211;Current)</li>
   <li>Xinxi (Shane) Lyu, BS->MS at UW (2021&#8211;Current)</li>
+  <li>Xinyan (Velocity) Yu, BS->MS at UW (2021&#8211;2022)</li>
   <li>Skyler Hallinan, BS->MS at UW (2021)</li>
   <li>Jungsoo Park, MS student at Korea University, now at NAVER (2021)</li>
   <li>Belinda Li, software engineer at Facebook, now a PhD student at MIT (2020)</li>

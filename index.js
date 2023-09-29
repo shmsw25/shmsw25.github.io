@@ -253,11 +253,12 @@ window.onload = function () {
   document.getElementById("demo").innerHTML += demoText;*/
 
   // load honors
-  let honorText = "";
+  /*let honorText = "";
   for (let i=0; i<honors.length; i++) {
     honorText += "<li>" + honors[i] + "</li>";
   }
   document.getElementById("honorship").innerHTML += "<ul>" + honorText + "</ul>";
+  */
   // load services
   let serviceText = `Please see my <a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> CV</a> for an up-to-date list.<br /><br />`;
   for (let i=0; i<services.length; i++) {
