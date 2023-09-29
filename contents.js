@@ -808,6 +808,7 @@ let services = [
         AACL (since 2020),
         ACL Rolling Review (since 2021)
     <li>Workshops:
+        Workshop on Distribution Shifts (NeurIPS 2023),
         Workshop on Retrieval-Enhanced Machine Learning (SIGIR 2023),
         Workshop on Mathematical and Empirical Understanding of Foundation Models (ICLR 2023),
         Workshop on Knowledge Retrieval and Language Models (ICML 2022),
@@ -843,25 +844,31 @@ let services = [
 let talks = [
  `12/2023 (Expected): Big Picture Workshop at EMNLP 2023`,
   `09/2023: UMass Amherst NLP Group <br />
-  <em>Redesigning the Softmax: Nonparametric Prediction in Language Modeling</em>`,
+  Title: <em>Redesigning the Softmax: Nonparametric Prediction in Language Modeling</em>`,
   `09/2023: Privacy in ML Seminar, Google Deepmind <br />
-  <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
+  Title: <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
   `09/2023: IBS Data Science Group, KAIST <br />
-  <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
+  Title: <em>SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore</em>`,
  `06/2023: Microsoft Semantic Machines <br />
-  <em> FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation</em>
+  Title: <em> FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation</em>
  `,
  `03/2023: Gradient Podcast Interview (` + add_link("link", "https://thegradientpub.substack.com/p/sewon-min-the-science-of-natural") + `)`,
  `02/2023: Conversation & Reasoning Group, Meta <br />
- <em>Nonparametric Masked Language Modeling</em>
+ Title: <em>Nonparametric Masked Language Modeling</em>
  `,
  `12/2022: Data Science & Business Analytics Lab, Korea University <br />
- <em>Open-domain, Open-ended Question Answering</em>`,
- `10/2022: USC ISI NL Seminar <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
- `07/2022: MLOPT Research Group, University of Wisconsin–Madison <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
- `04/2022: Language & Intelligence Lab, MIT <br /> <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
- `12/2021: AIRS, Hyundai`,
- `10/2021: Facebook AI`,
+ Title: <em>Open-domain, Open-ended Question Answering</em>`,
+ `10/2022: USC ISI NL Seminar <br />
+ Title: <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
+ `07/2022: MLOPT Research Group, University of Wisconsin–Madison <br />
+ Title: <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
+ `04/2022: Language & Intelligence Lab, MIT <br />
+ Title: <em>Understanding and Improving Learning through Inference with Large Language Models</em>`,
+ `12/2021: AIRS, Hyundai<br />
+ Title: <em>Learning from limited data at inference time</em>
+ `,
+ `10/2021: Facebook AI<br />
+ Title: <em>Learning from limited data at inference time</em>`,
  `08/2021: AI Summer School, Seoul National University`,
  `08/2021: Summer AI Seminar Series, Postech`,
  `04/2021: Colloquium Talk, Graduate School of AI at KAIST`,
@@ -888,6 +895,34 @@ let teaching = [
   <ul style="padding-left: 40px;">
     <li>Co-taught with Iz Beltagy, Arman Cohan, Hannaneh Hajishirzi and Matthew E. Peters</li>
   </ul>`,
+  `Guest Lecturer
+  <ul style="padding-left: 40px;">
+    <li>
+      Fall 2023 ` + add_link(`CPSC 488/588 AI Foundation Models, Yale University`, "https://yale-nlp.github.io/cpsc488/") + `
+      <br />
+      Instructor: Arman Cohan
+      <br />
+      Topic: Retrieval-based Language Modeling
+    </li>
+    <li>
+      Winter 2023 ` + add_link(`CSE 447 Natural Language Processing, University of Washington`, "https://courses.cs.washington.edu/courses/cse447/23wi/") + `
+      <br />
+      Instructor: Sofia Serrano
+      <br />
+      Topic: Zero- and Few-shot NLP with Pretrained Language Models
+    </li>
+    <li>
+      Winter 2023 ` + add_link("CSE 573 Artificial Intelligence, University of Washington", "https://courses.cs.washington.edu/courses/cse573/") + `
+      <br />
+      Instructor: Hannaneh Hajishirzi
+    </li>
+    <li>
+      Spring 2022 ` + add_link("CSE 573 Artificial Intelligence, University of Washington", "https://courses.cs.washington.edu/courses/cse573/") + `
+      <br />
+      Instructor: Hannaneh Hajishirzi
+    </li>
+  </ul>`
+  ,
   `Teaching assistant at University of Washington
   <ul style="padding-left: 40px;">
     <li>
@@ -913,11 +948,11 @@ let teaching = [
  `Pre-doctoral student mentoring
  <ul style="padding-left: 40px;">
   <li>Michael Duan, BS student at UW (2023&#8211;Current)</li>
-  <li>Xinxi (Shane) Lyu, BS->MS at UW (2021&#8211;Current)</li>
-  <li>Xinyan (Velocity) Yu, BS->MS at UW (2021&#8211;2022)</li>
-  <li>Skyler Hallinan, BS->MS at UW (2021)</li>
-  <li>Jungsoo Park, MS student at Korea University, now at NAVER (2021)</li>
-  <li>Belinda Li, software engineer at Facebook, now a PhD student at MIT (2020)</li>
+  <li>` + add_link("Xinxi (Shane) Lyu", "https://alrope123.github.io/") + `, BS->MS at UW (2021&#8211;Current)</li>
+  <li>` + add_link("Xinyan (Velocity) Yu", "https://velocitycavalry.github.io/") + `, BS->MS at UW (2021&#8211;2022)</li>
+  <li>` + add_link("Skyler Hallinan", "https://skylerhallinan.com/") + `, BS->MS at UW (2021)</li>
+  <li>` + add_link("Jungsoo Park", "https://jjumssu.github.io/") + `, MS student at Korea University, now a research scientist at NAVER (2021)</li>
+  <li>` + add_link("Belinda Li", "https://belindal.github.io/") + `, software engineer at Facebook, now a PhD student at MIT (2020)</li>
  </ul>
  `,
  `Mentor at Samsung Convergence Software Course (2017)
