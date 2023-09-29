@@ -642,7 +642,7 @@ let experiences = [
   [
     "Meta AI (formerly Facebook AI Research)",
     "10/2019&#8211;08/2020, 2021.04&#8211;2023.03, 2023.06&#8211;2023.12",
-    "Visiting researcher/Research intern",
+    "Visiting researcher / research intern",
     ["luke"]
   ],
   [
