@@ -258,7 +258,7 @@ let intros = [
     </li>
 
     <li>
-      ` + add_link("<b>Nonparametric language models</b>", website_directory["retrieval-lm-tutorial"]) + `:
+      ` + add_link("<b>Nonparametric language modeling</b>", website_directory["retrieval-lm-tutorial"]) + `:
       I study the class of LMs with a new dimension in scaling: the data given at inference time.
       This addresses key issues of current LMs: staleness, inefficiency, and lack of data attribution. 
       My approaches range from ` + add_link("retrieval augmentation", pub_dictionary["shi2023replug"]["paper"]) + ` to ` 
@@ -608,7 +608,7 @@ let publications = [
 let educations = [
   [
     "University of Washington",
-    "09/2018&#8211;Current",
+    "09/2018&#8211;06/2024 (Expected)",
     [
       "Ph.D. candidate in Computer Science & Engineering",
       "Advisers: <a href='" + people_website['hanna'] + "' target='_blank'>" + people['hanna'] + "</a> and " +
@@ -635,13 +635,13 @@ let educations = [
 let experiences = [
   [
     "University of Washington",
-    "09/2018&#8211;Current",
+    "09/2018&#8211;06/2024 (Expected)",
     "Ph.D. student",
     ["hanna", "luke"]
   ],
   [
     "Meta AI (formerly Facebook AI Research)",
-    "10/2019&#8211;08/2020, 2021.04&#8211;2023.03, 2023.06&#8211;2023.12",
+    "10/2019&#8211;08/2020, 04/2021&#8211;03/2023, 06/2023&#8211;12/2023",
     "Visiting researcher / research intern",
     ["luke"]
   ],
