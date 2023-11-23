@@ -158,7 +158,7 @@ let pub_dictionary = {
   "si2022re": {
     "paper": "https://arxiv.org/abs/2205.12507"
   },
-  "press2022measuring": {
+  "press2023measuring": {
     "paper": "https://ofir.io/self-ask.pdf",
     "code": "https://github.com/ofirpress/self-ask"
   },
@@ -193,6 +193,13 @@ let pub_dictionary = {
   "min2023silo": {
     "paper": "https://arxiv.org/abs/2308.04430",
     "code": "https://github.com/kernelmachine/silo-lm",
+    "slides": "silo.pdf"
+  },
+  "shi2023in": {
+    "paper": "https://arxiv.org/abs/2310.10638"
+  },
+  "cao2023btr": {
+    "paper": "https://arxiv.org/abs/2310.01329"
   },
 }
 
@@ -292,15 +299,22 @@ let intros = [
 ]
 
 let news = [
-  `08/2023: ` + add_tag("paper") + " Together with " + add_link("Suchin Gururangan", "https://suchin.io/") + `,
+  `12/2023: I am attending EMNLP and NeurIPS!
+    At EMNLP, I will give an invited talk on ` +
+    add_link(`Rethinking the Role of Demonstration`, pub_dictionary["min2022rethinking"]["paper"]) +
+    ` at ` + add_link(`the Big Picture Workshop`, "https://www.bigpictureworkshop.com/") + ` on Dec 7th,
+    and give an oral talk on ` + add_link("FActScore", pub_dictionary["min2023factscore"]["paper"]) + ` on Dec 8th.
+    At NeurIPS, I will give a spotlight talk on ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + ` at ` + add_link(`the Distribution Shifts Workshop`, "https://sites.google.com/view/distshift2023") + ` on Dec 15th,
+    and give an oral talk on ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + ` at ` + add_link(`the Regulatable ML Workshop`, "https://regulatableml.github.io/") + ` on Dec 16th.`,
+  "08/2023: Together with " + add_link("Suchin Gururangan", "https://suchin.io/") + `,
   we present ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `, 
   proposing to segregate the training data and the inference-time data in nonparametric LMs to mitigate legal risk in LMs.
   `,
-  `07/2023: ` + add_tag("paper") + " " + add_link("Our paper that examines the role of demonstrations in CoT prompting", pub_dictionary["wang2023towards"]["paper"]) + `,
+  "07/2023: " + add_link("Our paper that examines the role of demonstrations in CoT prompting", pub_dictionary["wang2023towards"]["paper"]) + `,
   led by ` + add_link(`Boshi Wang`, "https://boshi-wang.github.io/") + `, won an Honorable Mention at ACL 2023.
   `,
-  `07/2023: ` + add_tag("service") + ` I co-taught a tutorial on ` + 
-  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides are available on the website.`,
+  "07/2023: I co-taught a tutorial on " + 
+  add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides & recordings are available on the website.`,
   `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
   ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2023nonparametric"]["paper"]) + `.
   Code and model checkpoints available ` + add_link("here", pub_dictionary["min2023nonparametric"]["code"]) + `.
@@ -368,8 +382,22 @@ let news = [
 ];
 
 let publications = [
+    ["In-Context Pretraining: Language Modeling Beyond Document Boundaries",
+      ['Weijia Shi', 'sewon', 'Maria Lomeli', 'Chunting Zhou', 'Margaret Li', 'Victoria Lin', 'Noah A. Smith', 'Luke Zettlemoyer', 'Scott Yih', 'Mike Lewis'],
+      'arXiv preprint',
+      "",
+      "2023",
+      "shi2023in"
+      ],
+    ["BTR: Binary Token Representations for Efficient Retrieval Augmented Language Models",
+      ['Qingqing Cao', 'sewon', 'Yizhong Wang', 'hanna'],
+      "arXiv preprint",
+      "",
+      "2023",
+      "cao2023btr"
+      ],
     ["SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore",
-      ['sewon*', 'suchin*', 'Eric Wallace', 'hanna', 'Noah A. Smith', 'luke'],
+      ['sewon*', 'suchin*', 'Eric Wallace', 'Weijia Shi', 'hanna', 'Noah A. Smith', 'luke'],
       "arXiv preprint",
       "",
       "2023",
@@ -377,7 +405,7 @@ let publications = [
     ],
     ["FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
       ["sewon*", "kalpesh*", "shane", "mike", "scott", "Pang Wei Koh", "Mohit Iyyer", "luke", "hanna"],
-      "arXiv preprint",
+      "EMNLP (long)",
       "",
       "2023",
       "min2023factscore"
@@ -389,9 +417,16 @@ let publications = [
       "2023",
       "shi2023replug"
     ],
+    ["Measuring and Narrowing the Compositionality Gap in Language Models",
+      ['Ofir Press', 'Muru Zhang', 'sewon', 'Ludwig Schmidt', 'Noah A. Smith', 'mike'],
+      "Findings of EMNLP (long)",
+      "",
+      "2023",
+      "press2023measuring"
+     ],
     ["Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
      ["Boshi Wang", 'sewon', "Xiang Deng", "Jiaming Shen", "You Wu", 'luke', "Huan Sun"],
-     "ACL (long)",
+     "ACL (long) <span style='color: red'><b>Best Paper Honorable Mention</b></span>",
      "",
      "2023",
      "wang2023towards"
@@ -423,13 +458,6 @@ let publications = [
       "",
       "2023",
       "wu2023inscit"
-     ],
-     ["Measuring and Narrowing the Compositionality Gap in Language Models",
-      ['Ofir Press', 'Muru Zhang', 'sewon', 'Ludwig Schmidt', 'Noah A. Smith', 'mike'],
-      "arXiv preprint",
-      "",
-      "2022",
-      "press2022measuring"
      ],
      ["Re-Examining Calibration: The Case of Question Answering",
       ['Chenglei Si', 'Chen Zhao', 'sewon', 'Jordan Boyd-Graber'],

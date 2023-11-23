@@ -1,0 +1,7 @@
+@article{ cao2023btr,
+    title={ BTR: Binary Token Representations for Efficient Retrieval Augmented Language Models },
+    author={ Qingqing Cao, Sewon Min, Yizhong Wang, Hannaneh Hajishirzi },
+    year={ 2023 },
+    journal={ arXiv preprint arXiv:2310.01329 },
+    url={ https://arxiv.org/abs/2310.01329 }
+}
