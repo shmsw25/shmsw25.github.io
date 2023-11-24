@@ -301,7 +301,7 @@ let intros = [
 let news = [
   `12/2023: I am attending EMNLP and NeurIPS!
     At EMNLP, I will give an invited talk on ` +
-    add_link(`Rethinking the Role of Demonstration`, pub_dictionary["min2022rethinking"]["paper"]) +
+    add_link(`Rethinking the Role of Demonstrations`, pub_dictionary["min2022rethinking"]["paper"]) +
     ` at ` + add_link(`the Big Picture Workshop`, "https://www.bigpictureworkshop.com/") + ` on Dec 7th,
     and give an oral talk on ` + add_link("FActScore", pub_dictionary["min2023factscore"]["paper"]) + ` on Dec 8th.
     At NeurIPS, I will give a spotlight talk on ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + ` at ` + add_link(`the Distribution Shifts Workshop`, "https://sites.google.com/view/distshift2023") + ` on Dec 15th,
