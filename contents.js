@@ -190,15 +190,15 @@ let pub_dictionary = {
     "code": "https://github.com/shmsw25/FActScore",
     "slides": "FActScore.pdf"
   },
-  "min2023silo": {
+  "min2024silo": {
     "paper": "https://arxiv.org/abs/2308.04430",
     "code": "https://github.com/kernelmachine/silo-lm",
     "slides": "silo.pdf"
   },
-  "shi2023in": {
+  "shi2024in": {
     "paper": "https://arxiv.org/abs/2310.10638"
   },
-  "cao2023btr": {
+  "cao2024btr": {
     "paper": "https://arxiv.org/abs/2310.01329"
   },
 }
@@ -270,7 +270,7 @@ let intros = [
       This addresses key issues of current LMs: staleness, inefficiency, and lack of data attribution. 
       My approaches range from ` + add_link("retrieval augmentation", pub_dictionary["shi2023replug"]["paper"]) + ` to ` 
       + `an LM with ` + add_link("a nonparametric softmax", pub_dictionary["min2023nonparametric"]["paper"]) + `.
-      I also study how these new functionalities can change how we used to build models (` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `).
+      I also study how these new functionalities can change how we used to build models (` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + `).
     </li>
 
     <li>
@@ -304,10 +304,10 @@ let news = [
     add_link(`Rethinking the Role of Demonstrations`, pub_dictionary["min2022rethinking"]["paper"]) +
     ` at ` + add_link(`the Big Picture Workshop`, "https://www.bigpictureworkshop.com/") + ` on Dec 7th,
     and give an oral talk on ` + add_link("FActScore", pub_dictionary["min2023factscore"]["paper"]) + ` on Dec 8th.
-    At NeurIPS, I will give a spotlight talk on ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + ` at ` + add_link(`the Distribution Shifts Workshop`, "https://sites.google.com/view/distshift2023") + ` on Dec 15th,
-    and give an oral talk on ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + ` at ` + add_link(`the Regulatable ML Workshop`, "https://regulatableml.github.io/") + ` on Dec 16th.`,
+    At NeurIPS, I will give a spotlight talk on ` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + ` at ` + add_link(`the Distribution Shifts Workshop`, "https://sites.google.com/view/distshift2023") + ` on Dec 15th,
+    and give an oral talk on ` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + ` at ` + add_link(`the Regulatable ML Workshop`, "https://regulatableml.github.io/") + ` on Dec 16th.`,
   "08/2023: Together with " + add_link("Suchin Gururangan", "https://suchin.io/") + `,
-  we present ` + add_link("SILO", pub_dictionary["min2023silo"]["paper"]) + `, 
+  we present ` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + `, 
   proposing to segregate the training data and the inference-time data in nonparametric LMs to mitigate legal risk in LMs.
   `,
   "07/2023: " + add_link("Our paper that examines the role of demonstrations in CoT prompting", pub_dictionary["wang2023towards"]["paper"]) + `,
@@ -384,24 +384,24 @@ let news = [
 let publications = [
     ["In-Context Pretraining: Language Modeling Beyond Document Boundaries",
       ['Weijia Shi', 'sewon', 'Maria Lomeli', 'Chunting Zhou', 'Margaret Li', 'Victoria Lin', 'Noah A. Smith', 'Luke Zettlemoyer', 'Scott Yih', 'Mike Lewis'],
-      'arXiv preprint',
+      'ICLR (<span class="purple">Spotlight</span>)',
       "",
-      "2023",
-      "shi2023in"
+      "2024",
+      "shi2024in"
       ],
     ["BTR: Binary Token Representations for Efficient Retrieval Augmented Language Models",
       ['Qingqing Cao', 'sewon', 'Yizhong Wang', 'hanna'],
-      "arXiv preprint",
+      'ICLR (<span class="purple">Spotlight</span>)',
       "",
-      "2023",
-      "cao2023btr"
+      "2024",
+      "cao2024btr"
       ],
     ["SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore",
       ['sewon*', 'suchin*', 'Eric Wallace', 'Weijia Shi', 'hanna', 'Noah A. Smith', 'luke'],
-      "arXiv preprint",
+      'ICLR (<span class="purple">Spotlight</span>)',
       "",
-      "2023",
-      "min2023silo"
+      "2024",
+      "min2024silo"
     ],
     ["FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
       ["sewon*", "kalpesh*", "shane", "mike", "scott", "Pang Wei Koh", "Mohit Iyyer", "luke", "hanna"],
@@ -776,7 +776,7 @@ let services = [
     </li>
   </ul>
   `,*/
-  `Area Chair: ACL 2023, EMNLP 2023, COLING 2022
+  `Area Chair: COLM 2024, ACL 2023, EMNLP 2023, COLING 2022
   `,
   `
   Reviewer/Program Committee
