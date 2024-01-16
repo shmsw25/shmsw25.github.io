@@ -426,7 +426,7 @@ let publications = [
      ],
     ["Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
      ["Boshi Wang", 'sewon', "Xiang Deng", "Jiaming Shen", "You Wu", 'luke', "Huan Sun"],
-     "ACL (long) <span style='color: red'><b>Best Paper Honorable Mention</b></span>",
+     "ACL (long) <span style='color: #de2d26'><b>Best Paper Honorable Mention</b></span>",
      "",
      "2023",
      "wang2023towards"
