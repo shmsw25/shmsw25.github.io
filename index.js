@@ -61,9 +61,6 @@ window.onload = function () {
   $("#others-button").click(function(){
     hideAll();
     $("#honorship").show();
-    //$("#talks").show();
-    //$("#teaching").show();
-    // $("#personal").hide();
   })
 
   // load intro
@@ -232,33 +229,7 @@ window.onload = function () {
   }
   document.getElementById("experience").innerHTML += expText;
 
-  /*
-  //load demos
-  let demoText = "<center>" + demoIntro + "</center><br />";
-  for (let i=0; i<demos.length; i++) {
-    let demoLink = "http://qa.cs.washington.edu:" + demos[i][0];
-    let title = demos[i][1];
-    let method = demos[i][2];
-    demoText += `<div class="row">
-      <center style="margin-bottom: 5px;">
-        <span style="font-size: 140%">` + title + `</span></br />
-        <em>Using ` + method + `</em><br />
-        <a href="` + demoLink + `" target="_blank">` + demoLink.split("http://")[1] + `</a>
-      </center>
-      <div class="wrap">
-        <iframe class="frame" src="` + demoLink + `" title="` + title + `"></iframe>
-      </div>
-    </div>`;
-  }
-  document.getElementById("demo").innerHTML += demoText;*/
 
-  // load honors
-  /*let honorText = "";
-  for (let i=0; i<honors.length; i++) {
-    honorText += "<li>" + honors[i] + "</li>";
-  }
-  document.getElementById("honorship").innerHTML += "<ul>" + honorText + "</ul>";
-  */
   // load services
   let serviceText = `Please see my <a href="assets/CV.pdf" target="_blank"><i class="fa fa-download"></i> CV</a> for an up-to-date list.<br /><br />`;
   for (let i=0; i<services.length; i++) {

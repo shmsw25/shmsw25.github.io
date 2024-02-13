@@ -225,21 +225,6 @@ function add_info (paper, infos) {
   return text;
 }
 
-function add_tag(tag) {
-	return ""
-  if (tag==="paper") {
-		return `<span class="badge badge-pill badge-paper">Paper</span>`;
-	} else if (tag==="service") {
-		return `<span class="badge badge-pill badge-service">Event</span>`;
-	} else if (tag=="others") {
-		return `<span class="badge badge-pill badge-others">Others</span>`;
-	} else if (tag=="event") {
-		return `<span class="badge badge-pill badge-event">Event</span>`;
-	} else if (tag=="talk") {
-    return `<span class="badge badge-pill badge-event">Talks/Teaching</span>`;
-  }
-}
-
 let intros = [
   `  Hello! <br />
   I am a Ph.D. candidate in the Natural Language Processing group at the University of Washington.
@@ -315,68 +300,67 @@ let news = [
   `,
   "07/2023: I co-taught a tutorial on " + 
   add_link("retrieval-based LMs", website_directory["retrieval-lm-tutorial"]) + ` at ACL 2023. Slides & recordings are available on the website.`,
-  `12/2022: ` + add_tag("paper") + ` Check out our new preprint,
+  `12/2022: Check out our new preprint,
   ` + add_link("Nonparametric Masked Language Modeling", pub_dictionary["min2023nonparametric"]["paper"]) + `.
   Code and model checkpoints available ` + add_link("here", pub_dictionary["min2023nonparametric"]["code"]) + `.
   `,
-  `09/2022: ` + add_tag("others") + ` I was selected by the EECS Rising Stars Program.`,
-  `08/2022: ` + add_tag("others") + ` Together with `
+  `09/2022: I was selected by the EECS Rising Stars Program.`,
+  `08/2022: Together with `
   + add_link(`Sang Michael Xie`, "https://cs.stanford.edu/~eix/")
   + `, we wrote a post on `
   + add_link("How does in-context learning work? A framework for understanding the differences from traditional supervised learning", "https://ai.stanford.edu/blog/understanding-incontext/")
   + " at Stanford AI Blog.",
-  `05/2022: ` + add_tag("service") + ` I co-taught the ACL tutorial on ` + 
+  `05/2022: I co-taught the ACL tutorial on ` + 
   `Few-Shot NLP with Pretrained Language Models (` +
   add_link("slides", website_directory["fl-tutorial"]) + `, ` +
   add_link("recordings", "https://underline.io/events/284/sessions?eventSessionId=10748") + `).`,
-  `02/2022: ` + add_tag("paper") + ` Check out our new preprint, ` + add_link("Rethinking the Role of Demonstrations: What makes In-context Learning Work?", pub_dictionary["min2022rethinking"]["paper"]) + `
+  `02/2022: Check out our new preprint, ` + add_link("Rethinking the Role of Demonstrations: What makes In-context Learning Work?", pub_dictionary["min2022rethinking"]["paper"]) + `
   All experiments reproducible from `+ add_link("this code", pub_dictionary["min2022rethinking"]["code"]) + `.
   (Update 10/2022: The paper was accepted to EMNLP 2022.)
   `,
-  `02/2022: `+ add_tag("service") + ` I am co-organizing two workshops at ACL 2022: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
+  `02/2022: I am co-organizing two workshops at ACL 2022: ` + add_link("Repl4NLP", website_directory["repl4nlp"]) +
    ` (` + add_link("CFP", "https://sites.google.com/view/repl4nlp2022/call-for-papers?authuser=0") + `) and 
    `+ add_link("Spa-NLP", website_directory["semiparametric"]) + ` (` +
    add_link("CFP", "http://www.semiparametric.ml/cfp.html") + `).`,
-  `10/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2022metaicl"]["paper"]) +
+  `10/2021: Our new preprint, ` + add_link("MetaICL: Learning to Learn In Context", pub_dictionary["min2022metaicl"]["paper"]) +
   ` is out (w/ `+ add_link("code", pub_dictionary["min2022metaicl"]["code"]) + `).
   Check out the ` + add_link("demo", pub_dictionary["min2022metaicl"]["demo"]) + `!
   (Update 04/2022: The paper was accepted to NAACL 2022.)
   `,
-  `08/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2022noisy"]["paper"]) +
+  `08/2021: Our new preprint, ` + add_link("Noisy Channel Language Model Prompting for Few-Shot Text Classification", pub_dictionary["min2022noisy"]["paper"]) +
   ` is out w/ `+ add_link("code", pub_dictionary["min2022noisy"]["code"]) + `!
   (Update 02/2022: The paper was accepted to ACL 2022.)
   `,
-  `07/2021: ` + add_tag("paper") + ` Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2022faviq"]["paper"]) +
+  `07/2021: Our new preprint, ` + add_link("FaVIQ: FAct Verification from Information-seeking Questions", pub_dictionary["park2022faviq"]["paper"]) +
   ` is out! Visit ` + add_link("FaVIQ website", pub_dictionary["park2022faviq"]["website"]) + ` to download data and see samples.
   (Update 02/2022: The paper was accepted to ACL 2022.)
   `,
-  `07/2021: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
-  `, hosted at AKBC 2021. <!--Stay tuned for Call for abstracts!-->`,
-  `06/2021: ` + add_tag("service") + ` I co-taught the NAACL-HLT tutorial on ` + 
+  `07/2021: I am co-organizing ` + add_link("The 2nd Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `, hosted at AKBC 2021.`,
+  `06/2021: I co-taught the NAACL-HLT tutorial on ` + 
   add_link(`Beyond Paragraphs: NLP for Long Sequences`, pub_dictionary["beltagy2021beyond"]["website"]) + `.`,
-  `04/2021: ` + add_tag("paper") + ` Our new preprint, ` + 
+  `04/2021: Our new preprint, ` + 
   add_link("Joint Passage Ranking for Diverse Multi-Answer Retrieval", pub_dictionary["min2021joint"]["paper"]) + `
   is out! This is done as part of my internship at Google.
   (Update 08/2021: The paper was accepted to EMNLP.)
   `,
-  `01/2021: ` + add_tag("service") + `
-  We, the NeurIPS 2020 EfficientQA organizers, together with participants,
+  `01/2021: We, the NeurIPS 2020 EfficientQA organizers, together with participants,
   wrote ` + add_link(`NeurIPS 2020 EfficientQA Competition:
   	Systems, Analyses and Lessons Learned`, pub_dictionary["min2021neurips"]["paper"]) + `.
   The video of the NeuIPS event is also available ` + add_link(`here`, "https://www.youtube.com/watch?v=3tdWV4vAf2I") + `.
    (Update 05/2021: The paper was accepted to PMLR.)`,
-  `12/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
+  `12/2020: I am co-organizing ` + add_link("The 3rd Workshop on Machine Reading for Question Answering", website_directory["mrqa"]) +
   `, hosted at EMNLP 2021. Stay tuned for Call for papers!`,
-  `09/2020: ` + add_tag("others") + ` I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
+  `09/2020: I made an ` + add_link("Open-domain QA Demo", pub_dictionary["karpukhin2020dense"]["demo"])
       + ` using ` + add_link("DPR", pub_dictionary["karpukhin2020dense"]["paper"]) + `. Give it a try!`,
-  `06/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
+  `06/2020: I am co-organizing ` + add_link("Competition on Efficient Open-Domain Question Answering", website_directory["efficientqa"]) +
   `, hosted at NeurIPS 2020. [` + add_link("leaderboard", "https://ai.google.com/research/NaturalQuestions/efficientqa") + `]`,
-  `06/2020: ` + add_tag("service") + ` I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
+  `06/2020: I am co-organizing ` + add_link("Workshop on Unstructured/Structured KBs", website_directory["uskb"]) +
   `, hosted at AKBC 2020.`,
-  `04/2020: ` + add_tag("paper") + ` Our new preprint, ` +
+  `04/2020: Our new preprint, ` +
   add_link("AmbigQA: Answering Ambiguous Open-domain Questions", pub_dictionary["min2020ambigqa"]["paper"]) + `
   is out! Visit ` + add_link("AmbigQA website", pub_dictionary["min2020ambigqa"]["website"]) + ` to download data and see samples.`,
-  `04/2020: ` + add_tag("paper") + ` Our new preprint, ` +
+  `04/2020: Our new preprint, ` +
   add_link("Dense Passage Retrieval for Open-domain Question Answering", pub_dictionary["karpukhin2020dense"]["paper"]) + `
   is out (w/ ` + add_link("code", pub_dictionary["karpukhin2020dense"]["code"]) + `)!`
 ];
@@ -763,19 +747,6 @@ let services = [
     </li>
   </ul>
   `,
-  /*`Tutorial Co-instructor
-  <ul style="padding-left: 40px;">
-    <li>
-      Retrieval-based Language Models and Applications (ACL 2023)
-    </li>
-    <li>
-      ` + add_link("Few-Shot NLP with Pretrained Language Models (ACL 2022)", website_directory["fl-tutorial"]) + `
-    </li>
-    <li>
-      ` + add_link("Beyond Paragraphs: NLP for Long Sequences (NAACL-HLT 2021)", pub_dictionary["beltagy2021beyond"]["website"]) + `
-    </li>
-  </ul>
-  `,*/
   `Area Chair: COLM 2024, ACL 2023, EMNLP 2023, COLING 2022
   `,
   `
