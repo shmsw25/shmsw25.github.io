@@ -201,6 +201,16 @@ let pub_dictionary = {
   "cao2024btr": {
     "paper": "https://arxiv.org/abs/2310.01329"
   },
+  "duan2024membership": {
+    "paper": "https://arxiv.org/abs/2402.07841",
+    "code": "https://github.com/iamgroot42/mimir"
+  },
+  "liu2024infini": {
+    "paper": "https://arxiv.org/abs/2401.17377",
+    "demo": "https://huggingface.co/spaces/liujch1998/infini-gram",
+    "api": "https://infini-gram.io/api_doc",
+    "website": "https://infini-gram.io/"
+  }
 }
 
 let website_directory = {
@@ -226,64 +236,56 @@ function add_info (paper, infos) {
 }
 
 let intros = [
-  `  Hello! <br />
-  I am a Ph.D. candidate in the Natural Language Processing group at the University of Washington.
-  I am fortunate to be advised by [hanna] and [luke].
-  I am supported by a ` + add_link("J.P. Morgan PhD Fellowship", "https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/phd-fellowship") + `.
-  I have been a part-time visiting researcher at Meta AI (formerly Facebook AI Research) during my Ph.D., and
-  previously interned at Google Research (in 2020) and Salesforce Research (in 2017).
+  `
+  Hello! <br />
+  I am an incoming assistant professor at UC Berkeley EECS, starting in July 2025, and a research scientist at the Allen Institute for AI.
+  <strong>&#10024;I will be recruiting students!&#10024;</strong>
+  Check out <a href="faq.html">this page</a> for more details.
+
+  <br /><br />
+  I recently completed my Ph.D. in Computer Science & Engineering from the University of Washington,
+  where I was fortunate to work with [hanna] and [luke], and was supported by
+  a ` + add_link("J.P. Morgan PhD Fellowship", "https://www.jpmorgan.com/technology/artificial-intelligence/research-awards/phd-fellowship") + `.
+  I was a part-time visiting researcher at Meta AI (formerly Facebook AI Research),
+  and interned at Google Research and Salesforce Research.
   Prior to UW, I received B.S. in CSE from Seoul National University.
   <br /><br />
 
-  My primary research lies in the area of natural language processing and machine learning.
-  Specifically:
-  <ul style="padding-left: 30px; margin-top: 20px">
-    
-
+  My research lies in the area of natural language processing and machine learning.
+  My Ph.D. thesis is about <a href="assets/Sewon_Min_Thesis.pdf" target="_blank"><b>Rethinking Data Use in Large Language Models</b></a>—understanding and advancing LLMs centered around how they use the very large text corpora they are trained on.
+  This research led to
+  <ul style="padding-left: 30px; margin-top: 5px">
     <li>
-      ` + add_link(`<b>Language modeling</b>`, website_directory["fl-tutorial"]) + `:
-      I study new methods to improve the current class of LMs (` + add_link("noisy channel", pub_dictionary["min2022noisy"]["paper"]) + `, ` + 
-      add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + ", " + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `),
-      and also develop new analysis methods to understand them better (` + add_link("in-context learning", pub_dictionary["min2022rethinking"]["paper"]) + `, `
-          + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `, `
-          + add_link("zero-shot", pub_dictionary["lyu2023z"]["paper"]) + `).
+      new understanding of LLMs (` + add_link("in-context learning", pub_dictionary["min2022rethinking"]["paper"]) + `, `
+          + add_link("chain-of-thought", pub_dictionary["wang2023towards"]["paper"]) + `)
+          and their improvements
+          (` + add_link("noisy channel", pub_dictionary["min2022noisy"]["paper"]) + `, ` + 
+          add_link("UnifiedQA", pub_dictionary["khashabi2020unifiedqa"]["paper"]) + ", " + add_link("MetaICL", pub_dictionary["min2022metaicl"]["paper"]) + `);
     </li>
-
+    </li>
     <li>
-      ` + add_link("<b>Nonparametric language modeling</b>", website_directory["retrieval-lm-tutorial"]) + `:
-      I study the class of LMs with a new dimension in scaling: the data given at inference time.
-      This addresses key issues of current LMs: staleness, inefficiency, and lack of data attribution. 
-      My approaches range from ` + add_link("retrieval augmentation", pub_dictionary["shi2023replug"]["paper"]) + ` to ` 
-      + `an LM with ` + add_link("a nonparametric softmax", pub_dictionary["min2023nonparametric"]["paper"]) + `.
-      I also study how these new functionalities can change how we used to build models (` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + `).
+      new ` + add_link("nonparametric (retrieval-based) LMs", website_directory["retrieval-lm-tutorial"]) + ` that repurpose the training data as a data
+      store (`
+      + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + ", "
+      + add_link("REPLUG", pub_dictionary["shi2023replug"]["paper"]) + ", "
+      + add_link("In-context pretraining", pub_dictionary["shi2024in"]["paper"]) + ", "
+      + add_link("NPM", pub_dictionary["min2023nonparametric"]["paper"]) + `);
     </li>
-
     <li>
-      <b>Information-seeking</b>:
-      My earlier work includes systems for retrieval/representation learning for question answering, including
-      ` + add_link(`DPR`, pub_dictionary["karpukhin2020dense"]["paper"]) + `, ` + add_link(`GraphQA`, pub_dictionary["preprint2019b"]["paper"]) + `,
-      and ` + add_link(`DecompRC`, pub_dictionary["acl2019a"]["paper"]) + `.
-      These days, I am more interested in open-ended information-seeking,
-      such as ` + add_link(`ambiguous question answering`, pub_dictionary["min2020ambigqa"]["paper"]) + ` (` + add_link(`+model`, pub_dictionary["min2021joint"]["paper"]) + `)
-      and ` + add_link(`questions with false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `,
-      which are still largely unsolved by current state-of-the-art LMs.
-      I also study ` + add_link("new evaluation", pub_dictionary["min2023factscore"]["paper"]) + ` for these problems.
+      how these models can open up new avenues for responsible data use (` + add_link("SILO", pub_dictionary["min2024silo"]["paper"]) + `); and
     </li>
-  </ul>
-  
-  <br />
-  
-  Check out resources for the topics I am excited about:
-  nonparametric LMs (` + add_link("ACL 2023 tutorial", website_directory["retrieval-lm-tutorial"]) + `, ` + add_link(`Spa-NLP`, website_directory["semiparametric"]) + `),
-  representation learning (` + add_link(`USKB`, website_directory["uskb"]) + `, ` + add_link("Repl4NLP", website_directory["repl4nlp"]) + `),
-  zero-/few-shot learning (` + add_link(`ACL 2022 tutorial`, website_directory["fl-tutorial"]) + `), and
-  question answering (` + add_link(`MRQA`, website_directory["mrqa"]) + `, ` + add_link(`EfficientQA`, website_directory["efficientqa"]) + `).
-
-  <br /><br />
-  `
+    <li>
+      new evaluation, focusing on ` + add_link("QA", pub_dictionary["min2021neurips"]["paper"]) + ", " + add_link(`ambiguity`, pub_dictionary["min2020ambigqa"]["paper"]) + `,
+      ` + add_link(`false presuppositions`, pub_dictionary["yu2023crepe"]["paper"]) + `,
+      and ` + add_link("factuality", pub_dictionary["min2023factscore"]["paper"]) + `.
+    </li>
+  </ul>`
 ]
 
 let news = [
+  `09/2024: I am attending two workshops at Simons Institute:
+  ` + add_link("Workshop on Emerging Settings in Generalization", "https://simons.berkeley.edu/workshops/emerging-generalization-setting") + ` and ` +
+  add_link(`Workshop on Transformers as a Computational Model`, "https://simons.berkeley.edu/workshops/transformers-computational-model") + ".",
   `12/2023: I am attending EMNLP and NeurIPS!
     At EMNLP, I will give an invited talk on ` +
     add_link(`Rethinking the Role of Demonstrations`, pub_dictionary["min2022rethinking"]["paper"]) +
@@ -366,101 +368,113 @@ let news = [
 ];
 
 let publications = [
+    ["CopyBench: Measuring Literal and Non-Literal Reproduction of Copyright-Protected Text in Language Model Generation",
+     ["Tong Chen", "Akari Asai", "Niloofar Mireshghallah", 'sewon', "James Grimmelmann",
+      "Yejin Choi", "Hannaneh Hajishirzi", "Luke Zettlemoyer", "Pang Wei Koh"],
+      "arXiv preprint",
+      "2024",
+      "tong2024copybench"
+    ],
+    ["Scaling Retrieval-Based Language Models with a Trillion-Token Datastore",
+     ["Rulin Shao", "Jacqueline He", "Akari Asai", "Weijia Shi", "Tim Dettmers", "sewon", "Luke Zettlemoyer", "Pang Wei Koh"],
+     "arXiv preprint",
+     "2024",
+     "shao2024scaling"
+    ],
+    ["Do Membership Inference Attacks Work on Large Language Models?",
+     ["Michael Duan", "Anshuman Suri", "Niloofar Mireshghallah", 'sewon', "Weijia Shi", "Luke Zettlemoyer",
+      "Yulia Tsvetkov", "Yejin Choi", "David Evans", "Hannaneh Hajishirzi"],
+      "COLM",
+      "2024",
+      "duan2024membership"
+    ],
+    ["Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+      ["Jiacheng Liu", 'sewon', "Luke Zettlemoyer", "Yejin Choi", "Hannaneh Hajishirzi"],
+      "COLM",
+      "2024",
+      "liu2024infini"
+    ],
+    ["REPLUG: Retrieval-Augmented Black-Box Language Models",
+      ["Weijia Shi", "sewon", "Michihiro Yasunaga", "Minjoon Seo", "Rich James", "mike", "luke", "scott"],
+      "NAACL",
+      "2024",
+      "shi2023replug"
+    ],
     ["In-Context Pretraining: Language Modeling Beyond Document Boundaries",
       ['Weijia Shi', 'sewon', 'Maria Lomeli', 'Chunting Zhou', 'Margaret Li', 'Victoria Lin', 'Noah A. Smith', 'Luke Zettlemoyer', 'Scott Yih', 'Mike Lewis'],
       'ICLR (<span class="purple">Spotlight</span>)',
-      "",
       "2024",
       "shi2024in"
-      ],
+    ],
     ["BTR: Binary Token Representations for Efficient Retrieval Augmented Language Models",
       ['Qingqing Cao', 'sewon', 'Yizhong Wang', 'hanna'],
       'ICLR (<span class="purple">Spotlight</span>)',
-      "",
       "2024",
       "cao2024btr"
       ],
     ["SILO Language Models: Isolating Legal Risk in a Nonparametric Datastore",
       ['sewon*', 'suchin*', 'Eric Wallace', 'Weijia Shi', 'hanna', 'Noah A. Smith', 'luke'],
       'ICLR (<span class="purple">Spotlight</span>)',
-      "",
       "2024",
       "min2024silo"
     ],
     ["FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
       ["sewon*", "kalpesh*", "shane", "mike", "scott", "Pang Wei Koh", "Mohit Iyyer", "luke", "hanna"],
       "EMNLP (long)",
-      "",
       "2023",
       "min2023factscore"
-    ],
-    ["REPLUG: Retrieval-Augmented Black-Box Language Models",
-      ["Weijia Shi", "sewon", "Michihiro Yasunaga", "Minjoon Seo", "Rich James", "mike", "luke", "scott"],
-      "arXiv preprint",
-      "",
-      "2023",
-      "shi2023replug"
     ],
     ["Measuring and Narrowing the Compositionality Gap in Language Models",
       ['Ofir Press', 'Muru Zhang', 'sewon', 'Ludwig Schmidt', 'Noah A. Smith', 'mike'],
       "Findings of EMNLP (long)",
-      "",
       "2023",
       "press2023measuring"
      ],
     ["Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
      ["Boshi Wang", 'sewon', "Xiang Deng", "Jiaming Shen", "You Wu", 'luke', "Huan Sun"],
      "ACL (long) <span style='color: #de2d26'><b>Best Paper Honorable Mention</b></span>",
-     "",
      "2023",
      "wang2023towards"
     ],
     ["Z-ICL: Zero-Shot In-Context Learning with Pseudo-Demonstrations",
      ['shane', 'sewon', 'iz', 'luke', 'hanna'],
      "ACL (long)",
-     "",
      "2023",
      "lyu2023z"
     ],
     ["Nonparametric Masked Language Modeling",
      ['sewon', 'Weijia Shi', 'mike', "Xilun Chen", 'scott', 'hanna', 'luke'],
      "Findings of ACL (long)",
-     "",
      "2023",
      "min2023nonparametric"
      ],
     ["CREPE: Open-Domain Question Answering with False Presuppositions",
      ["Xinyan Yu", "sewon", "luke", "hanna"],
      "ACL (long)",
-     "",
      "2023",
      "yu2023crepe"
      ],
     ["INSCIT: Information-Seeking Conversations with Mixed-Initiative Interactions",
       ['Zeqiu Wu', 'Ryu Parish', 'Hao Cheng', 'sewon', 'Prithviraj Ammanabrolu', 'Mari Ostendorf', 'hanna'],
       "TACL",
-      "",
       "2023",
       "wu2023inscit"
      ],
      ["Re-Examining Calibration: The Case of Question Answering",
       ['Chenglei Si', 'Chen Zhao', 'sewon', 'Jordan Boyd-Graber'],
       "Findings of EMNLP (long)",
-      "",
       "2022",
       "si2022re"
      ],
      ["Exploring The Landscape of Distributional Robustness for Question Answering Models",
       ["Anas Awadalla", "Mitchell Wortsman", "Gabriel Ilharco", 'sewon', 'hanna', "Ludwig Schmidt"],
       "Findings of EMNLP (long)",
-      "",
       "2022",
       "awadalla2022exploring"
      ],
      ["Rethinking the Role of Demonstrations: What makes In-context Learning Work?",
       ['sewon', 'shane', 'ari', 'mikel', 'mike', 'hanna', 'luke'],
       "EMNLP (long)",
-       "",
        "2022",
        "min2022rethinking"
      ],
@@ -469,149 +483,127 @@ let publications = [
        "Lianhui Qin", "Kyle Richardson", "Sameer Singh", "Sean Welleck",
        "hanna", "Tushar Khot", "Ashish Sabharwal", "Yejin Choi"],
        "NAACL (long)",
-       "",
        "2022",
        "khashabi2022prompt"
      ],
      ["MetaICL: Learning to Learn In Context",
       ["sewon", "mike", "luke", "hanna"],
       "NAACL (long)",
-      "",
       "2022",
       "min2022metaicl"
      ],
      ["Noisy Channel Language Model Prompting for Few-Shot Text Classification",
   	  ["sewon", "mike", "hanna", "luke"],
   	  "ACL (long)",
-      "",
       "2022",
       "min2022noisy"
      ],
      ["FaVIQ: Fact Verification from Information-seeking Questions",
       ["jungsoo*", 'sewon*', "Jaewoo Kang", 'luke', 'hanna'],
       "ACL (long)",
-      "",
       "2022",
       "park2022faviq"
      ],
      ["Joint Passage Ranking for Diverse Multi-Answer Retrieval",
       ['sewon', 'kenton', 'mingwei', 'kristina', 'hanna'],
       "EMNLP (long)",
-      "",
       "2021",
       "min2021joint"
       ],
       ["NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned",
-       //['<strong>Sewon Min</strong> et al.'],
        ['sewon', 'jordan', 'chris', 'danqi', 'eunsol', 'michael', 'kelvin', 'hanna', 'kenton',
        'jennimaria', 'colin', 'adam', 'tom', " and more (EfficientQA participants)"],
        "Machine Learning Research (PMLR)",
-       "",
        "2021",
        "min2021neurips"
       ],
       ["ReConsider: Re-Ranking using Span-Focused Cross-Attention for Open Domain Question Answering",
        ['srini', 'sewon', 'yashar', 'scott'],
        "NAACL (short)",
-       "",
        "2021",
        "iyer2021reconsider"
       ],
       ["Efficient One-Pass End-to-End Entity Linking for Questions",
        ['belinda', 'sewon', 'srini', 'yashar', 'scott'],
        "EMNLP (short)",
-       "",
        "2020",
        "li2020efficient"
       ],
       ["AmbigQA: Answering Ambiguous Open-domain Questions",
        ['sewon', 'julian', 'hanna', 'luke'],
        "EMNLP (long)",
-       "",
        "2020",
        "min2020ambigqa"
       ],
       ["Dense Passage Retrieval for Open-domain Question Answering",
        ['vlad*', 'barlas*', 'sewon', 'patrick', 'ledell', 'sergey', 'danqi', 'scott'],
        "EMNLP (long)",
-       "",
        "2020",
        "karpukhin2020dense"
       ],
       ["UnifiedQA: Crossing Format Boundaries With a Single QA System",
        ['daniel', 'sewon', 'tushar', 'ashish', 'oyvind', 'peter', 'hanna'],
        "Findings of EMNLP (long)",
-       "",
        "2020",
        "khashabi2020unifiedqa"
       ],
       ["Knowledge Guided Text Retrieval and Reading for Open Domain Question Answering",
        ['sewon', 'danqi', 'luke', 'hanna'],
        "arXiv:1911.03868",
-       "",
        "2019",
        "preprint2019b"
       ],
       ["A Discrete Hard EM Approach for Weakly Supervised Question Answering",
        ['sewon', 'danqi', 'hanna', 'luke'],
        "EMNLP (long)",
-       "Hong Kong, China",
        "2019",
        "emnlp2019"
       ],
       ["On Making Reading Comprehension More Comprehensive",
        ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
        "MRQA @ EMNLP",
-       "Hong Kong, China",
        "2019",
        "mrqa2019"
       ],
       ["Question Answering is a Format; When is it Useful?",
        ['matt', 'jonathan', 'hanna', 'alon', 'sewon'],
        "arXiv:1909.11291",
-       "",
        "2019",
        "preprint2019a"
       ],
       ["Multi-hop Reading Comprehension through Question Decomposition and Rescoring",
        ['sewon', 'victor', 'luke', 'hanna'],
        "ACL (long)",
-       "Florence, Italy",
        "2019",
        "acl2019a"
       ],
       ["Compositional Questions Do Not Necessitate Multi-hop Reasoning",
        ['sewon*', 'eric*', 'sameer', 'matt', 'hanna', 'luke'],
        "ACL (short)",
-       "Florence, Italy",
        "2019",
        "acl2019b"
       ],
       ["Efficient and Robust Question Answering from Minimal Context over Documents",
        ['sewon', 'victor', 'richard', 'caiming'],
        "ACL (long)",
-       "Melbourne, Australia",
        "2018",
        "acl2018"
       ],
       ["Neural Speed Reading via Skim-RNN",
        ['minjoon*', 'sewon*', 'ali', 'hanna'],
        "ICLR",
-       "Vancouver, Canada",
        "2018",
        "iclr2018"
       ],
       ["Question Answering through Transfer Learning from Large Fine-grained Supervision Data",
        ['sewon', 'minjoon', 'hanna'],
        "ACL (short)",
-       "Vancouver, Canada",
        "2017",
        "acl2017"
       ],
       ["Query-Reduction Networks for Question Answering",
        ['minjoon', 'sewon', 'ali', 'hanna'],
        "ICLR",
-       "Toulon, France",
        "2017",
        "iclr2017"
       ]
@@ -620,12 +612,17 @@ let publications = [
 let educations = [
   [
     "University of Washington",
-    "09/2018&#8211;06/2024 (Expected)",
+    "09/2018&#8211;06/2024",
     [
-      "Ph.D. candidate in Computer Science & Engineering",
-      "Advisers: <a href='" + people_website['hanna'] + "' target='_blank'>" + people['hanna'] + "</a> and " +
+      "Ph.D. in Computer Science & Engineering",
+      "Advisers: <a href='" + people_website['hanna'] + "' target='_blank'>" + people['hanna'] + "</a>, " +
       "<a href='" + people_website['luke'] + "' target='_blank'>" + people['luke'] + "</a><br />" +
-      "Master's degree obtained in March 2020"
+      `Committee:
+          <a href="https://nasmith.github.io/" target='_blank'>Noah Smith</a>,
+          <a href="https://www.shane.st/" target='_blank'>Shane Steinert-Threlkeld</a>,
+          <a href="https://www.phontron.com/" target='_blank'>Graham Neubig</a><br />
+      Thesis: <em><a href="assets/Sewon_Min_Thesis.pdf" target="_blank">Rethinking Data Use in Large Language Models</a></em>`,
+      `Master's degree obtained in March 2020`
     ],
   ],
   [
@@ -647,7 +644,7 @@ let educations = [
 let experiences = [
   [
     "University of Washington",
-    "09/2018&#8211;06/2024 (Expected)",
+    "09/2018&#8211;06/2024",
     "Ph.D. student",
     ["hanna", "luke"]
   ],
@@ -728,6 +725,9 @@ let services = [
   Workshop Co-organizer
   <ul style="padding-left: 40px;">
     <li>
+     ` + add_link("The 2nd Workshop on Mathematical and Empirical Understanding of Foundation Models (ME-FoMo)", "https://sites.google.com/view/me-fomo2024") + `
+    </li>
+    <li>
       ` + add_link("7th Workshop on Representation Learning for NLP (Repl4NLP @ ACL 2022)", website_directory["repl4nlp"]) + `
     </li>
     <li>
@@ -747,49 +747,11 @@ let services = [
     </li>
   </ul>
   `,
-  `Area Chair: COLM 2024, ACL 2023, EMNLP 2023, COLING 2022
+  `Area Chair: EMNLP 2024, COLM 2024, ACL 2023, EMNLP 2023, COLING 2022
   `,
   `
   Reviewer/Program Committee
   <ul style="padding-left: 40px;">
-    <!--<li>Journals:
-      <ul style="padding-left: 40px;">
-        <li>Transactions of the Association for Computational Linguistics (TACL): 2022&#8211;</li>
-        <li>Transactions on Machine Learning Research (TMLR): 2022&#8211;</li>
-        <li>Journal of Artificial Intelligence Research (JAIR): 2023</li>
-      </ul>
-    </li>
-    <li>Conferences:
-      <ul style="padding-left: 40px;">
-        <li>ACL: 2019, 2020, 2021 <em>(outstanding reviewer)</em></li>
-        <li>EMNLP: 2019 <em>(outstanding reviewer)</em>, 2020, 2021 <em>(outstanding reviewer)</em>, 2022</li>
-        <li>NAACL: 2021</li>
-
-        <li>NeurIPS: 2018, 2020, 2021, 2022</li>
-        <li>ICLR: 2019, 2020, 2021, 2022, 2023</li>
-        <li>ICML: 2021, 2023</li>
-        <li>AAAI: 2020, 2021, 2022</li>
-
-        <li>AKBC: 2019, 2020, 2021, 2022</li>
-        <li>AACL: 2020</li>
-        <li>ACL Rolling Review: 2021, 2022</li>
-        
-      </ul>
-    <li>Workshops:
-      <ul style="padding-left: 40px;">
-        <li>Workshop on Retrieval-Enhanced Machine Learning (SIGIR 2023)</li>
-        <li>Workshop on Mathematical and Empirical Understanding of Foundation Models (ICLR 2023)</li>
-        <li>Workshop on Knowledge Retrieval and Language Models (ICML 2022)</li>
-        <li>The 2nd Workshop on NLP for Positive Impact (NLP4PI @ EMNLP 2022)</li>
-        <li>The 1st Workshop on NLP for Positive Impact (NLP4PI @ ACL 2021)</li>
-        <li>Student Research Workshop (SRW): ACL 2019, ACL 2020, AACL 2020, EACL 2021, ACL 2021</li>
-        <li>The 2nd Workshop on Machine Reading for Question Answering (MRQA @ EMNLP 2019)</li>
-      </ul>
-    </li>
-    <li>
-      Competition Proposals: NeurIPS (2021)
-    </li>-->
-
     <li>Journals:
         Transactions of the Association for Computational Linguistics (TACL, since 2022),
         Transactions on Machine Learning Research (TMLR, since 2022),
@@ -807,6 +769,7 @@ let services = [
         AACL (since 2020),
         ACL Rolling Review (since 2021)
     <li>Workshops:
+        Workshop on Long-Context Foundation Models (LCFM @ ICML 2024),
         Workshop on Distribution Shifts (NeurIPS 2023),
         Workshop on Retrieval-Enhanced Machine Learning (SIGIR 2023),
         Workshop on Mathematical and Empirical Understanding of Foundation Models (ICLR 2023),
@@ -841,7 +804,33 @@ let services = [
 ];
 
 let talks = [
- `12/2023 (Expected): Big Picture Workshop at EMNLP 2023`,
+`09/2024 (Expected): ` + add_link("Simons Workshop on Transformers as a Computational Model", "https://simons.berkeley.edu/workshops/transformers-computational-model"),
+`09/2024 (Expected): ` + add_link("Simons Workshop on Emerging Settings in Generalization", "https://simons.berkeley.edu/workshops/emerging-generalization-settings"),
+`07/2024: National University of Singapore`,
+`07/2024: DSO National Laboratories`,
+`07/2024: ` + add_link("LLM Safety Workshop", "https://llmworkshop.github.io"),
+`04/2024: Cornell Tech`,
+`04/2024: Harvard University`,
+`04/2024: University of Toronto`,
+
+`03/2024: University of Texas, Austin`,
+`03/2024: MIT Media Lab`,
+`03/2024: MIT EECS`,
+`03/2024: Carnegie Mellon University - Machine Learning Department`,
+`03/2024: Carnegie Mellon University - Language Technologies Institute`,
+`03/2024: Princeton University`,
+
+`02/2024: Cornell University`,
+`02/2024: New York University`,
+`02/2024: UC Berkeley`,
+`02/2024: Columbia University`,
+`02/2024: University of Pennsylvania`,
+`02/2024: Caltech`,
+
+`01/2024: Northwestern University`,
+`01/2024: Allen School Colloquium (short talk; representing NLP Research Lab)`,
+
+ `12/2023: ` + add_link("Big Picture Workshop at EMNLP 2023", "https://www.bigpictureworkshop.com/"),
   `09/2023: UMass Amherst NLP Group <br />
   Title: <em>Redesigning the Softmax: Nonparametric Prediction in Language Modeling</em>`,
   `09/2023: Privacy in ML Seminar, Google Deepmind <br />
@@ -851,7 +840,7 @@ let talks = [
  `06/2023: Microsoft Semantic Machines <br />
   Title: <em> FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation</em>
  `,
- `03/2023: Gradient Podcast Interview (` + add_link("link", "https://thegradientpub.substack.com/p/sewon-min-the-science-of-natural") + `)`,
+ `03/2023: ` + add_link("Gradient Podcast Interview", "https://thegradientpub.substack.com/p/sewon-min-the-science-of-natural"),
  `02/2023: Conversation & Reasoning Group, Meta <br />
  Title: <em>Nonparametric Masked Language Modeling</em>
  `,
@@ -946,10 +935,10 @@ let teaching = [
   </ul>`,
  `Pre-doctoral student mentoring
  <ul style="padding-left: 40px;">
-  <li>Michael Duan, BS student at UW (2023&#8211;Current)</li>
-  <li>` + add_link("Xinxi (Shane) Lyu", "https://alrope123.github.io/") + `, BS->MS at UW (2021&#8211;Current)</li>
-  <li>` + add_link("Xinyan (Velocity) Yu", "https://velocitycavalry.github.io/") + `, BS->MS at UW (2021&#8211;2022)</li>
-  <li>` + add_link("Skyler Hallinan", "https://skylerhallinan.com/") + `, BS->MS at UW (2021)</li>
+  <li>Michael Duan, BS student at UW (2023&#8211;2024)</li>
+  <li>` + add_link("Xinxi (Shane) Lyu", "https://alrope123.github.io/") + `, BS&rarr;MS at UW (2021&#8211;2024), now a PYI at AI2</li>
+  <li>` + add_link("Xinyan (Velocity) Yu", "https://velocitycavalry.github.io/") + `, BS&rarr;MS at UW (2021&#8211;2022), now a PhD student at USC</li>
+  <li>` + add_link("Skyler Hallinan", "https://skylerhallinan.com/") + `, BS&rarr;MS at UW (2021)</li>
   <li>` + add_link("Jungsoo Park", "https://jjumssu.github.io/") + `, MS student at Korea University, now a research scientist at NAVER (2021)</li>
   <li>` + add_link("Belinda Li", "https://belindal.github.io/") + `, software engineer at Facebook, now a PhD student at MIT (2020)</li>
  </ul>
