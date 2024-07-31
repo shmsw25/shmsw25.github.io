@@ -1,6 +1,10 @@
 window.onload = function () {
   var current = window.location.href.split("/").pop().split(".")[0];
 
+  if (current === "") {
+    current = "index";
+  }
+
   // setup nav
   $(".navbar-toggle").click(function(){
     if ($(".navbar-collapse").hasClass("collapse")) {
@@ -9,6 +13,8 @@ window.onload = function () {
       $(".navbar-collapse").addClass("collapse");
     }
   })
+
+  console.log(current);
 
   if (current==="index") {
     let introText = "";
