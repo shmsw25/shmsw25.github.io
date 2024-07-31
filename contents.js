@@ -284,7 +284,7 @@ let intros = [
 
 let news = [
   `09/2024: I am attending two workshops at Simons Institute:
-  ` + add_link("Workshop on Emerging Settings in Generalization", "https://simons.berkeley.edu/workshops/emerging-generalization-setting") + ` and ` +
+  ` + add_link("Workshop on Emerging Settings in Generalization", "https://simons.berkeley.edu/workshops/emerging-generalization-settings") + ` and ` +
   add_link(`Workshop on Transformers as a Computational Model`, "https://simons.berkeley.edu/workshops/transformers-computational-model") + ".",
   `12/2023: I am attending EMNLP and NeurIPS!
     At EMNLP, I will give an invited talk on ` +
